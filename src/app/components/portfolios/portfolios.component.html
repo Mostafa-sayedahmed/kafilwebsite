@@ -1,0 +1,306 @@
+<body class="">
+  <section class="container my-3 mb-5">
+    <div class="row">
+      <div class="col-12 col-lg-3 d-lg-block d-none">
+        <div class="pluse text-center py-3 mb-3 rounded-2">
+          <a
+            routerLink="/newportfoloi"
+            class="w-100 text-center text-white text-decoration-none"
+          >
+            أضف عملك
+            <i class="far fa-plus-square mx-3"></i>
+          </a>
+        </div>
+
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-search">
+            <i class="fas fa-search"></i>
+          </span>
+          <input
+            type="search"
+            class="form-control py-2"
+            placeholder="ابحث عن ..."
+            aria-label="search"
+            aria-describedby="basic-search"
+          />
+        </div>
+
+        <div class="accordion mb-3" id="accordionExample">
+          <div class="accordion-item text-muted">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button text-muted fw-bold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                الأقسام
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body p-0">
+                <div class="right p-3">
+                  <i class="fa-solid fa-suitcase"></i>
+                  أعمال وخدمات إستشارية وإدارية
+                </div>
+                <div class="right p-3">
+                  <i class="fa-solid fa-code"></i>
+                  برمجة,تطوير المواقع والتطبيقات
+                </div>
+                <div class="right p-3">
+                  <i class="fa-solid fa-paintbrush"></i>
+                  تصميم
+                </div>
+                <div class="right p-3">
+                  <i class="fa-solid fa-video"></i>
+                  فيديو
+                </div>
+                <div class="right p-3">
+                  <i class="fa-solid fa-microphone-lines"></i>
+                  صوتيات
+                </div>
+                <div class="right p-3">
+                  <i class="fa-solid fa-bullhorn"></i>
+                  التسويق والمبعات
+                </div>
+                <div class="right p-3">
+                  <i class="fa-solid fa-pen-clip"></i>
+                  كتابة,صناعة محتوى,ترجمةولغات
+                </div>
+                <div class="right p-3">
+                  <i class="fa-solid fa-chalkboard-user"></i>
+                  تدريب,تعليم ومساعدة عن بعد
+                </div>
+                <div class="right p-3">
+                  <i class="fas fa-bars"></i>
+                  أموراخري
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <a href="https://kafiil.com/youtube">
+            <img
+              src="https://kafiil.com/img/youtube-initiative/2.jpg"
+              style="width: 100%"
+            />
+          </a>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-9">
+        <div class="d-lg-none d-flex justify-content-between">
+          <div class="pluse text-center px-3 py-2 mb-3 rounded-2">
+            <a
+              href="#"
+              class="w-100 text-center text-white text-decoration-none"
+            >
+              <i class="far fa-plus-square mx-3"></i>
+              أضف عملك
+            </a>
+          </div>
+          <button
+            class="canvasBtn"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight"
+          >
+            <i class="fas fa-sliders-h"></i>
+          </button>
+        </div>
+
+        <div class="filter bg-white rounded-2 mb-3 mb-2">
+          <div class=" ">
+            <h4>معرض الاعمال</h4>
+          </div>
+          <div class="dropdown type-radio">
+            <button
+              class="btn btn-sm dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="fa-solid fa-sliders"></i> الافضل
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <button class="dropdown-item" type="button">الافضل</button>
+              </li>
+              <li>
+                <button class="dropdown-item" type="button">الأحدث</button>
+              </li>
+              <li>
+                <button class="dropdown-item" type="button">
+                  الاكثر مشاهدات
+                </button>
+              </li>
+              <li>
+                <button class="dropdown-item" type="button">
+                  الاكثر تفضيلا
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-2">
+          <ng-container *ngFor="let port of portfolois; let i = index">
+            <div (click)="goToDetails(port.id)" class="col">
+              <div class="card h-100">
+                <img [src]="port.img" class="card-img-top" alt="..." />
+
+                <div class="card-body">
+                  <h5 class="card-title">{{ port.protfoloiName }}</h5>
+                </div>
+                <div class="card-footer down">
+                  <div class="owner">
+                    <a href="" class="img"
+                      ><img [src]="port.ownerimg" alt=""
+                    /></a>
+                    <div class="owner-info">
+                      <a href="" class="name">{{ port.name }}</a>
+                      <p class="category">{{ port.category }}</p>
+                    </div>
+                  </div>
+                  <div class="icons">
+                    <span class="icon">
+                      <i class="fas fa-eye p-1"></i>{{ port.watch }}
+                    </span>
+                    <span class="icon">
+                      <i class="fas fa-heart p-1"></i>{{ port.like }}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- offcanvas body -->
+  <div
+    class="offcanvas offcanvas-end"
+    tabindex="-1"
+    id="offcanvasRight"
+    aria-labelledby="offcanvasRightLabel"
+  >
+    <div class="offcanvas-header">
+      <button class="canvasTitle offcanvas-title" id="offcanvasRightLabel">
+        عرض النتائج
+      </button>
+      <button
+        type="button"
+        class="back fw-bold"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"
+      >
+        رجوع
+        <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="pluse text-center py-3 mb-3 rounded-2">
+        <a href="#" class="w-100 text-center text-white text-decoration-none">
+          أضف عملك
+          <i class="far fa-plus-square mx-3"></i>
+        </a>
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-search">
+          <i class="fas fa-search"></i>
+        </span>
+        <input
+          type="search"
+          class="form-control py-2"
+          placeholder="ابحث عن ..."
+          aria-label="search"
+          aria-describedby="basic-search"
+        />
+      </div>
+
+      <div class="accordion mb-3" id="accordionExample" dir="rtl">
+        <div class="accordion-item text-muted">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button text-muted fw-bold"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              الأقسام
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body p-0">
+              <div class="right p-3">
+                <i class="fa-solid fa-suitcase"></i>
+                أعمال وخدمات إستشارية وإدارية
+              </div>
+              <div class="right p-3">
+                <i class="fa-solid fa-code"></i>
+                برمجة,تطوير المواقع والتطبيقات
+              </div>
+              <div class="right p-3">
+                <i class="fa-solid fa-paintbrush"></i>
+                تصميم
+              </div>
+              <div class="right p-3">
+                <i class="fa-solid fa-video"></i>
+                فيديو
+              </div>
+              <div class="right p-3">
+                <i class="fa-solid fa-microphone-lines"></i>
+                صوتيات
+              </div>
+              <div class="right p-3">
+                <i class="fa-solid fa-bullhorn"></i>
+                التسويق والمبعات
+              </div>
+              <div class="right p-3">
+                <i class="fa-solid fa-pen-clip"></i>
+                كتابة,صناعة محتوى,ترجمةولغات
+              </div>
+              <div class="right p-3">
+                <i class="fa-solid fa-chalkboard-user"></i>
+                تدريب,تعليم ومساعدة عن بعد
+              </div>
+              <div class="right p-3">
+                <i class="fas fa-bars"></i>
+                اخري
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <a href="https://kafiil.com/youtube">
+          <img
+            src="https://kafiil.com/img/youtube-initiative/2.jpg"
+            style="width: 100%"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</body>

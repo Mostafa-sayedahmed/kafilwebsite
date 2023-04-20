@@ -1,0 +1,234 @@
+<div class="container d-flex mt-2 justify-content-between">
+  <div class="col-12 col-lg-8 rounded border ms-4 bg-white mb-5">
+    <div class="add-service-header">
+      <p class="title">
+        <i class="far fa-list-alt"></i>
+        اضف مسابقة
+      </p>
+    </div>
+    <button
+      class="btn btn-outline-warning float-start m-3"
+      (click)="restoreDraft()"
+      *ngIf="contestDraft != null"
+    >
+      استرجاع المسودة<i class="fa-solid fa-arrow-rotate-left px-2"></i>
+    </button>
+    <div class="clearfix"></div>
+    <div class="p-3">
+      <form action="" [formGroup]="contestform">
+        <div class="mb-3">
+          <label for="title" class="form-label">العنوان</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="title"
+            id="title"
+            name="title"
+            placeholder="العنوان"
+            [class.is-valid]="contestform.get('title')?.valid"
+            [class.is-invalid]="
+              contestform.get('title')?.invalid &&
+              contestform.get('title')?.dirty
+            "
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="description" class="form-label">الوصف :</label>
+          <textarea
+            class="form-control"
+            id="description"
+            name="description"
+            formControlName="description"
+            rows="7"
+            placeholder="الوصف"
+            [class.is-valid]="contestform.get('description')?.valid"
+            [class.is-invalid]="
+              contestform.get('description')?.invalid &&
+              contestform.get('description')?.dirty
+            "
+          ></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label for="conditions" class="form-label">الشروط :</label>
+          <textarea
+            class="form-control"
+            id="conditions"
+            name="conditions"
+            formControlName="conditions"
+            rows="7"
+            placeholder="الشروط"
+          ></textarea>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="winnersNum" class="form-label">عدد الفائزين</label>
+            <select
+              id="winnersNum"
+              class="form-select"
+              formControlName="winnersNum"
+              [class.is-valid]="contestform.get('winnersNum')?.valid"
+              [class.is-invalid]="
+                contestform.get('winnersNum')?.invalid &&
+                contestform.get('winnersNum')?.dirty
+              "
+            >
+              <option selected disabled>اختر عدد الفائزين</option>
+              <option value="فائز واحد">فائز واحد</option>
+              <option value="فائزين">فائزين</option>
+              <option value="ثلاث فائزين">ثلاث فائزين</option>
+            </select>
+          </div>
+          <div class="col">
+            <label for="firstWinner" class="form-label">الفائز الاول :</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="firstWinner"
+              id="firstWinner"
+              name="firstWinner"
+              placeholder="قيمة الجائزة"
+              [class.is-valid]="contestform.get('firstWinner')?.valid"
+              [class.is-invalid]="
+                contestform.get('firstWinner')?.invalid &&
+                contestform.get('firstWinner')?.dirty
+              "
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="contestDuration" class="form-label"
+              >مدة المسابقة:</label
+            >
+            <select
+              id="contestDuration"
+              class="form-select"
+              formControlName="contestDuration"
+              [class.is-valid]="contestform.get('contestDuration')?.valid"
+              [class.is-invalid]="
+                contestform.get('contestDuration')?.invalid &&
+                contestform.get('contestDuration')?.dirty
+              "
+            >
+              <option selected disabled>اختر مدة المسابقة</option>
+              <option value="شهر">شهر</option>
+              <option value="شهرين">شهرين</option>
+              <option value="ثلاث شهور">ثلاث شهور</option>
+            </select>
+          </div>
+          <div class="col">
+            <label for="deliveryDuration" class="form-label"
+              >مدة التسليم:</label
+            >
+            <select
+              id="deliveryDuration"
+              class="form-select"
+              formControlName="deliveryDuration"
+              [class.is-valid]="contestform.get('deliveryDuration')?.valid"
+              [class.is-invalid]="
+                contestform.get('deliveryDuration')?.invalid &&
+                contestform.get('deliveryDuration')?.dirty
+              "
+            >
+              <option selected disabled>اختر مدة التسليم</option>
+              <option value="شهر">شهر</option>
+              <option value="شهرين">شهرين</option>
+              <option value="ثلاث شهور">ثلاث شهور</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="sectionId" class="form-label">القسم</label>
+            <select
+              name="sectionId"
+              id="sectionId"
+              formControlName="sectionId"
+              class="form-control"
+              [class.is-valid]="contestform.get('sectionId')?.valid"
+              [class.is-invalid]="
+                contestform.get('sectionId')?.invalid &&
+                contestform.get('sectionId')?.dirty
+              "
+            >
+              <option value="0" selected disabled>اختر القسم</option>
+              <option
+                *ngFor="let sect of contestSections"
+                [value]="sect.id"
+                selectedSectionID="sect.id"
+              >
+                {{ sect.name }}
+              </option>
+            </select>
+          </div>
+
+          <div class="col">
+            <label for="skills" class="form-label">المهارات</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="skills"
+              id="skills"
+              name="skills"
+              placeholder="المهارات"
+            />
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          class="btn btn-success rounded submitbtn"
+          (click)="addContest()"
+        >
+          اضف مسابقة
+        </button>
+
+        <button class="btn btn-outline-dark" (click)="saveDraft()">
+          احفظ كمسودة
+          <i class="fa-regular fa-floppy-disk px-2"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="col-lg-4 d-none d-lg-flex flex-column">
+    <span class="fs-4 my-3">إنشر مسابقتك على كفيل</span>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/o08tmeovA2Q"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+    <p class="text-black-50 my-4">
+      تساعدك منصة كفيل على الربح من مهاراتك عن طريق نشر مسابقك
+    </p>
+    <h5><span class="fas fa-lightbulb"></span> نصائح لإضافة مسابقتك</h5>
+    <ul class="px-3 tips-content">
+      <li>اضف عنوان واضح وصغير لمسابقتك</li>
+      <li>أضف قسم وشارك مسابقتك حتى يسهل على المستقليين الوصول لها</li>
+      <li>اشرح المتطلبات بشكل واضح حتى يسهل على المستقليين تقيمها ومشاركتها</li>
+      <li>حدد نوع المسابقة</li>
+      <li>يمكنك اضافة بعض الشروط</li>
+      <li>اختر الميزانية المناسبة مع متطلباتك</li>
+    </ul>
+    <div class="col-12 px-0 mb-4">
+      <h5>
+        <span class="fas fa-shield-alt" style="color: #1dbf73"> </span>كفيل يضمن
+        حقوقك
+      </h5>
+      <div class="col-12 px-0 tips-content">
+        توفر لك منصة كفيل بيئه متكاملة لعرض مسابقاتك و التواصل والدفع وسحب
+        الأرباح وغيره, تلعب فيها دور الوسيط بين البائع و المشتري لتضمن تجربه
+        ناجحه مرضيه للطرفين.
+      </div>
+    </div>
+  </div>
+</div>

@@ -97,6 +97,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "kafilwebsite:build:production",
+            "firebaseProject": "kafiil-12b6c",
+            "firebaseHostingSite": "kafiil-12b6c"
+          }
         }
       }
     }
