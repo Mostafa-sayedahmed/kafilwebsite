@@ -68,8 +68,23 @@
                   type="text"
                   placeholder="ابحث عن ..."
                   class="searchbox-input"
+                  #searchtxt
+                  (keydown)="search(searchtxt.value)"
+                  (keyup)="search(searchtxt.value)"
                 />
               </form>
+              <section
+                class="search-result d-flex flex-column align-items-center"
+                *ngIf="searchtxt.value != ''"
+              >
+                <ng-container
+                  *ngFor="let item of headsearchlist; let i = index"
+                >
+                  <a *ngIf="i < 5" href="services/{{ item.uid }}">{{
+                    item.data.title
+                  }}</a>
+                </ng-container>
+              </section>
             </div>
             <div class="borderseprator"></div>
             <ul class="nav-list d-flex justify-content-between">
@@ -118,14 +133,25 @@
               src="https://kafiil.com/assets/images/logos/small.svg"
               alt="logo small"
             />
-            <form action="" class="searchbox">
+            <!-- <form action="" class="searchbox">
               <i class="fas fa-search fs-5 px-2"></i>
               <input
                 type="text"
                 placeholder="ابحث عن ..."
                 class="searchbox-input"
+                #searchtxtsmall
               />
             </form>
+            <section
+              class="search-result d-flex flex-column align-items-center"
+              *ngIf="searchtxtsmall.value != ''"
+            >
+              <ng-container *ngFor="let item of headsearchlist; let i = index">
+                <a *ngIf="i < 5" href="services/{{ item.uid }}">{{
+                  item.data.title
+                }}</a>
+              </ng-container>
+            </section> -->
             <div class="userlogin d-flex justify-content-between gap-3">
               <ng-container *ngIf="user !== null">
                 <div
