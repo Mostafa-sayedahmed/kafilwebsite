@@ -1,104 +1,91 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register</title>
-  </head>
-  <body>
+
     <div class="container-fluid" style="background-color: #f1f2f2">
       <div class="row m-4" style="background-color: #f1f2f2">
         <div class="col-md-6 p-3">
-          <p class="title text-center text-black">أنشئ حساب جديد</p>
-          <div class="sign-method row mb-3 bg-body p-4 text-center">
+          <p class="title text-center text-black">{{ "CreateNewAccount" | translate }}</p>
+          <div class="sign-method row mb-3 bg-body p-3 text-center">
             <a
               type="button"
               (click)="UserService.GoogleAuth()"
-              class="method-google col-md-5 me-2 mt-1 rounded-2 text-decoration-none text-white pt-2 pb-2 ps-5 pe-5 bg-danger"
-              >سجل دخول بجوجل</a
+              class="method-google col-md-5 ms-1 mt-1 rounded-2 text-decoration-none text-white pt-2 pb-2 ps-5 pe-5 bg-danger"
+              >{{ "LoginWithGoogle" | translate }}</a
             >
             <a
               type="button"
               (click)="UserService.TwitterAuth()"
               class="method-twitter col-md-5 me-2 mt-1 rounded-2 text-decoration-none text-white pt-2 pb-2 ps-5 pe-5 bg-info"
-              >سجل دخول بتويتر</a
+              >{{ "LoginWithTwitter" | translate }}</a
             >
           </div>
 
           <form class="row" action="">
             <div class="col-md-6">
-              <label for="firstName" class="p-2"> الأسم الأول </label><br />
+              <label for="firstName" class="p-2"> {{ "FirstName" | translate }}</label><br />
               <input
                 style="background-color: rgb(250, 250, 250)"
                 class="form-control"
                 type="text"
                 id="firstName"
                 name="first-name"
-                placeholder="الاسم الأول"
+                placeholder=' {{ "FirstName" | translate }}'
                 #userFname
                 required
               />
             </div>
 
             <div class="col-md-6">
-              <label for="lastName" class="p-2"> الأسم الثاني </label><br />
+              <label for="lastName" class="p-2"> {{ "LastName" | translate }}</label><br />
               <input
                 class="form-control"
                 type="text"
                 id="lastName"
                 name="last-name"
-                placeholder="الاسم الثاني"
+                placeholder='{{ "LastName" | translate }}'
                 #userSname
                 required
               />
             </div>
             <div class="col-md-12">
-              <label for="email" class="p-2">البريد الألكتروني</label>
+              <label for="email" class="p-2">{{ "Email" | translate }}</label>
               <input
                 class="form-control"
                 type="email"
                 name="Email"
                 id="email"
-                placeholder="البريد الألكتروني"
+                placeholder='{{ "Email" | translate }}'
                 #userEmail
                 required
               />
             </div>
 
             <div class="col-md-6">
-              <label for="password" class="p-2"> كلمة السر </label><br />
+              <label for="password" class="p-2"> {{"Password" | translate }}</label><br />
               <input
                 class="form-control"
                 type="password"
                 id="password"
                 name="password"
-                placeholder="كلمه السر"
+                placeholder='{{"Password" | translate }}'
                 #userPassword
                 required
               />
             </div>
 
             <div class="col-md-6">
-              <label for="confirmpassword" class="p-2"> تأكيد كلمة السر </label
+              <label for="confirmpassword" class="p-2"> {{ "PasswordConfirmation" | translate }}</label
               ><br />
               <input
                 class="form-control"
                 type="password"
                 id="confirmpassword"
                 name="password"
-                placeholder=" تأكيد كلمة السر "
+                placeholder='{{ "PasswordConfirmation" | translate }}'
                 #userRePassword
                 required
               />
             </div>
             <p class="p-3">
-              بالتسجيل في كفيل ,انت توافق على
-              <a class="text-success text-decoration-none" href="#">الخصوصية</a
-              >,
-              <a class="text-success text-decoration-none" href="#"
-                >والشروط والأحكام
-              </a>
+              {{ "ByRegisteringKafiil" | translate }}
             </p>
 
             <button
@@ -114,16 +101,15 @@
                 )
               "
             >
-              تسجيل
+            {{ "register" | translate }}
             </button>
             <div class="text-center">
-              <span
-                >هل لديك حساب بالفعل<a
+              <span> {{ "AlreadyHaveAccount" | translate }} <a
                   type="button"
                   class="text-success text-decoration-none"
                   href="/sign-in"
                 >
-                  دخول
+                {{ "Login" | translate }}
                 </a></span
               >
             </div>
@@ -134,5 +120,3 @@
         </div>
       </div>
     </div>
-  </body>
-</html>

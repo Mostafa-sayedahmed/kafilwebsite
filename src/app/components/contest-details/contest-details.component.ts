@@ -1,11 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Icontest } from 'src/app/models/icontest';
-// import { IcontestSection } from 'src/app/models/icontestsection';
 import { ContestsService } from 'src/app/services/contests.service';
 import { ActivatedRoute } from '@angular/router';
-
-// import { FormBuilder , Validators } from '@angular/forms';
-
 @Component({
   selector: 'app-contest-details',
   templateUrl: './contest-details.component.html',

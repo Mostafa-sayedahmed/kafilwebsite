@@ -8,5 +8,52 @@
     "RegisterNow":"Register Now",
     "Login":"Login",
     "LoginWithGoogle":"Login With Google",
-    "LoginWithTwitter":"Login With Twitter"
+    "LoginWithTwitter":"Login With Twitter",
+    "CreateNewAccount":"Create A New Account",
+    "FirstName":"First Name",
+    "LastName":"Last Name",
+    "PasswordConfirmation":"Password Confirmation",
+    "ByRegisteringKafiil":"By Registering At Kafiil, You Agree To Privacy and Terms",
+    "AlreadyHaveAccount":"Already Have Account?",
+    "register":"Register",
+    "ResetPassword":"Reset Password",
+    "Categories":"Categories",
+    "addContest":"Add Contest",
+    "all":"All",
+    "open":"Open",
+    "Show_results":"Show Results",
+    "back":"Back",
+    "search":"Search...",
+    "Retrieving_draft":"Retrieving the draft",
+    "title":"Title",
+    "description":"Description",
+    "conditions":"Conditions",
+    "winnersNumber":"Winners Number",
+    "selectWinnersNumber":"Select Winners Number",
+    "Prizevalue":"Prize value",
+    "contestTime":"Contest Time",
+    "chooseContestTime":"Choose Contest Time",
+    "deliveryDuration":"Delivery Duration",
+    "chooseDeliveryDuration":"Choose Delivery Duration",
+    "section":"Section",
+    "chooseSection":"Choose Section",
+    "SavDraft":"Save as a draft",
+    "skills":"Skills",
+    "PostContestSponsor":"Post your contest on sponsor",
+
+    "KafeelPlatform":"Kafeel platform helps you to earn from your skills by publishing your competition",
+    "TipsAdding":"Tips for adding your contest",
+    "AddClear":"Add a clear and short title to your contest",
+    "ExplainRequirements":"Explain requirements clearly so that it is easy for freelancers to assess and share",
+    "SelectCompetition":"Select the type of competition",
+    "AddConditions":"Add some conditions",
+    "ChoosBudget":"Choose your budget and requirements",
+    "guarantorGuarantees":"A guarantor guarantees your rights",
+    "sponsorPlatformProvides":"The sponsor platform provides you with an integrated environment to display your competitions, communicate, pay and withdraw Profits and others, in which you play the role of mediator between the seller and the buyer to ensure an experience A satisfactory success for both parties."
+
+    
+    
+
+
+    
 }
