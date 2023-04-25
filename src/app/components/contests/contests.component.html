@@ -1,7 +1,87 @@
 <section style="background-color: #f1f2f2">
   <section class="container my-5">
     <div class="row">
-      <div class="col-12 col-lg-9" dir="rtl">
+      <div class="col-12 col-lg-3 d-lg-block d-none">
+        <div class="pluse text-center py-3 mb-3 rounded-2">
+          <a
+            href="/addContest"
+            class="w-100 text-center text-white text-decoration-none"
+          >
+          {{ "addContest" | translate }}
+            <i class="far fa-plus-square mx-3"></i>
+          </a>
+        </div>
+
+        <div class="input-group mb-3" >
+          <input
+            type="search"
+            class="input-my-input form-control py-2"
+            placeholder=' {{ "search" | translate }}'
+            aria-label="search"
+            aria-describedby="basic-search"
+            #search
+          />
+
+          <span class="input-my-text" id="basic-search">
+            <i
+              class="fas fa-search"
+              type="button"
+              (click)="searchByName(search.value)"
+            ></i>
+          </span>
+        </div>
+
+        <div class="accordion mb-3" id="accordionExample">
+          <div class="accordion-item text-muted">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button text-muted fw-bold"
+            
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+              {{ "Categories" | translate }}
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body p-0">
+                <ng-container
+                  *ngFor="let sect of contestSections; let i = index"
+                >
+                  <div
+                    type="button"
+                    (click)="ChangeContestSectionId(sect.id)"
+                    class="right p-3"
+                  >
+                    <i class="fas fa-paint-brush"></i>
+                    {{ sect.name }}
+                  </div>
+                </ng-container>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <a href="https://kafiil.com/youtube">
+            <img
+              src="https://kafiil.com/img/youtube-initiative/2.jpg"
+              style="width: 100%"
+            />
+          </a>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-9">
         <div class="d-lg-none d-flex justify-content-between">
           <div class="pluse text-center px-3 py-2 mb-3 rounded-2">
             <a
@@ -9,7 +89,7 @@
               class="w-100 text-center text-white text-decoration-none"
             >
               <i class="far fa-plus-square mx-3"></i>
-              أضف مسابقة
+              {{ "addContest" | translate }}
             </a>
           </div>
 
@@ -25,7 +105,7 @@
         </div>
 
         <div class="filter bg-white rounded-2 mb-3">
-          <div class="type-radio" dir="rtl">
+          <div class="type-radio" >
             <label class="custom-radio">
               <input
                 type="radio"
@@ -36,7 +116,7 @@
                 (click)="GetAllContests()"
               />
               <i></i>
-              الكل
+              {{ "all" | translate }}
             </label>
             <label class="custom-radio">
               <input
@@ -47,18 +127,10 @@
                 (click)="ChangeContestCompletedStatus()"
               />
               <i></i>
-              مفتوح
+              {{ "open" | translate }}
             </label>
           </div>
-          <!--   
-              <div class="cols-controls d-flex align-items-center">
-                  <button id="cols" class="cols" type="button">
-                     <i class="fas fa-bars"></i>
-                  </button>
-                  <button id="grid" class="cols active me-3" type="button">
-                    <i class="fas fa-th-large"></i>
-                  </button>
-              </div> -->
+
         </div>
 
         <div>
@@ -74,7 +146,7 @@
                         </a>
                         <div>
                           <a
-                            class="text-decoration-none text-black me-2"
+                            class="text-decoration-none text-black mx-2"
                             href="#"
                           >
                             {{ cont.userName }}
@@ -172,104 +244,10 @@
               </div>
             </ng-container>
           </div>
-          <!-- 
-            <div class="d-flex justify-content-center" dir="ltr">
-              <nav aria-label="Page navigation example">
-                <ul class="pagination justify-content-end">
-                  <li class="page-item disabled">
-                    <a class="page-link">Previous</a>
-                  </li>
-                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item">
-                    <a class="page-link" href="#">Next</a>
-                  </li>
-                </ul>
-              </nav>
-            </div> -->
+
         </div>
       </div>
 
-      <div class="col-12 col-lg-3 d-lg-block d-none">
-        <div class="pluse text-center py-3 mb-3 rounded-2">
-          <a
-            href="/addContest"
-            class="w-100 text-center text-white text-decoration-none"
-          >
-            أضف مسابقة
-            <i class="far fa-plus-square mx-3"></i>
-          </a>
-        </div>
-
-        <div class="input-group mb-3" dir="rtl">
-          <input
-            type="search"
-            class="input-my-input form-control py-2"
-            placeholder="ابحث عن ..."
-            aria-label="search"
-            aria-describedby="basic-search"
-            #search
-          />
-
-          <span class="input-my-text" id="basic-search">
-            <i
-              class="fas fa-search"
-              type="button"
-              (click)="searchByName(search.value)"
-            ></i>
-          </span>
-        </div>
-
-        <div class="accordion mb-3" id="accordionExample">
-          <div class="accordion-item text-muted">
-            <h2 class="accordion-header" id="headingOne">
-              <button
-                class="accordion-button text-muted fw-bold"
-                dir="rtl"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseOne"
-                aria-expanded="true"
-                aria-controls="collapseOne"
-              >
-                الأقسام
-              </button>
-            </h2>
-            <div
-              id="collapseOne"
-              dir="rtl"
-              class="accordion-collapse collapse show"
-              aria-labelledby="headingOne"
-              data-bs-parent="#accordionExample"
-            >
-              <div class="accordion-body p-0">
-                <ng-container
-                  *ngFor="let sect of contestSections; let i = index"
-                >
-                  <div
-                    type="button"
-                    (click)="ChangeContestSectionId(sect.id)"
-                    class="right p-3"
-                  >
-                    <i class="fas fa-paint-brush"></i>
-                    {{ sect.name }}
-                  </div>
-                </ng-container>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="mb-3">
-          <a href="https://kafiil.com/youtube">
-            <img
-              src="https://kafiil.com/img/youtube-initiative/2.jpg"
-              style="width: 100%"
-            />
-          </a>
-        </div>
-      </div>
     </div>
   </section>
   <!-- offcanvas body -->
@@ -281,7 +259,7 @@
   >
     <div class="offcanvas-header">
       <button class="canvasTitle offcanvas-title" id="offcanvasRightLabel">
-        عرض النتائج
+        {{ "Show_results" | translate }}
       </button>
       <button
         type="button"
@@ -289,7 +267,7 @@
         data-bs-dismiss="offcanvas"
         aria-label="Close"
       >
-        رجوع
+      {{ "back" | translate }}
         <i class="fas fa-arrow-right"></i>
       </button>
     </div>
@@ -299,23 +277,28 @@
           href="/addContest"
           class="w-100 text-center text-white text-decoration-none"
         >
-          أضف مسابقة
+        {{ "addContest" | translate }}
           <i class="far fa-plus-square mx-3"></i>
         </a>
       </div>
 
-      <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-search">
-          <i class="fas fa-search"></i>
-        </span>
+      <div class="input-group mb-3" >
         <input
           type="search"
-          class="form-control py-2"
-          dir="rtl"
-          placeholder="ابحث عن ..."
+          class="input-my-input form-control py-2"
+          placeholder=' {{ "search" | translate }}'
           aria-label="search"
           aria-describedby="basic-search"
+          #search
         />
+
+        <span class="input-my-text" id="basic-search">
+          <i
+            class="fas fa-search"
+            type="button"
+            (click)="searchByName(search.value)"
+          ></i>
+        </span>
       </div>
 
       <div class="accordion mb-3" id="accordionExample">
@@ -323,19 +306,19 @@
           <h2 class="accordion-header" id="headingOne">
             <button
               class="accordion-button text-muted fw-bold"
-              dir="rtl"
+           
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseOne"
               aria-expanded="true"
               aria-controls="collapseOne"
             >
-              الأقسام
+            {{ "Categories" | translate }}
             </button>
           </h2>
           <div
             id="collapseOne"
-            dir="rtl"
+            
             class="accordion-collapse collapse show"
             aria-labelledby="headingOne"
             data-bs-parent="#accordionExample"
