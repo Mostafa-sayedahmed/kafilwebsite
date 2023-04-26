@@ -35,7 +35,7 @@ export class ContestDetailsComponent implements OnInit {
 
       this.getContestById();
 
-      console.log(this.userImg);
+      console.log(this.currentContestID);
     });
 
     this.getCommentsByContestId();

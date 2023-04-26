@@ -14,7 +14,7 @@
               aria-controls="collapseOne"
             >
               <i class="fas fa-user ms-3"></i>
-              صاحب المسابقة
+              {{ "contestOwner" | translate }}
             </button>
           </h2>
           <div
@@ -38,10 +38,6 @@
                       >
                         {{ selectedContest?.userName }}
                       </a>
-                      <!-- <span class="text text-muted ">
-                            <i class="fas fa-map-marker-alt ms-2"></i>
-                            المملكة العربية السعودية
-                          </span> -->
                     </div>
                   </div>
                 </div>
@@ -64,7 +60,7 @@
               aria-controls="collapseTwo"
             >
               <i class="fas fa-list-alt ms-3"></i>
-              التفاصيل
+              {{ "details" | translate }}
             </button>
           </h2>
           <div
@@ -79,7 +75,7 @@
                 <div class="d-flex justify-content-between py-3">
                   <div>
                     <i class="fas fa-calendar-alt"></i>
-                    تاريخ الانتهاء
+                 {{ "contestOwner" | translate }}
                   </div>
                   <div>
                     {{ endDate }}
@@ -89,15 +85,15 @@
                 <div class="dark d-flex justify-content-between py-3">
                   <div>
                     <i class="far fa-calendar-alt"></i>
-                    مدة التسليم
+                    {{ "contestTime" | translate }}
                   </div>
-                  <div>{{ daysRemaining }} ايام</div>
+                  <div>{{ daysRemaining }}  {{ "days" | translate }}</div>
                 </div>
 
                 <div class="d-flex justify-content-between py-3">
                   <div>
                     <i class="fas fa-users"></i>
-                    المتسابقين
+                    {{ "contestants" | translate }}
                   </div>
                   <div>
                     {{ selectedContest?.contestants }}
@@ -107,7 +103,7 @@
                 <div class="dark d-flex justify-content-between py-3">
                   <div>
                     <i class="fas fa-users"></i>
-                    عدد الفائزين
+                    {{ "winnersNumber" | translate }}
                   </div>
                   <div>
                     {{ selectedContest?.winnersNum }}
@@ -117,7 +113,7 @@
                 <div class="d-flex justify-content-between py-3">
                   <div>
                     <i class="fas fa-photo-video"></i>
-                    المشاركات
+                    {{ "Posts" | translate }}
                   </div>
                   <div>
                     {{ selectedContest?.Posts }}
@@ -127,7 +123,7 @@
                 <div class="d-flex justify-content-between py-3">
                   <div>
                     <i class="far fa-eye"></i>
-                    المشاهدات
+                    {{ "Views" | translate }}
                   </div>
                   <div>
                     {{ selectedContest?.Views }}
@@ -137,7 +133,7 @@
                 <div class="d-flex justify-content-between py-3">
                   <div>
                     <i class="far fa-comments"></i>
-                    التعليقات
+                    {{ "comments" | translate }}
                   </div>
                   <div>
                     {{ numberOfComments }}
@@ -156,7 +152,7 @@
           <div class="d-flex justify-content-between align-items-center">
             <div class="contestAbout">
               <i class="far fa-list-alt ms-3 text-white fs-4"></i>
-              عن المسابقة
+              {{ "aboutContest" | translate }}
             </div>
             <div class="price">
               <i class="fas fa-trophy"></i> {{ selectedContest?.firstWinner }} $
@@ -165,47 +161,11 @@
         </div>
       </div>
 
-      <!-- <div class="filter">
-            <div class="p-4">
-              <div class="d-flex justify-content-around align-items-center position-relative">
-                <span class="progress-track"></span>
-                <span class="progress-bar"></span>
-                <div class="step position-relative current active closed ">
-                  <span class="number">
-                  1
-                  </span>
-                  <span class="title">
-                    مرحلة إستلام المشاركات
-                  </span>
-                </div>
-                <div class="step position-relative">
-                  <span class="number">
-                  2
-                  </span>
-                  <span class="title">
-                    مرحلة إختيار الفائزين
-                  </span>
-                </div>
-                <div class="step position-relative">
-                  <span class="number">
-                  3
-                  </span>
-                  <span class="title">
-                    التعديلات النهائية و التسليم
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div> -->
-
       <div class="filter">
-        <!-- <div class="head text-black fw-bold">
-                <i class="fas fa-list-alt ms-3"></i>
-                 تفاصيل المشروع  
-              </div> -->
+
         <div class="text-black">
           <p class="titleContest fw-bold">
-            تصميم هويه بصريه ولوجو لمتجر الكتروني
+            {{ selectedContest?.title}}
           </p>
         </div>
 
@@ -223,7 +183,7 @@
         <div>
           <p>
             <i class="fas fa-list-alt ms-3"></i>
-            التفاصيل
+            {{ "details" | translate }}
           </p>
           <div class="me-3">
             <p>
@@ -235,7 +195,7 @@
         <div>
           <p>
             <i class="fas fa-list-alt ms-3"></i>
-            الشروط
+            {{ "conditions" | translate }}
           </p>
           <div class="me-3">
             <p>
@@ -248,7 +208,7 @@
       <div class="filter">
         <div class="head text-black fw-bold">
           <i class="far fa-star ms-3"></i>
-          المهارات المطلوبة
+          {{ "skills" | translate }}
         </div>
         <div>
           <p class="body">
@@ -261,7 +221,7 @@
       <div class="last-filter">
         <div class="head text-black fw-bold">
           <i class="far fa-comments ms-3"></i>
-          التعليقات
+          {{ "comments" | translate }}
         </div>
 
         <div class="inner-row" id="row">
@@ -304,7 +264,7 @@
             class="btn btn-success rounded submitbtn m-3"
             (click)="addComment(comment.value)"
           >
-            اضف رد
+          {{ "AddReply" | translate }}
           </button>
         </form>
       </div>
