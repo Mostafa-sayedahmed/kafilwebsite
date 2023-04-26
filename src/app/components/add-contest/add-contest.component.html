@@ -3,7 +3,7 @@
     <div class="add-service-header">
       <p class="title">
         <i class="far fa-list-alt"></i>
-        اضف مسابقة
+        {{ "addContest" | translate }}
       </p>
     </div>
     <button
@@ -11,20 +11,21 @@
       (click)="restoreDraft()"
       *ngIf="contestDraft != null"
     >
-      استرجاع المسودة<i class="fa-solid fa-arrow-rotate-left px-2"></i>
+    {{ "Retrieving_draft" | translate }}
+    <i class="fa-solid fa-arrow-rotate-left px-2"></i>
     </button>
     <div class="clearfix"></div>
     <div class="p-3">
       <form action="" [formGroup]="contestform">
         <div class="mb-3">
-          <label for="title" class="form-label">العنوان</label>
+          <label for="title" class="form-label"> {{ "title" | translate }}</label>
           <input
             type="text"
             class="form-control"
             formControlName="title"
             id="title"
             name="title"
-            placeholder="العنوان"
+            placeholder='{{ "title"  | translate }}' 
             [class.is-valid]="contestform.get('title')?.valid"
             [class.is-invalid]="
               contestform.get('title')?.invalid &&
@@ -34,14 +35,14 @@
         </div>
 
         <div class="mb-3">
-          <label for="description" class="form-label">الوصف :</label>
+          <label for="description" class="form-label"> {{ "description" | translate }} :</label>
           <textarea
             class="form-control"
             id="description"
             name="description"
             formControlName="description"
             rows="7"
-            placeholder="الوصف"
+            placeholder='{{ "description" | translate }} '
             [class.is-valid]="contestform.get('description')?.valid"
             [class.is-invalid]="
               contestform.get('description')?.invalid &&
@@ -51,20 +52,20 @@
         </div>
 
         <div class="mb-3">
-          <label for="conditions" class="form-label">الشروط :</label>
+          <label for="conditions" class="form-label">{{ "conditions" | translate }}  :</label>
           <textarea
             class="form-control"
             id="conditions"
             name="conditions"
             formControlName="conditions"
             rows="7"
-            placeholder="الشروط"
+            placeholder='{{ "conditions" | translate }}'
           ></textarea>
         </div>
 
         <div class="row">
           <div class="col">
-            <label for="winnersNum" class="form-label">عدد الفائزين</label>
+            <label for="winnersNum" class="form-label">{{ "winnersNumber" | translate }}</label>
             <select
               id="winnersNum"
               class="form-select"
@@ -75,21 +76,21 @@
                 contestform.get('winnersNum')?.dirty
               "
             >
-              <option selected disabled>اختر عدد الفائزين</option>
+              <option selected disabled>{{ "selectWinnersNumber" | translate }}</option>
               <option value="فائز واحد">فائز واحد</option>
               <option value="فائزين">فائزين</option>
               <option value="ثلاث فائزين">ثلاث فائزين</option>
             </select>
           </div>
           <div class="col">
-            <label for="firstWinner" class="form-label">الفائز الاول :</label>
+            <label for="firstWinner" class="form-label">{{ "Prizevalue" | translate }} :</label>
             <input
               type="text"
               class="form-control"
               formControlName="firstWinner"
               id="firstWinner"
               name="firstWinner"
-              placeholder="قيمة الجائزة"
+              placeholder='{{ "Prizevalue" | translate }}'
               [class.is-valid]="contestform.get('firstWinner')?.valid"
               [class.is-invalid]="
                 contestform.get('firstWinner')?.invalid &&
@@ -102,7 +103,7 @@
         <div class="row">
           <div class="col">
             <label for="contestDuration" class="form-label"
-              >مدة المسابقة:</label
+              >{{ "contestTime" | translate }}:</label
             >
             <select
               id="contestDuration"
@@ -114,7 +115,7 @@
                 contestform.get('contestDuration')?.dirty
               "
             >
-              <option selected disabled>اختر مدة المسابقة</option>
+              <option selected disabled>{{ "chooseContestTime" | translate }}</option>
               <option value="شهر">شهر</option>
               <option value="شهرين">شهرين</option>
               <option value="ثلاث شهور">ثلاث شهور</option>
@@ -122,7 +123,7 @@
           </div>
           <div class="col">
             <label for="deliveryDuration" class="form-label"
-              >مدة التسليم:</label
+              > {{ "deliveryDuration" | translate }}:</label
             >
             <select
               id="deliveryDuration"
@@ -134,7 +135,7 @@
                 contestform.get('deliveryDuration')?.dirty
               "
             >
-              <option selected disabled>اختر مدة التسليم</option>
+              <option selected disabled>{{ "chooseDeliveryDuration" | translate }}</option>
               <option value="شهر">شهر</option>
               <option value="شهرين">شهرين</option>
               <option value="ثلاث شهور">ثلاث شهور</option>
@@ -144,7 +145,7 @@
 
         <div class="row">
           <div class="col">
-            <label for="sectionId" class="form-label">القسم</label>
+            <label for="sectionId" class="form-label">{{ "section" | translate }}</label>
             <select
               name="sectionId"
               id="sectionId"
@@ -156,7 +157,7 @@
                 contestform.get('sectionId')?.dirty
               "
             >
-              <option value="0" selected disabled>اختر القسم</option>
+              <option value="0" selected disabled>{{ "chooseSection" | translate }}</option>
               <option
                 *ngFor="let sect of contestSections"
                 [value]="sect.id"
@@ -168,14 +169,14 @@
           </div>
 
           <div class="col">
-            <label for="skills" class="form-label">المهارات</label>
+            <label for="skills" class="form-label"> {{ "skills" | translate }}</label>
             <input
               type="text"
               class="form-control"
               formControlName="skills"
               id="skills"
               name="skills"
-              placeholder="المهارات"
+              placeholder='{{ "addContest" | translate }}'
             />
           </div>
         </div>
@@ -185,11 +186,11 @@
           class="btn btn-success rounded submitbtn"
           (click)="addContest()"
         >
-          اضف مسابقة
+        {{ "addContest" | translate }}
         </button>
 
         <button class="btn btn-outline-dark" (click)="saveDraft()">
-          احفظ كمسودة
+          {{ "SavDraft" | translate }}
           <i class="fa-regular fa-floppy-disk px-2"></i>
         </button>
       </form>
@@ -197,7 +198,7 @@
   </div>
 
   <div class="col-lg-4 d-none d-lg-flex flex-column">
-    <span class="fs-4 my-3">إنشر مسابقتك على كفيل</span>
+    <span class="fs-4 my-3">{{ "PostContestSponsor" | translate }}</span>
     <iframe
       width="560"
       height="315"
@@ -208,26 +209,24 @@
       allowfullscreen
     ></iframe>
     <p class="text-black-50 my-4">
-      تساعدك منصة كفيل على الربح من مهاراتك عن طريق نشر مسابقك
+      {{ "KafeelPlatform" | translate }}
     </p>
-    <h5><span class="fas fa-lightbulb"></span> نصائح لإضافة مسابقتك</h5>
+    <h5><span class="fas fa-lightbulb"></span>   {{ "TipsAdding" | translate }}</h5>
     <ul class="px-3 tips-content">
-      <li>اضف عنوان واضح وصغير لمسابقتك</li>
-      <li>أضف قسم وشارك مسابقتك حتى يسهل على المستقليين الوصول لها</li>
-      <li>اشرح المتطلبات بشكل واضح حتى يسهل على المستقليين تقيمها ومشاركتها</li>
-      <li>حدد نوع المسابقة</li>
-      <li>يمكنك اضافة بعض الشروط</li>
-      <li>اختر الميزانية المناسبة مع متطلباتك</li>
+      <li> {{ "AddClear" | translate }}</li>
+      <li>{{  "ExplainRequirements" | translate }}</li>
+      <li>{{ "SelectCompetition" | translate }} </li>
+      <li>{{ "AddConditions" | translate }}</li>
+      <li>{{ "ChoosBudget" | translate }}</li>
     </ul>
     <div class="col-12 px-0 mb-4">
       <h5>
-        <span class="fas fa-shield-alt" style="color: #1dbf73"> </span>كفيل يضمن
-        حقوقك
+        <span class="fas fa-shield-alt" style="color: #1dbf73">
+          {{ "guarantorGuarantees" | translate }}
+         </span>
       </h5>
       <div class="col-12 px-0 tips-content">
-        توفر لك منصة كفيل بيئه متكاملة لعرض مسابقاتك و التواصل والدفع وسحب
-        الأرباح وغيره, تلعب فيها دور الوسيط بين البائع و المشتري لتضمن تجربه
-        ناجحه مرضيه للطرفين.
+        {{ "sponsorPlatformProvides" | translate }}
       </div>
     </div>
   </div>
