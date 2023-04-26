@@ -49,7 +49,18 @@
     "AddConditions":"Add some conditions",
     "ChoosBudget":"Choose your budget and requirements",
     "guarantorGuarantees":"A guarantor guarantees your rights",
-    "sponsorPlatformProvides":"The sponsor platform provides you with an integrated environment to display your competitions, communicate, pay and withdraw Profits and others, in which you play the role of mediator between the seller and the buyer to ensure an experience A satisfactory success for both parties."
+    "sponsorPlatformProvides":"The sponsor platform provides you with an integrated environment to display your competitions, communicate, pay and withdraw Profits and others, in which you play the role of mediator between the seller and the buyer to ensure an experience A satisfactory success for both parties.",
+
+    "contestOwner":"Contest Owner",
+    "details":"Details",
+    "ExpiryDate":"Expiry Date",
+    "contestants":"Contestants",
+    "Posts":"Posts",
+    "Views":"Views",
+    "comments":"Comments",
+    "days":"Days",
+    "aboutContest":"About Contest",
+    "AddReply":"Add a reply"
 
     
     
