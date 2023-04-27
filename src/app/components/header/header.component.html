@@ -91,41 +91,37 @@
               <li class="headerlistitem">
                 <a href="/services" class="link active">
                   <i class="fas fa-shopping-cart"></i>
-                  {{'Serves'| translate}}
+                  {{ "Serves" | translate }}
                 </a>
               </li>
               <li class="headerlistitem">
                 <a href="/contests" class="link active">
                   <i class="fas fa-trophy"></i>
-                  {{'contests'| translate}}
-
+                  {{ "contests" | translate }}
                 </a>
               </li>
               <li class="headerlistitem">
                 <a href="/projects" class="link active">
                   <i class="fas fa-briefcase"></i>
-                  {{'projects'| translate}}
-
+                  {{ "projects" | translate }}
                 </a>
               </li>
               <li class="headerlistitem">
                 <a href="/portfolios" class="link active">
                   <i class="far fa-image"></i>
-                  {{'portfolois'| translate}}
-
+                  {{ "portfolois" | translate }}
                 </a>
               </li>
               <li class="headerlistitem">
                 <a href="/freelancers" class="link active">
                   <i class="fas fa-users"></i>
-                  {{'freelancers'| translate}}
-
+                  {{ "freelancers" | translate }}
                 </a>
               </li>
               <li class="headerlistitem">
                 <a href="#" class="link active">
                   <i class="fas fa-bars"></i>
-                  {{'more'| translate}}
+                  {{ "more" | translate }}
                 </a>
               </li>
             </ul>
@@ -192,21 +188,23 @@
                         <a
                           class="dropdown-item d-flex justify-content-between"
                           href="/createservice"
-                          > {{'addService'| translate}}</a
+                        >
+                          {{ "addService" | translate }}</a
                         >
                       </li>
                       <li>
                         <a
                           class="dropdown-item d-flex justify-content-between"
                           routerLink="/addContest"
-                          >{{'addContest'| translate}}</a
+                          >{{ "addContest" | translate }}</a
                         >
                       </li>
                       <li>
                         <a
                           class="dropdown-item d-flex justify-content-between"
                           routerLink="/newportfolio"
-                          > {{'addPortfolio'| translate}}</a
+                        >
+                          {{ "addPortfolio" | translate }}</a
                         >
                       </li>
                       <li>
@@ -217,7 +215,7 @@
                           class="dropdown-item d-flex justify-content-between"
                           (click)="logout()"
                         >
-                          <span>  {{'logout'| translate}} </span>
+                          <span> {{ "logout" | translate }} </span>
                           <i class="fa-solid fa-power-off"></i>
                         </a>
                       </li>
@@ -227,10 +225,14 @@
               </ng-container>
               <ng-container *ngIf="user == null">
                 <a href="/sign-in">
-                  <button class="btn btn-light px-4 border">{{'Login'| translate}}</button>
+                  <button class="btn btn-light px-4 border">
+                    {{ "Login" | translate }}
+                  </button>
                 </a>
                 <a href="/register">
-                  <button class="btn btn-register border"> {{'RegisterNow'| translate}}</button>
+                  <button class="btn btn-register border">
+                    {{ "RegisterNow" | translate }}
+                  </button>
                 </a>
               </ng-container>
             </div>
