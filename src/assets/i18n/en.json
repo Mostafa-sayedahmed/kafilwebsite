@@ -1,12 +1,187 @@
 {
-    "WelcomeBackAgain":"Welcome Back Again",
-    "Email":"Email",
-    "Password":"Password",
-    "RememberMe":"Remember Me",
-    "ForgottenPassword":"Forgotten Password?",
-    "Don'tHaveAnAccount":"Don't Have An Account?",
-    "RegisterNow":"Register Now",
-    "Login":"Login",
-    "LoginWithGoogle":"Login With Google",
-    "LoginWithTwitter":"Login With Twitter"
+  "WelcomeBackAgain": "Welcome Back Again",
+  "Email": "Email",
+  "Password": "Password",
+  "RememberMe": "Remember Me",
+  "ForgottenPassword": "Forgotten Password?",
+  "Don'tHaveAnAccount": "Don't Have An Account?",
+  "RegisterNow": "Register Now",
+  "Login": "Login",
+  "LoginWithGoogle": "Login With Google",
+  "LoginWithTwitter": "Login With Twitter",
+  "CreateNewAccount": "Create A New Account",
+  "FirstName": "First Name",
+  "LastName": "Last Name",
+  "PasswordConfirmation": "Password Confirmation",
+  "ByRegisteringKafiil": "By Registering At Kafiil, You Agree To Privacy and Terms",
+  "AlreadyHaveAccount": "Already Have Account?",
+  "register": "Register",
+  "ResetPassword": "Reset Password",
+  "Categories": "Categories",
+  "addContest": "Add Contest",
+  "all": "All",
+  "open": "Open",
+  "Show_results": "Show Results",
+  "back": "Back",
+  "search": "Search...",
+  "Retrieving_draft": "Retrieving the draft",
+  "title": "Title",
+  "description": "Description",
+  "conditions": "Conditions",
+  "winnersNumber": "Winners Number",
+  "selectWinnersNumber": "Select Winners Number",
+  "Prizevalue": "Prize value",
+  "contestTime": "Contest Time",
+  "chooseContestTime": "Choose Contest Time",
+  "deliveryDuration": "Delivery Duration",
+  "chooseDeliveryDuration": "Choose Delivery Duration",
+  "section": "Section",
+  "chooseSection": "Choose Section",
+  "SavDraft": "Save as a draft",
+  "skills": "Skills",
+  "PostContestSponsor": "Post your contest on sponsor",
+
+  "KafeelPlatform": "Kafeel platform helps you to earn from your skills by publishing your competition",
+  "TipsAdding": "Tips for adding your contest",
+  "AddClear": "Add a clear and short title to your contest",
+  "ExplainRequirements": "Explain requirements clearly so that it is easy for freelancers to assess and share",
+  "SelectCompetition": "Select the type of competition",
+  "AddConditions": "Add some conditions",
+  "ChoosBudget": "Choose your budget and requirements",
+  "guarantorGuarantees": "A guarantor guarantees your rights",
+  "sponsorPlatformProvides": "The sponsor platform provides you with an integrated environment to display your competitions, communicate, pay and withdraw Profits and others, in which you play the role of mediator between the seller and the buyer to ensure an experience A satisfactory success for both parties.",
+
+  "contestOwner": "Contest Owner",
+  "details": "Details",
+  "ExpiryDate": "Expiry Date",
+  "contestants": "Contestants",
+  "Posts": "Posts",
+  "Views": "Views",
+  "comments": "Comments",
+  "days": "Days",
+  "aboutContest": "About Contest",
+  "AddReply": "Add a reply",
+  "Services That Help You Grow Your Business": "Services That Help You Grow Your Business",
+  "services_subtitle": "Kafiil Freelancers Provide A Variety Of Professional Services That Help You Develop Your Business And Grow Your Projects",
+  "addd_service": "Add service",
+  "show_all_categories": "Show all categories",
+
+  "addons": "Addons",
+  "evaluation": "Evaluation",
+  "suggested_services": "Suggested Services",
+  "service_addons": "service addons",
+  "buy_service": "buy service",
+  "total_price": "Total Price",
+  "service_evaluation": "Service Evaluation",
+  "Criteria_rating": "Criteria Rating",
+  "work_quality": "Work Quality",
+  "communication_colaboration": "Communication and collaboration",
+  "Adherence_toschedual": "Adherence to schedual",
+  "buy": "Buy",
+  "seller_level": "seller level",
+  "last_seen": "Last Seen",
+  "contact_me": "Contact Me",
+  "info": "Information",
+  "placed_orders": "Placed Prders",
+  "complete_orders": "Complete Orders",
+  "clients": "clients",
+  "category": "Category",
+  "ads": "Ads",
+  "share_win": "Share and win",
+  "seller": "Seller",
+  "showmore_comments": "Show more comments",
+  "overall_ev": "overall evaluation",
+
+  "add_mservice": "Add micro service",
+  "recover_draft": "Recover draft",
+  "what_u_offer": "What will you offer ?",
+  "main_img": "Main image",
+  "choose_img": "Choose image",
+  "choose_imgs": "Choose more images",
+  "additional_imgs": "More images",
+  "buyer_instructions": "Buyer instructions",
+  "addon_price": "Addon Price",
+  "delete_addon": "Delete addon",
+  "add_addon": "Add more addons",
+  "place_service": "Place service",
+  "Serves": "Serves",
+
+  "contests": "Contests",
+
+  "projects": "Projects",
+
+  "portfolois": "Portfolois",
+
+  "freelancers": "Freelancers",
+
+  "more": "More",
+
+  "addPortfolio": " Add Portfolio",
+
+  "addService": "Add Service",
+
+  "logout": " Logout",
+
+  "HelpAndSupport": "Help and support",
+
+  "HelpCenter": "Help Center",
+
+  "CommonQuestions": "Common Questions",
+
+  "QuestionBank": "Question Bank",
+
+  "ContactUs": "Contact Us",
+
+  "kafiil": "kafiil",
+
+  "TermsOfService": "Terms Of Service",
+
+  "Privacy": "Privacy",
+
+  "AboutKafiil": "About Kafiil",
+
+  "HowKafiilGuaranteeYourRights": "How Kafiil Guarantee Your Rights",
+
+  "AffiliateMarketing": "Affiliate Marketing",
+
+  "KafiilForum": "Kafiil Forum",
+
+  "UsersLevels": "Users Levels",
+
+  "PointsSystem": "Points System",
+
+  "KafiilBlog": "Kafiil Blog",
+
+  "howDoISell": "How do I sell my first service on a sponsor website?! (8 Important Tips)",
+
+  "WhyIsTheSponsor": "Why is the sponsor website the perfect choice for freelancers in the Arab world?",
+
+  "ImportantMicroservices": "Important microservices for entrepreneurs and startup owners",
+
+  "FalseMyths": "7 False Myths About Online Business That Are Unfounded",
+
+  "MoreArticles": "More Articles",
+
+  "PaymentMethods": "Payment Methods",
+
+  "WithdrawalsMethods": "Withdrawals Methods",
+
+  "BusinessAndServices": "Consulting and management business and services",
+
+  "Programming": "Programming, developing websites and applications",
+
+  "Design": "Design",
+
+  "Video": "Video",
+
+  "Audios": "Audios",
+
+  "MarketingAndSales": "Marketing And Sales",
+
+  "Writing": "Writing, content creation, translation and languages",
+
+  "Remote": "Remote training, education and assistance",
+
+  "OtherThings": "Other Things"
 }
+

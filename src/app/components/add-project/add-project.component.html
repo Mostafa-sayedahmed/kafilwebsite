@@ -1,0 +1,116 @@
+
+
+    <section class="container p-3 my-5">
+      <div class="d-flex ">
+        <!-- Right Side -->
+        <div class="flex-grow-1 border rounded-3 p-3 bg-white me-4">
+            <h4 class="p-3 bg-white"><i class="fa-sharp fa-solid fa-list me-2"></i> اضف مشروع </h4>
+              <hr>
+            <form action="" >
+               <div class="mb-3">
+                  <label for="title" class="form-label">العنوان</label>
+                  <input class="form-control" type="text" name="Title" id="title" placeholder="العنوان" required>
+               </div>
+               <div class="mb-3">
+                <label for="discription" class="form-label">الوصف</label>
+                <textarea class="form-control" name="discription" id="discription" cols="30" rows="10" placeholder="الوصف" required></textarea>
+             </div>
+                <div class="row mb-3">
+                    <div class="col">
+                         <label for="Department" class="form-label">القسم</label>
+                          <select name="Department" id="Department" class="form-select" required >
+                            <option selected>القسم</option>
+                            <option value={{cat.id}} *ngFor="let cat of LisTOfCat; let i = index">{{cat.name}}</option>
+                          </select>
+                    </div>
+                    <div class="col">
+                      <label for="skills" class="form-label">المهارات(اختياري)</label>
+                      <input type="text" name="skills" id="skills" pleaceholder="المهارات" class="form-control">
+                    </div>
+                </div>
+                  <div class='row mb-5'>
+                      <div class="col" >
+                        <label for="budget" class="form-label">الميزانية المتوقعة</label>
+                        <select name="budget" id="budget" class="form-select" required>
+                          <option selected>الميزانية المتوقعة</option>
+                        </select>
+                      </div>
+                      <div class="col" >
+                        <label for="Time" class="form-label">وقت التسليم المتوقع (بالأيام) </label>
+                        <select name="Time" id="Time" class="form-select" required>
+                          <option selected>وقت التسليم المتوقع</option>
+                        </select>
+                      </div>
+
+                  </div>
+
+                    <button type="submit" class="btn btn-success fw-bold fs-5 w-100 mb-2" (click)="GetAddProjcet()">اضف</button>
+
+            </form>
+        </div>
+        <!-- left Side -->
+        <div class=" col-lg-4  col-sm-none">
+          <div>
+            <h3>نشر مشروعك على كفيل</h3>
+            <!-- <iframe
+              width="450"
+              height="315"
+              src="https://www.youtube.com/embed/z15GtCNH0UA"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; "
+              allowfullscreen
+            ></iframe> -->
+           </div>
+          <p class="text-muted">
+            تساعدك منصة كفيل على تنفيذ أعمالك ومشاريعك بسهوله وإحترافية عن طريق
+            توصيلك بأفضل المستقلين المتخصصين القادرين على التعاون معك لتنفيذ
+            متطلباتك, فقط أنشئ مشروع جديد وأكتب متطلباتك وأنتظر عروض المستقلين
+            المختلفين للمقارنة بينهم وإختيار أفضلهم
+          </p>
+          <div>
+            <h3><i class="fa-solid fa-lightbulb"></i> نصائح لإضافة مشروعك</h3>
+            <ul class="text-muted">
+              <li>ضف عنوان معبر لمشروعك</li>
+              <li>
+                اشرح متطلباتك بشكل واضح باللغة العربية حتى يسهل على المستقلين فهمها
+                وتنفيذها
+              </li>
+              <li>
+                أضف قسم ومهارات مناسبة لمشروعك حتى يسهل على المستقلين المتخصصين
+                الوصل إلى مشروعك
+              </li>
+              <li>
+                حدد النقاط الهامة في المشروع في نقاط رئيسية والتي لا تتوقع اكتمال
+                المشروع بدونها
+              </li>
+              <li>
+                جزء مشروعك إلى مشاريع أصغر حتى تحصل على أفضل العروض في كل تخصص على
+                حدى
+              </li>
+              <li>حدد مدة تنفيذ و ميزانية كافية منطقية مع متطلبات مشروعك</li>
+              <li>وفر امثلة في حالة توافرها لضمان وضوح أكثر لمتطلباتك</li>
+            </ul>
+          </div>
+          <div>
+            <div class="d-flex">
+              <p
+                class="fas fa-shield-alt"
+                style="color: #1dbf73; font-size: larger"
+              ></p>
+              <h3>كفيل يضمن حقوقك</h3>
+            </div>
+            <p class="text-muted">
+              توفر لك منصة كفيل بيئه متكاملة لعرض خدماتك و التواصل والدفع وسحب
+              الأرباح وغيره, تلعب فيها دور الوسيط بين البائع و المشتري لتضمن تجربه
+              ناجحه مرضيه للطرفين.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+
+

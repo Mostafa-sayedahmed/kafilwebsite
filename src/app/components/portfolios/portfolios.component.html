@@ -4,10 +4,10 @@
       <div class="col-12 col-lg-3 d-lg-block d-none">
         <div class="pluse text-center py-3 mb-3 rounded-2">
           <a
-            routerLink="/newportfoloi"
+            routerLink="/newportfolio"
             class="w-100 text-center text-white text-decoration-none"
           >
-            أضف عملك
+          {{'addPortfolio'| translate}} 
             <i class="far fa-plus-square mx-3"></i>
           </a>
         </div>
@@ -19,7 +19,7 @@
           <input
             type="search"
             class="form-control py-2"
-            placeholder="ابحث عن ..."
+            placeholder=' {{ "search" | translate }}'
             aria-label="search"
             aria-describedby="basic-search"
           />
@@ -36,7 +36,7 @@
                 aria-expanded="true"
                 aria-controls="collapseOne"
               >
-                الأقسام
+              {{'Categories'| translate}}
               </button>
             </h2>
             <div
@@ -48,39 +48,40 @@
               <div class="accordion-body p-0">
                 <div class="right p-3">
                   <i class="fa-solid fa-suitcase"></i>
-                  أعمال وخدمات إستشارية وإدارية
+                  {{'BusinessAndServices'| translate}}
                 </div>
                 <div class="right p-3">
                   <i class="fa-solid fa-code"></i>
-                  برمجة,تطوير المواقع والتطبيقات
+                  {{'Programming'| translate}}
                 </div>
                 <div class="right p-3">
                   <i class="fa-solid fa-paintbrush"></i>
-                  تصميم
+                  {{'Design'| translate}}
+
                 </div>
                 <div class="right p-3">
                   <i class="fa-solid fa-video"></i>
-                  فيديو
+                  {{'Video'| translate}}
                 </div>
                 <div class="right p-3">
                   <i class="fa-solid fa-microphone-lines"></i>
-                  صوتيات
+                  {{'Audios'| translate}}
                 </div>
                 <div class="right p-3">
                   <i class="fa-solid fa-bullhorn"></i>
-                  التسويق والمبعات
+                  {{'MarketingAndSales'| translate}}
                 </div>
                 <div class="right p-3">
                   <i class="fa-solid fa-pen-clip"></i>
-                  كتابة,صناعة محتوى,ترجمةولغات
+                  {{'Writing'| translate}}
                 </div>
                 <div class="right p-3">
                   <i class="fa-solid fa-chalkboard-user"></i>
-                  تدريب,تعليم ومساعدة عن بعد
+                  {{'Remote'| translate}}
                 </div>
                 <div class="right p-3">
                   <i class="fas fa-bars"></i>
-                  أموراخري
+                  {{'OtherThings'| translate}}
                 </div>
               </div>
             </div>
