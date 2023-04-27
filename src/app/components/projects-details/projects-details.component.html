@@ -9,18 +9,18 @@
       </a>
       <div>
         <a href="#" class="text-center text-black text-decoration-none">
-          <b>مطلوب كتابة ريبورت</b>
+          <b>{{project.title}}</b>
         </a>
         <div class="d-flex align-items-center">
           <span class="text">
             <i class="fas fa-align-justify ms-3"></i>
             <a href="#" class="text-black text-decoration-none"
-              >كتابة, صناعة محتوي, ترجمة و لغات</a
+              >{{project.catId}}</a
             >
           </span>
           <span class="text" title="2023-01-29 15:47:45">
             <i class="fas fa-clock ms-3"></i>
-            منذ 3 أيام
+           {{project.time}}
           </span>
         </div>
       </div>
@@ -91,7 +91,7 @@
                         href="#"
                         class="text-muted text-decoration-none d-block"
                       >
-                        Ahmad Alanazi
+                        {{project.personName}}
                       </a>
                       <span class="text text-muted">
                         <i class="fas fa-map-marker-alt ms-2"></i>
@@ -136,7 +136,7 @@
                     <i class="fas fa-clock"></i>
                     تاريخ النشر
                   </div>
-                  <div>2023-01-29</div>
+                  <div>{{project.publishData}}</div>
                 </div>
 
                 <div class="dark d-flex justify-content-between py-3">
@@ -144,7 +144,7 @@
                     <i class="fas fa-money-bill-alt"></i>
                     الميزانية
                   </div>
-                  <div>$25 - $50</div>
+                  <div>{{project.budget}}</div>
                 </div>
 
                 <div class="d-flex justify-content-between py-3">
@@ -152,7 +152,7 @@
                     <i class="fas fa-clock"></i>
                     مدة المشروع
                   </div>
-                  <div>يومين</div>
+                  <div>{{project.durationproject}}</div>
                 </div>
 
                 <div class="dark d-flex justify-content-between py-3">
@@ -160,15 +160,16 @@
                     <i class="fas fa-suitcase"></i>
                     عدد العروض
                   </div>
-                  <div>117</div>
+                  <div>{{project.offers}}</div>
                 </div>
 
-                <div class="d-flex justify-content-between py-3">
+                <!-- <div class="d-flex justify-content-between py-3" [hidden]="project.Averageoffers === ''" > -->
+                <div class="d-flex justify-content-between py-3" *ngIf="project.Averageoffers === ''" >
                   <div>
                     <i class="fas fa-money-bill-alt"></i>
                     متوسط العروض
                   </div>
-                  <div>$32.26</div>
+                  <div  >{{project.Averageoffers}}</div>
                 </div>
               </div>
             </div>
@@ -280,16 +281,14 @@
           <i class="fas fa-list-alt ms-3"></i>
           تفاصيل المشروع
         </div>
-        <div class="text-black">
+        <div class="text-muted">
           <p>
-            مطلوب كتابة ريبورت 200 كلمة عن<br />
-            تخيل ان بطارية هاتفك تموت دائما بهذة السرعة اكتب سببين رئيسيين لهذة
-            المشكلة
+              {{project.discription}}
           </p>
         </div>
       </div>
 
-      <div class="filter">
+      <!-- <div class="filter">
         <div class="head text-black fw-bold">
           <i class="far fa-star ms-3"></i>
           المهارات المطلوبة
@@ -300,7 +299,7 @@
             الانجليزية
           </p>
         </div>
-      </div>
+      </div> -->
 
       <div class="last-filter">
         <div class="head text-black fw-bold">
@@ -308,8 +307,8 @@
           العروض
         </div>
 
-        <div class="inner-row" id="row">
-          <ng-container *ngFor="let proj of project; let i = index">
+         <div class="inner-row" id="row">
+          <!-- <ng-container *ngFor="let proj of project; let i = index">
             <div>
               <div class="d-flex">
                 <a href="#" class="text-black text-decoration-none">
@@ -352,7 +351,7 @@
                 </p>
               </div>
             </div>
-          </ng-container>
+          </ng-container> -->
         </div>
       </div>
 
