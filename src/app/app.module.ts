@@ -36,6 +36,7 @@ import { DetailsPortfoliosComponent } from './components/details-portfolios/deta
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ProjectsDetailsComponent } from './components/projects-details/projects-details.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { AddProjectComponent } from './components/add-project/add-project.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,6 +63,7 @@ import { FooterComponent } from './components/footer/footer.component';
     ProjectsComponent,
     ProjectsDetailsComponent,
     FooterComponent,
+    AddProjectComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
