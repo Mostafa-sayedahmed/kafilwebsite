@@ -4,8 +4,8 @@
       <div
         class="px-2 py-3 text-nowrap text-center fs-5 fw-bold mb-3 rounded bg-success"
       >
-        <a href="#" class="text-decoration-none text-white"
-          ><i class="far fa-plus-square mx-3"></i> اضف عمل
+        <a routerLink="/addproject" class="text-decoration-none text-white"
+          ><i class="far fa-plus-square mx-3"></i> اضف مشروع
         </a>
       </div>
       <!-- canvas Btn -->
@@ -26,10 +26,10 @@
     <div class="col-4">
       <div class="d-none d-md-block">
         <div
-          class="px-2 py-3 text-nowrap text-center fs-5 fw-bold mb-3 rounded bg-success"
+          class="px-2 py-3 text-nowrap text-center fs-5 fw-bold mb-3 rounded bgcolorbtn"
         >
           <a routerLink="/addproject" class="text-decoration-none text-white"
-            ><i class="far fa-plus-square mx-3"></i> اضف عمل
+            ><i class="far fa-plus-square mx-3"></i> اضف مشروع
           </a>
         </div>
         <!-- canvas Btn
@@ -72,46 +72,8 @@
               aria-labelledby="headingOne"
               data-bs-parent="#accordionExample"
             >
-              <div class="accordion-body">
-                <div class="border p-4">
-                  <a href="#" class="text-decoration-none text-muted"
-                    ><i class="fa-solid fa-briefcase"></i> أعمال وخدمات إستشارية
-                    وإدارية</a
-                  >
-                </div>
-                <div class="border p-2">
-                  <a href="#" class="text-decoration-none text-muted"
-                    ><i class="fa-sharp fa-solid fa-code"></i> برمجة وتطوير
-                    المواقع والتطبيقات
-                  </a>
-                </div>
-                <div class="border p-2">
-                  <a href="#" class="text-decoration-none text-muted"
-                    ><i class="fa-solid fa-photo-film"></i> تصميم فيديو وصوتيات
-                  </a>
-                </div>
-                <div class="border p-2">
-                  <a href="#" class="text-decoration-none text-muted"
-                    ><i class="fa-solid fa-bullhorn"></i> التسويق والمبياعات</a
-                  >
-                </div>
-                <div class="border p-2">
-                  <a href="#" class="text-decoration-none text-muted"
-                    ><i class="fa-solid fa-newspaper"></i> كتابة ,صناعة محتوي
-                    ,ترجمة ولغات</a
-                  >
-                </div>
-                <div class="border p-2">
-                  <a href="#" class="text-decoration-none text-muted"
-                    ><i class="fa-solid fa-tv"></i> تدريب ,تعليم ومساعدة عن
-                    بعد</a
-                  >
-                </div>
-                <div class="border p-2">
-                  <a href="#" class="text-decoration-none text-muted"
-                    ><i class="fa-solid fa-bars"></i> أمور اخرى</a
-                  >
-                </div>
+              <div class="accordion-body p-0 fs-5" *ngFor="let cat of ListofCatproj,let i = index">
+                <div  class="border p-2 "><a type="button" class="  text-decoration-none text-muted" (click)="ChangeCatID(cat.id)"><i class="fa-solid {{cat.icon}} ms-2"></i> {{cat.name}} </a> </div>
               </div>
             </div>
           </div>
@@ -158,13 +120,9 @@
               aria-labelledby="headingThree"
               data-bs-parent="#accordionExample"
             >
-              <div class="accordion-body text-muted">
-                <div><input type="checkbox" /> اقل من اسبوع</div>
-                <div><input type="checkbox" /> من 1 إالي 2 أسابيع</div>
-                <div><input type="checkbox" /> من 2 إلى شهر</div>
-                <div><input type="checkbox" /> من 2 إلى شهر</div>
-                <div><input type="checkbox" /> أكثر من ثلاثةأشهر</div>
-              </div>
+            <div class="accordion-body border-2 border-bottom text-muted fs-5" *ngFor="let DeliveryTime of ListofDeliverytimeprojects;let i = index">
+              <div ><input type="checkbox" /> {{DeliveryTime.name}}</div>
+            </div>
             </div>
           </div>
         </div>
@@ -191,45 +149,8 @@
             aria-labelledby="headingOne"
             data-bs-parent="#accordionExample"
           >
-            <div class="accordion-body fs-5">
-              <div class="border p-2">
-                <a href="#" class="text-decoration-none text-muted"
-                  ><i class="fa-solid fa-briefcase"></i> أعمال وخدمات إستشارية
-                  وإدارية</a
-                >
-              </div>
-              <div class="border p-2">
-                <a href="#" class="text-decoration-none text-muted"
-                  ><i class="fa-sharp fa-solid fa-code"></i> برمجة وتطوير
-                  المواقع والتطبيقات
-                </a>
-              </div>
-              <div class="border p-2">
-                <a href="#" class="text-decoration-none text-muted"
-                  ><i class="fa-solid fa-photo-film"></i> تصميم فيديو وصوتيات
-                </a>
-              </div>
-              <div class="border p-2">
-                <a href="#" class="text-decoration-none text-muted"
-                  ><i class="fa-solid fa-bullhorn"></i> التسويق والمبياعات</a
-                >
-              </div>
-              <div class="border p-2">
-                <a href="#" class="text-decoration-none text-muted"
-                  ><i class="fa-solid fa-newspaper"></i> كتابة ,صناعة محتوي
-                  ,ترجمة ولغات</a
-                >
-              </div>
-              <div class="border p-2">
-                <a href="#" class="text-decoration-none text-muted"
-                  ><i class="fa-solid fa-tv"></i> تدريب ,تعليم ومساعدة عن بعد</a
-                >
-              </div>
-              <div class="border p-2">
-                <a href="#" class="text-decoration-none text-muted"
-                  ><i class="fa-solid fa-bars"></i> أمور اخرى</a
-                >
-              </div>
+            <div class="accordion-body p-0 fs-5" *ngFor="let cat of ListofCatproj ; let i = index">
+                <div  class="border p-2 "><a type="button" class="  text-decoration-none text-muted" (click)="ChangeCatID(cat.id)"><i class="fa-solid {{cat.icon}} ms-2"></i> {{cat.name}} </a> </div>
             </div>
           </div>
         </div>
@@ -276,12 +197,9 @@
             aria-labelledby="headingThree"
             data-bs-parent="#accordionExample"
           >
-            <div class="accordion-body text-muted fs-5">
-              <div><input type="checkbox" /> اقل من اسبوع</div>
-              <div><input type="checkbox" /> من 1 إالي 2 أسابيع</div>
-              <div><input type="checkbox" /> من 2 إلى شهر</div>
-              <div><input type="checkbox" /> من 2 إلى شهر</div>
-              <div><input type="checkbox" /> أكثر من ثلاثةأشهر</div>
+            <div class="accordion-body border-2 border-bottom text-muted fs-5" *ngFor="let DeliveryTime of ListofDeliverytimeprojects;let i = index">
+              <div ><input type="checkbox" /> {{DeliveryTime.name}}</div>
+
             </div>
           </div>
         </div>
@@ -295,6 +213,7 @@
     <!-- start main side {cards} -->
     <!-- first card {heading} -->
     <div class="col-lg-8 col-md-12">
+
       <div class="d-flex justify-content-between text-muted shadow p-3 rounded">
         <!-- heading -->
         <h4 class="d-md-block">
@@ -310,7 +229,10 @@
                 type="radio"
                 name="inlineRadioOptions"
                 id="inlineRadio1"
-                value="option1"
+                value="all"
+                checked
+                (click)="getprojects()"
+
               />
             </div>
             <div class="form-check form-check-inline">
@@ -320,7 +242,8 @@
                 type="radio"
                 name="inlineRadioOptions"
                 id="inlineRadio2"
-                value="option2"
+                value="open"
+                (click)="ChangeCatByStatus()"
               />
             </div>
           </div>
@@ -346,10 +269,16 @@
         </div>
       </div>
       <!-- second card  -->
+      <!-- spinner -->
+      <div class="text-center mt-5 spinner" *ngIf="spinner">
+        <div class="spinner-border mt-5 text-bg-success " role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+
       <!-- <button  (click)="getData()" >get data</button> -->
       <ng-container *ngFor="let data of ListOfProject; let i = index">
-        <div></div>
-        <div class="d-flex p-3 shadow-lg rounded my-2">
+        <div class="d-flex p-4 shadow-lg rounded my-2" >
           <img
             class="d-sm-none d-lg-block ms-2 my-2"
             style="border-radius: 50%; width: 9%"
@@ -360,12 +289,12 @@
             <div class="d-flex">
               <div>
                 <a
-                  class="text-white text-decoration-none p-1 bg-success rounded"
+                  class="text-white text-decoration-none p-1 bgcolorbtn rounded"
                   href="#"
                   >مفتوح</a
                 >
               </div>
-              <h4 class="p-2">{{ data.title }}</h4>
+              <h4 class="p-2" (click)="Detailsproject(data.id)" style="cursor: pointer;">{{ data.title }}</h4>
             </div>
             <div class="mx-4 my-2 text-muted">
               <i class="fa-solid fa-user-tie"></i> {{ data.personName }} |
@@ -373,7 +302,7 @@
               <i class="fa-solid fa-hand-holding-dollar"></i> {{ data.offers }}
             </div>
           </div>
-          <p class="align-items-center p-3">{{ data.budget }}</p>
+          <p class="align-items-center p-3 text-nowrap">{{ data.budget }}</p>
         </div>
       </ng-container>
     </div>

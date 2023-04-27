@@ -12,24 +12,27 @@
       <div class="tabs-bar border ps-3 d-flex justify-content-between mb-3">
         <ul class="nav" id="service-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#service-sec"
-              >الوصف</a
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="#service-sec"
+              >{{ "description" | translate }}</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#service-addons"
-              >الاضافات</a
-            >
+            <a class="nav-link" aria-current="page" href="#service-addons">{{
+              "addons" | translate
+            }}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#service-ratings"
-              >التقييم</a
-            >
+            <a class="nav-link" aria-current="page" href="#service-ratings">{{
+              "evaluation" | translate
+            }}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#"
-              >الخدمات المقترحة</a
-            >
+            <a class="nav-link" aria-current="page" href="#">{{
+              "suggested_services" | translate
+            }}</a>
           </li>
         </ul>
         <div class="more-menu">
@@ -152,7 +155,7 @@
             </div>
             <div class="service-desc">
               <p class="title">
-                <b>الوصف</b>
+                <b>{{ "description" | translate }}</b>
                 <br />
               </p>
               <h5>
@@ -172,7 +175,7 @@
                   aria-expanded="true"
                   aria-controls="collapseOne"
                 >
-                  اضافات الخدمة
+                  {{ "service_addons" | translate }}
                 </button>
               </h2>
               <div
@@ -193,9 +196,7 @@
                       id="option1"
                     />
 
-                    <label for="option">
-                      50 الف مشاهدة اضافية {{ item.addonTitle }}</label
-                    >
+                    <label for="option"> {{ item.addonTitle }}</label>
                   </div>
                   <div class="option-info d-flex gap-3">
                     <span class="option-price">{{ item.addonPrice }}$</span>
@@ -212,7 +213,7 @@
           <!-- service-buy -->
           <div class="service-buy mb-3 border rounded">
             <div class="service-buy-head border rounded-top p-3">
-              <span>شراء الخدمة</span>
+              <span>{{ "buy_service" | translate }}</span>
             </div>
 
             <div
@@ -236,7 +237,7 @@
               <div
                 class="total-price col-12 col-md-3 d-flex justify-content-center align-items-center"
               >
-                <span>المبلغ الكلي</span>
+                <span>{{ "total_price" | translate }}</span>
                 <span id="total-price">
                   {{ totalprice }}
                   $</span
@@ -247,7 +248,7 @@
                   class="buy-btn d-flex flex-grow-1 align-items-center justify-content-center"
                 >
                   <i class="fas fa-shopping-cart mx-3"></i>
-                  شـراء
+                  {{ "buy" | translate }}
                 </button>
               </div>
             </div>
@@ -272,10 +273,12 @@
                   <div class="d-flex justify-content-between flex-grow-1 fs-5">
                     <div class="right fw-bold">
                       <i class="far fa-comment-dots"></i>
-                      <span class="fw-bold px-2"> تقييم الخدمة </span>
+                      <span class="fw-bold px-2"
+                        >{{ "service_evaluation" | translate }}
+                      </span>
                     </div>
                     <div class="left d-none d-lg-block">
-                      <span class="">15 تقييم</span>
+                      <span class="">15 {{ "evaluation" | translate }}</span>
                       <i class="fas fa-star star-active"></i>
                       <i class="fas fa-star star-active"></i>
                       <i class="fas fa-star star-active"></i>
@@ -299,7 +302,9 @@
                       <div
                         class="rate-view m-3 d-flex flex-column justify-content-center align-items-center d-lg-none"
                       >
-                        <span class="rate-range"> 15 تقييم </span>
+                        <span class="rate-range">
+                          15 {{ "evaluation" | translate }}
+                        </span>
                         <div>
                           <i class="fas fa-star star-active"></i>
                           <i class="fas fa-star star-active"></i>
@@ -383,23 +388,29 @@
                     </div>
                     <!-- rating details -->
                     <div class="left p-3">
-                      <p class="title">تقييم المعايير</p>
+                      <p class="title">{{ "Criteria_rating" | translate }}</p>
                       <div class="rate-analysis-row">
-                        <span class="desc"> جودة العمل </span>
+                        <span class="desc">
+                          {{ "work_quality" | translate }}
+                        </span>
                         <span class="percent">
                           <i class="fas fa-star star-active"></i>
                           4.9
                         </span>
                       </div>
                       <div class="rate-analysis-row">
-                        <span class="desc"> التواصل و التعاون </span>
+                        <span class="desc">
+                          {{ "communication_colaboration" | translate }}</span
+                        >
                         <span class="percent">
                           <i class="fas fa-star star-active"></i>
                           5.0
                         </span>
                       </div>
                       <div class="rate-analysis-row">
-                        <span class="desc"> الإلتزام بالمواعيد </span>
+                        <span class="desc">
+                          {{ "Adherence_toschedual" | translate }}</span
+                        >
                         <span class="percent">
                           <i class="fas fa-star star-active"></i>
                           5.0
@@ -436,7 +447,7 @@
                       </div>
                       <div class="comment-rates">
                         <div class="comment-rate">
-                          <p class="title">جودة العمل</p>
+                          <p class="title">{{ "work_quality" | translate }}</p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -446,7 +457,9 @@
                           </div>
                         </div>
                         <div class="comment-rate">
-                          <p class="title">التواصل و التعاون</p>
+                          <p class="title">
+                            {{ "communication_colaboration" | translate }}
+                          </p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -456,7 +469,9 @@
                           </div>
                         </div>
                         <div class="comment-rate">
-                          <p class="title">الإلتزام بالمواعيد</p>
+                          <p class="title">
+                            {{ "Adherence_toschedual" | translate }}
+                          </p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -466,7 +481,7 @@
                           </div>
                         </div>
                         <div class="comment-rate">
-                          <p class="title">التقييم العام</p>
+                          <p class="title">{{ "overall_ev" | translate }}</p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -501,7 +516,7 @@
                       </div>
                       <div class="comment-rates">
                         <div class="comment-rate">
-                          <p class="title">جودة العمل</p>
+                          <p class="title">{{ "work_quality" | translate }}</p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -511,7 +526,9 @@
                           </div>
                         </div>
                         <div class="comment-rate">
-                          <p class="title">التواصل و التعاون</p>
+                          <p class="title">
+                            {{ "communication_colaboration" | translate }}
+                          </p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -521,7 +538,9 @@
                           </div>
                         </div>
                         <div class="comment-rate">
-                          <p class="title">الإلتزام بالمواعيد</p>
+                          <p class="title">
+                            {{ "Adherence_toschedual" | translate }}
+                          </p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -531,7 +550,7 @@
                           </div>
                         </div>
                         <div class="comment-rate">
-                          <p class="title">التقييم العام</p>
+                          <p class="title">{{ "overall_ev" | translate }}</p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -572,7 +591,7 @@
                       </div>
                       <div class="comment-rates">
                         <div class="comment-rate">
-                          <p class="title">جودة العمل</p>
+                          <p class="title">{{ "work_quality" | translate }}</p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -582,7 +601,9 @@
                           </div>
                         </div>
                         <div class="comment-rate">
-                          <p class="title">التواصل و التعاون</p>
+                          <p class="title">
+                            {{ "communication_colaboration" | translate }}
+                          </p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -592,7 +613,9 @@
                           </div>
                         </div>
                         <div class="comment-rate">
-                          <p class="title">الإلتزام بالمواعيد</p>
+                          <p class="title">
+                            {{ "Adherence_toschedual" | translate }}
+                          </p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -602,7 +625,7 @@
                           </div>
                         </div>
                         <div class="comment-rate">
-                          <p class="title">التقييم العام</p>
+                          <p class="title">{{ "overall_ev" | translate }}</p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -638,7 +661,7 @@
                       </div>
                       <div class="comment-rates">
                         <div class="comment-rate">
-                          <p class="title">جودة العمل</p>
+                          <p class="title">{{ "work_quality" | translate }}</p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -648,7 +671,9 @@
                           </div>
                         </div>
                         <div class="comment-rate">
-                          <p class="title">التواصل و التعاون</p>
+                          <p class="title">
+                            {{ "communication_colaboration" | translate }}
+                          </p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -658,7 +683,9 @@
                           </div>
                         </div>
                         <div class="comment-rate">
-                          <p class="title">الإلتزام بالمواعيد</p>
+                          <p class="title">
+                            {{ "Adherence_toschedual" | translate }}
+                          </p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -668,7 +695,7 @@
                           </div>
                         </div>
                         <div class="comment-rate">
-                          <p class="title">التقييم العام</p>
+                          <p class="title">{{ "overall_ev" | translate }}</p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -706,7 +733,7 @@
                       </div>
                       <div class="comment-rates">
                         <div class="comment-rate">
-                          <p class="title">جودة العمل</p>
+                          <p class="title">{{ "work_quality" | translate }}</p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -716,7 +743,9 @@
                           </div>
                         </div>
                         <div class="comment-rate">
-                          <p class="title">التواصل و التعاون</p>
+                          <p class="title">
+                            {{ "communication_colaboration" | translate }}
+                          </p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -726,7 +755,9 @@
                           </div>
                         </div>
                         <div class="comment-rate">
-                          <p class="title">الإلتزام بالمواعيد</p>
+                          <p class="title">
+                            {{ "Adherence_toschedual" | translate }}
+                          </p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -736,7 +767,7 @@
                           </div>
                         </div>
                         <div class="comment-rate">
-                          <p class="title">التقييم العام</p>
+                          <p class="title">{{ "overall_ev" | translate }}</p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -771,7 +802,7 @@
                       </div>
                       <div class="comment-rates">
                         <div class="comment-rate">
-                          <p class="title">جودة العمل</p>
+                          <p class="title">{{ "work_quality" | translate }}</p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -781,7 +812,9 @@
                           </div>
                         </div>
                         <div class="comment-rate">
-                          <p class="title">التواصل و التعاون</p>
+                          <p class="title">
+                            {{ "communication_colaboration" | translate }}
+                          </p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -791,7 +824,9 @@
                           </div>
                         </div>
                         <div class="comment-rate">
-                          <p class="title">الإلتزام بالمواعيد</p>
+                          <p class="title">
+                            {{ "Adherence_toschedual" | translate }}
+                          </p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -801,7 +836,7 @@
                           </div>
                         </div>
                         <div class="comment-rate">
-                          <p class="title">التقييم العام</p>
+                          <p class="title">{{ "overall_ev" | translate }}</p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -842,7 +877,7 @@
                       </div>
                       <div class="comment-rates">
                         <div class="comment-rate">
-                          <p class="title">جودة العمل</p>
+                          <p class="title">{{ "work_quality" | translate }}</p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -852,7 +887,9 @@
                           </div>
                         </div>
                         <div class="comment-rate">
-                          <p class="title">التواصل و التعاون</p>
+                          <p class="title">
+                            {{ "communication_colaboration" | translate }}
+                          </p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -862,7 +899,9 @@
                           </div>
                         </div>
                         <div class="comment-rate">
-                          <p class="title">الإلتزام بالمواعيد</p>
+                          <p class="title">
+                            {{ "Adherence_toschedual" | translate }}
+                          </p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -872,7 +911,7 @@
                           </div>
                         </div>
                         <div class="comment-rate">
-                          <p class="title">التقييم العام</p>
+                          <p class="title">{{ "overall_ev" | translate }}</p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -907,7 +946,7 @@
                       </div>
                       <div class="comment-rates">
                         <div class="comment-rate">
-                          <p class="title">جودة العمل</p>
+                          <p class="title">{{ "work_quality" | translate }}</p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
 
@@ -918,7 +957,9 @@
                           </div>
                         </div>
                         <div class="comment-rate">
-                          <p class="title">التواصل و التعاون</p>
+                          <p class="title">
+                            {{ "communication_colaboration" | translate }}
+                          </p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -928,7 +969,9 @@
                           </div>
                         </div>
                         <div class="comment-rate">
-                          <p class="title">الإلتزام بالمواعيد</p>
+                          <p class="title">
+                            {{ "Adherence_toschedual" | translate }}
+                          </p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -938,7 +981,7 @@
                           </div>
                         </div>
                         <div class="comment-rate">
-                          <p class="title">التقييم العام</p>
+                          <p class="title">{{ "overall_ev" | translate }}</p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -1001,7 +1044,7 @@
                       </div>
                       <div class="comment-rates">
                         <div class="comment-rate">
-                          <p class="title">جودة العمل</p>
+                          <p class="title">{{ "work_quality" | translate }}</p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -1011,7 +1054,9 @@
                           </div>
                         </div>
                         <div class="comment-rate">
-                          <p class="title">التواصل و التعاون</p>
+                          <p class="title">
+                            {{ "communication_colaboration" | translate }}
+                          </p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -1021,7 +1066,9 @@
                           </div>
                         </div>
                         <div class="comment-rate">
-                          <p class="title">الإلتزام بالمواعيد</p>
+                          <p class="title">
+                            {{ "Adherence_toschedual" | translate }}
+                          </p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -1031,7 +1078,7 @@
                           </div>
                         </div>
                         <div class="comment-rate">
-                          <p class="title">التقييم العام</p>
+                          <p class="title">{{ "overall_ev" | translate }}</p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -1072,7 +1119,7 @@
                       </div>
                       <div class="comment-rates">
                         <div class="comment-rate">
-                          <p class="title">جودة العمل</p>
+                          <p class="title">{{ "work_quality" | translate }}</p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -1082,7 +1129,9 @@
                           </div>
                         </div>
                         <div class="comment-rate">
-                          <p class="title">التواصل و التعاون</p>
+                          <p class="title">
+                            {{ "communication_colaboration" | translate }}
+                          </p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -1092,7 +1141,9 @@
                           </div>
                         </div>
                         <div class="comment-rate">
-                          <p class="title">الإلتزام بالمواعيد</p>
+                          <p class="title">
+                            {{ "Adherence_toschedual" | translate }}
+                          </p>
                           <div class="stars">
                             <i class="fas fa-star star-active"></i>
                             <i class="fas fa-star star-active"></i>
@@ -1103,7 +1154,7 @@
                         </div>
 
                         <div class="comment-rate">
-                          <p class="title">التقييم العام</p>
+                          <p class="title">{{ "overall_ev" | translate }}</p>
                           <div class="stars">
                             <!-- <i class="fas fa-star star-active" *ngFor="let item of list"></i> -->
                             <i class="fas fa-star star-active"></i>
@@ -1127,7 +1178,8 @@
                       href="https://kafiil.com/service/36115-%D8%B2%D9%8A%D8%A7%D8%AF%D8%A9-%D9%85%D8%B4%D8%A7%D9%87%D8%AF%D8%A7%D8%AA-%D8%AA%D9%8A%D9%83-%D8%AA%D9%88%D9%83-2?show_all_ratings=1"
                       class="btn btn-secondary flex-item"
                     >
-                      <i class="far fa-star"></i> إظهر المزيد من التقييمات</a
+                      <i class="far fa-star"></i>
+                      {{ "showmore_comments" | translate }}</a
                     >
                   </div>
                 </div>
@@ -1141,7 +1193,7 @@
             <div class="seller-head">
               <span class="title">
                 <i class="fas fa-user"></i>
-                البائع
+                {{ "seller" | translate }}
               </span>
             </div>
             <div
@@ -1175,8 +1227,8 @@
               <span
                 class="seller-level d-flex align-items-center justify-content-center gap-2"
               >
-                <i class="fas fa-layer-group"></i> بائع مستوي :
-                <span>3</span></span
+                <i class="fas fa-layer-group"></i>
+                {{ "seller_level" | translate }}: <span>3</span></span
               >
               <span class="seller-rating d-flex gap-2">
                 <i class="fas fa-star star-active"></i>
@@ -1199,7 +1251,8 @@
                 </div>
                 <i class="far fa-eye"></i>
                 <span class="p-2"
-                  >اخر ظهور : <span class="seen-time"> منذ ساعه</span></span
+                  >{{ "last_seen" | translate }}:
+                  <span class="seen-time"> منذ ساعه</span></span
                 >
               </div>
               <div class="medals">
@@ -1224,7 +1277,7 @@
               </div>
               <a href="#" class="theme-btn primary-btn w-100 mt-4 rounded">
                 <i class="far fa-envelope"></i>
-                تواصل معي
+                {{ "contact_me" | translate }}
               </a>
             </div>
           </div>
@@ -1242,7 +1295,7 @@
                     aria-controls="collapseTwo"
                   >
                     <i class="fas fa-list-alt ms-3"></i>
-                    معلومات
+                    {{ "info" | translate }}
                   </button>
                 </h2>
                 <div
@@ -1257,7 +1310,7 @@
                       <div class="d-flex justify-content-between py-3">
                         <div>
                           <i class="fas fa-dollar-sign"></i>
-                          السعر
+                          {{ "price" | translate }}
                         </div>
                         <div>
                           {{ myservice.price }}
@@ -1268,7 +1321,7 @@
                       <div class="dark d-flex justify-content-between py-3">
                         <div>
                           <i class="fas fa-clock"></i>
-                          مدة التسليم
+                          {{ "deliveryDuration" | translate }}
                         </div>
                         <div>{{ myservice.deliveryDuration }}يوم</div>
                       </div>
@@ -1276,7 +1329,7 @@
                       <div class="d-flex justify-content-between py-3">
                         <div>
                           <i class="fas fa-shopping-cart"></i>
-                          طلبات قيد التسليم
+                          {{ "placed_orders" | translate }}
                         </div>
                         <div>0</div>
                       </div>
@@ -1284,7 +1337,7 @@
                       <div class="dark d-flex justify-content-between py-3">
                         <div>
                           <i class="fas fa-check"></i>
-                          الطلبات المكتملة
+                          {{ "complete_orders" | translate }}
                         </div>
                         <div>
                           {{ myservice.orderscount }}
@@ -1294,14 +1347,14 @@
                       <div class="d-flex justify-content-between py-3">
                         <div>
                           <i class="fas fa-users"></i>
-                          العملاء
+                          {{ "clients" | translate }}
                         </div>
                         <div>16</div>
                       </div>
                       <div class="d-flex justify-content-between py-3">
                         <div>
                           <i class="fas fa-chart-line"></i>
-                          المبيعات
+                          {{ "sales" | translate }}
                         </div>
                         <div>
                           {{ myservice.orderscount! * myservice.price! }} $
@@ -1310,7 +1363,7 @@
                       <div class="d-flex justify-content-between py-3">
                         <div>
                           <i class="fas fa-bars"></i>
-                          القسم
+                          {{ "category" | translate }}
                         </div>
                         <div>
                           {{ myservice.category }}
@@ -1330,7 +1383,7 @@
             reported="true"
           >
             <a href="#" class="side-offer-service o-hidden block">
-              <div class="ads-block-box">إعلان ممول</div>
+              <div class="ads-block-box">{{ "ads" | translate }}</div>
               <div class="img">
                 <img
                   src="https://kafiil.s3.eu-central-1.amazonaws.com/media/gig_other/e5c65c9671106f9ba70e1a78c4c75019/c/f7dfb2113decb3f2c11ea82d0a304088-medium.jpg"
@@ -1353,7 +1406,7 @@
                   aria-controls="collapseThree"
                 >
                   <i class="fas fa-share-alt ms-3"></i>
-                  شارك واربح
+                  {{ "share_win" | translate }}
                 </button>
               </h2>
               <div

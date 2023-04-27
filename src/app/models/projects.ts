@@ -1,4 +1,5 @@
 export interface Project {
+  id:string,
   Averageoffers:string,
   budget:string,
   discription:string,
