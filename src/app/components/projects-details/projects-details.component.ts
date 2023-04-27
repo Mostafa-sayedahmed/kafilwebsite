@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { Iproject } from 'src/app/models/iproject';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { categoryprojects } from 'src/app/models/categoryProject';
 import { ProjectsService } from 'src/app/services/projects.service';
 
 @Component({
@@ -7,15 +8,20 @@ import { ProjectsService } from 'src/app/services/projects.service';
   templateUrl: './projects-details.component.html',
   styleUrls: ['./projects-details.component.scss'],
 })
-export class ProjectsDetailsComponent {
-  project: Iproject[] = [];
+export class ProjectsDetailsComponent implements OnInit{
 
-  constructor(private PS: ProjectsService) {}
+  project :any = {};
+  ListofCatproj : categoryprojects [] = [] ;
 
-  ngOnInit() {
-    this.PS.getProjects().subscribe((data) => {
-      // console.log("projects",data);
-      this.project = data;
-    });
-  }
+
+  constructor(private proj:ProjectsService , private route:ActivatedRoute) {}
+
+  ngOnInit(): void {
+
+    this.proj.getCategoryProject().subscribe(res=>{ this.ListofCatproj = res ;console.log(this.ListofCatproj) })
+    let idproj = this.route.snapshot.paramMap.get('projectID')
+     this.proj.getprojecetById(idproj).subscribe( (data) =>{this.project = data ,console.log(data) })
+ }
+
+
 }

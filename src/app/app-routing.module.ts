@@ -20,6 +20,7 @@ import { AddportfoliosComponent } from './components/addportfolios/addportfolios
 import { DetailsPortfoliosComponent } from './components/details-portfolios/details-portfolios.component';
 import { ProjectsDetailsComponent } from './components/projects-details/projects-details.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { AddProjectComponent } from './components/add-project/add-project.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -54,6 +55,11 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   { path: 'detailsPortfolois/:id', component: DetailsPortfoliosComponent },
+  {
+    path:'addproject',
+    component:AddProjectComponent,
+    canActivate: [AuthGuard],
+  },
   { path: 'projects', component: ProjectsComponent },
   { path: 'projects/:projectID', component: ProjectsDetailsComponent },
 

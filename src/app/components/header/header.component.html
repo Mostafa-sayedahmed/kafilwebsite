@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" [dir]="'dir' | translate">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -68,45 +68,64 @@
                   type="text"
                   placeholder="ابحث عن ..."
                   class="searchbox-input"
+                  #searchtxt
+                  (keydown)="search(searchtxt.value)"
+                  (keyup)="search(searchtxt.value)"
                 />
               </form>
+              <section
+                class="search-result d-flex flex-column align-items-center"
+                *ngIf="searchtxt.value != ''"
+              >
+                <ng-container
+                  *ngFor="let item of headsearchlist; let i = index"
+                >
+                  <a *ngIf="i < 5" href="services/{{ item.uid }}">{{
+                    item.data.title
+                  }}</a>
+                </ng-container>
+              </section>
             </div>
             <div class="borderseprator"></div>
             <ul class="nav-list d-flex justify-content-between">
               <li class="headerlistitem">
                 <a href="/services" class="link active">
                   <i class="fas fa-shopping-cart"></i>
-                  الخدمات
+                  {{'Serves'| translate}}
                 </a>
               </li>
               <li class="headerlistitem">
                 <a href="/contests" class="link active">
                   <i class="fas fa-trophy"></i>
-                  المسابقات
+                  {{'contests'| translate}}
+
                 </a>
               </li>
               <li class="headerlistitem">
                 <a href="/projects" class="link active">
                   <i class="fas fa-briefcase"></i>
-                  المشاريع
+                  {{'projects'| translate}}
+
                 </a>
               </li>
               <li class="headerlistitem">
                 <a href="/portfolios" class="link active">
                   <i class="far fa-image"></i>
-                  الأعمال
+                  {{'portfolois'| translate}}
+
                 </a>
               </li>
               <li class="headerlistitem">
                 <a href="/freelancers" class="link active">
                   <i class="fas fa-users"></i>
-                  المستقلين
+                  {{'freelancers'| translate}}
+
                 </a>
               </li>
               <li class="headerlistitem">
                 <a href="#" class="link active">
                   <i class="fas fa-bars"></i>
-                  المزيد
+                  {{'more'| translate}}
                 </a>
               </li>
             </ul>
@@ -118,14 +137,25 @@
               src="https://kafiil.com/assets/images/logos/small.svg"
               alt="logo small"
             />
-            <form action="" class="searchbox">
+            <!-- <form action="" class="searchbox">
               <i class="fas fa-search fs-5 px-2"></i>
               <input
                 type="text"
-                placeholder="ابحث عن ..."
+                placeholder=' {{ "search" | translate }}'
                 class="searchbox-input"
+                #searchtxtsmall
               />
             </form>
+            <section
+              class="search-result d-flex flex-column align-items-center"
+              *ngIf="searchtxtsmall.value != ''"
+            >
+              <ng-container *ngFor="let item of headsearchlist; let i = index">
+                <a *ngIf="i < 5" href="services/{{ item.uid }}">{{
+                  item.data.title
+                }}</a>
+              </ng-container>
+            </section> -->
             <div class="userlogin d-flex justify-content-between gap-3">
               <ng-container *ngIf="user !== null">
                 <div
@@ -162,21 +192,21 @@
                         <a
                           class="dropdown-item d-flex justify-content-between"
                           href="/createservice"
-                          >اضافة خدمة</a
+                          > {{'addService'| translate}}</a
                         >
                       </li>
                       <li>
                         <a
                           class="dropdown-item d-flex justify-content-between"
                           routerLink="/addContest"
-                          >اضافة مسابقة</a
+                          >{{'addContest'| translate}}</a
                         >
                       </li>
                       <li>
                         <a
                           class="dropdown-item d-flex justify-content-between"
                           routerLink="/newportfolio"
-                          >اضافة اعمال</a
+                          > {{'addPortfolio'| translate}}</a
                         >
                       </li>
                       <li>
@@ -187,7 +217,7 @@
                           class="dropdown-item d-flex justify-content-between"
                           (click)="logout()"
                         >
-                          <span> تسجيل الخروج </span>
+                          <span>  {{'logout'| translate}} </span>
                           <i class="fa-solid fa-power-off"></i>
                         </a>
                       </li>
@@ -197,10 +227,10 @@
               </ng-container>
               <ng-container *ngIf="user == null">
                 <a href="/sign-in">
-                  <button class="btn btn-light px-4 border">دخول</button>
+                  <button class="btn btn-light px-4 border">{{'Login'| translate}}</button>
                 </a>
                 <a href="/register">
-                  <button class="btn btn-register border">حساب جديد</button>
+                  <button class="btn btn-register border"> {{'RegisterNow'| translate}}</button>
                 </a>
               </ng-container>
             </div>
@@ -212,7 +242,7 @@
                 aria-expanded="false"
               >
                 <i class="fa-solid fa-globe"></i>
-                <span class="lang-name">العربية</span>
+                <!-- <span class="lang-name">العربية</span> -->
               </button>
               <ul class="dropdown-menu">
                 <li>
