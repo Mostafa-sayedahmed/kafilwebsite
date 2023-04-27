@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,13 +8,13 @@
   </head>
   <body>
     <div class="container d-flex mt-2 justify-content-between">
-      <div class="col-12 col-lg-8 rounded border ms-4 bg-white mb-5">
+      <div class="col-12 col-lg-8 rounded border mx-4 bg-white mb-5">
         <div
           class="add-service-header py-2 px-3 d-flex justify-content-between flex-row align-items-center"
         >
           <span class="pagetitle">
             <i class="far fa-list-alt"></i>
-            أضف خدمة مصغرة
+            {{ "add_mservice" | translate }}
           </span>
 
           <button
@@ -22,7 +22,8 @@
             (click)="restoreDraft()"
             *ngIf="serviceDraft != null"
           >
-            استرجاع المسودة<i class="fa-solid fa-arrow-rotate-left px-2"></i>
+            {{ "recover_draft" | translate
+            }}<i class="fa-solid fa-arrow-rotate-left px-2"></i>
           </button>
         </div>
         <!-- {{ serviceform.value | json }}  -->
@@ -43,14 +44,16 @@
             {{ serviceform.get("buyerinstructions")?.errors | json }} -->
 
             <div class="mb-3">
-              <label for="title" class="form-label">العنوان</label>
+              <label for="title" class="form-label">{{
+                "title" | translate
+              }}</label>
               <input
                 type="text"
                 class="form-control"
                 formControlName="title"
                 id="title"
                 name="title"
-                placeholder="ماذا سوف تقدم في الخدمة.؟"
+                placeholder="{{ 'what_u_offer' | translate }}"
                 required
                 [class.is-valid]="serviceform.get('title')?.valid"
                 [class.is-invalid]="
@@ -76,7 +79,9 @@
               </div>
             </div>
             <div class="mb-3">
-              <label for="category" class="form-label">القسم</label>
+              <label for="category" class="form-label">{{
+                "category" | translate
+              }}</label>
               <select
                 id="category"
                 class="form-select"
@@ -88,7 +93,7 @@
                 "
               >
                 <option selected disabled value="" class="text-light-emphasis">
-                  القسم
+                  {{ "category" | translate }}
                 </option>
                 <option
                   *ngFor="let item of categorylist"
@@ -113,14 +118,16 @@
               </div>
             </div>
             <div class="mb-3">
-              <label for="description" class="form-label">وصف الخدمة:</label>
+              <label for="description" class="form-label"
+                >{{ "description" | translate }}:</label
+              >
               <textarea
                 class="form-control"
                 id="description"
                 name="description"
                 formControlName="description"
                 rows="7"
-                placeholder="الوصف"
+                placeholder="{{ 'description' | translate }}"
                 required
                 [class.is-valid]="serviceform.get('description')?.valid"
                 [class.is-invalid]="
@@ -155,7 +162,7 @@
             >
               <div class="col-12 col-md-5 d-flex flex-grow-1 flex-column">
                 <span class="mb-2 text-black-50">
-                  الصورة الرئيسية
+                  {{ "main_img" | translate }}
 
                   <i
                     class="fas fa-lightbulb"
@@ -175,7 +182,7 @@
                     href="#"
                     (click)="chosemainimg()"
                   >
-                    اختر صورة</a
+                    {{ "choose_img" | translate }}</a
                   >
                   <div
                     class="imgpreview d-flex flex-column"
@@ -204,7 +211,7 @@
               </div>
               <div class="col-12 col-md-5 d-flex flex-grow-1 flex-column">
                 <span class="mb-2 text-black-50">
-                  صور إضافية
+                  {{ "additional_imgs" | translate }}
                   <i
                     class="fas fa-lightbulb"
                     data-toggle="tooltip"
@@ -223,8 +230,8 @@
                     href="#"
                     (click)="choseimgs()"
                   >
-                    اختر صور اضافية</a
-                  >
+                    {{ "choose_imgs" | translate }}
+                  </a>
                   <div
                     class="imgpreview d-flex flex-wrap gap-3"
                     *ngIf="otherImgs && otherImgs !== null"
@@ -251,7 +258,7 @@
             <!-- buyer instructions -->
             <div class="mb-3">
               <label for="buyerinstructions" class="form-label"
-                >تعليمات للمشتري:</label
+                >{{ "buyer_instructions" | translate }}:</label
               >
               <textarea
                 class="form-control"
@@ -259,7 +266,7 @@
                 name="buyerinstructions"
                 formControlName="buyerinstructions"
                 rows="7"
-                placeholder="التعليمات"
+                placeholder="{{ 'buyer_instructions' | translate }}"
                 required
                 [class.is-valid]="serviceform.get('buyerinstructions')?.valid"
                 [class.is-invalid]="
@@ -329,7 +336,7 @@
               </div>
               <div class="col">
                 <label for="deliveryDuration" class="form-label"
-                  >مدة التسليم:</label
+                  >{{ "deliveryDuration" | translate }}:</label
                 >
                 <select
                   id="inputState"
@@ -341,7 +348,9 @@
                     serviceform.get('deliveryDuration')?.dirty
                   "
                 >
-                  <option selected value="" disabled>مدة التسليم</option>
+                  <option selected value="" disabled>
+                    {{ "deliveryDuration" | translate }}
+                  </option>
                   <option value="1">يوم</option>
                   <option value="2">يومين</option>
                   <option
@@ -425,7 +434,7 @@
 
                 <div class="col-5 mb-3">
                   <label for="addonPrice" class="form-label"
-                    >سعر الاضافة:</label
+                    >{{ "addon_price" | translate }}:</label
                   >
                   <input
                     type="number"
@@ -459,7 +468,7 @@
                 </div>
                 <div class="col-5">
                   <label for="deliveryDuration" class="form-label"
-                    >مدة التسليم:</label
+                    >{{ "deliveryDuration" | translate }}:</label
                   >
                   <select
                     id="addonDeliveryDuration"
@@ -492,7 +501,7 @@
                     (click)="deleteaddon(i)"
                   >
                     <i class="fas fa-minus-square"></i>
-                    حذف الاضافة
+                    {{ "delete_addon" | translate }}
                   </button>
                 </div>
               </div>
@@ -506,14 +515,14 @@
                 (click)="newaddon()"
               >
                 <i class="fas fa-plus-square"></i>
-                أضف إضافات اخري لخدمتك
+                {{ "add_addon" | translate }}
               </button>
             </div>
             <button
               type="submit"
               class="btn btn-success rounded submitbtn border-white"
             >
-              اضف الخدمة
+              {{ "place_service" | translate }}
             </button>
 
             <button
@@ -525,8 +534,8 @@
               #preloaderdismissmodalbtn
               (click)="saveDraft()"
             >
-              احفظ كمسودة
-              <i class="fa-regular fa-floppy-disk px-2"></i>
+              {{ "SavDraft" | translate
+              }}<i class="fa-regular fa-floppy-disk px-2"></i>
             </button>
             <!-- <button class="btn btn-outline-dark">
               احفظ كمسودة

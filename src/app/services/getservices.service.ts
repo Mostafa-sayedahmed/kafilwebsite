@@ -30,6 +30,7 @@ export class GetservicesService {
   }
   async getservices() {
     const querySnapshot = await getDocs(collection(this.firestore, 'services'));
+    this.serviceslist = [];
     querySnapshot.forEach((doc) => {
       this.serviceslist = [
         ...this.serviceslist,
