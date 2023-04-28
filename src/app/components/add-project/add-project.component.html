@@ -3,55 +3,55 @@
     <section class="container p-3 my-5">
       <div class="d-flex ">
         <!-- Right Side -->
-        <div class="flex-grow-1 border rounded-3 p-3 bg-white me-4">
-            <h4 class="p-3 bg-white"><i class="fa-sharp fa-solid fa-list me-2"></i> اضف مشروع </h4>
+        <div class="flex-grow-1 border rounded-3 p-3 bg-white mx-4">
+            <h4 class="p-3 bg-white"><i class="fa-sharp fa-solid fa-list me-2"></i> {{"add_project"|translate}} </h4>
               <hr>
             <form action="" >
                <div class="mb-3">
-                  <label for="title" class="form-label">العنوان</label>
-                  <input class="form-control" type="text" name="Title" id="title" placeholder="العنوان" required>
+                  <label for="title" class="form-label">{{"Set_title"|translate}}</label>
+                  <input class="form-control" type="text" name="Title" id="title" placeholder='{{"Set_title"|translate}}' required>
                </div>
                <div class="mb-3">
-                <label for="discription" class="form-label">الوصف</label>
-                <textarea class="form-control" name="discription" id="discription" cols="30" rows="10" placeholder="الوصف" required></textarea>
+                <label for="discription" class="form-label">{{"Set_discription"|translate}}</label>
+                <textarea class="form-control" name="discription" id="discription" cols="30" rows="10" placeholder= '{{"Set_discription"|translate}}' required></textarea>
              </div>
                 <div class="row mb-3">
                     <div class="col">
-                         <label for="Department" class="form-label">القسم</label>
+                         <label for="Department" class="form-label">{{"Choose_Category"|translate}}</label>
                           <select name="Department" id="Department" class="form-select" required >
-                            <option selected>القسم</option>
+                            <option selected>{{"Choose_Category"|translate}}</option>
                             <option value={{cat.id}} *ngFor="let cat of LisTOfCat; let i = index">{{cat.name}}</option>
                           </select>
                     </div>
                     <div class="col">
-                      <label for="skills" class="form-label">المهارات(اختياري)</label>
-                      <input type="text" name="skills" id="skills" pleaceholder="المهارات" class="form-control">
+                      <label for="skills" class="form-label"> {{"Choose_skills"|translate}} </label>
+                      <input type="text" name="skills" id="skills" placeholder='{{"Choose_skills"|translate}}'  class="form-control">
                     </div>
                 </div>
                   <div class='row mb-5'>
                       <div class="col" >
-                        <label for="budget" class="form-label">الميزانية المتوقعة</label>
+                        <label for="budget" class="form-label">{{"Choose_Budget"|translate}}</label>
                         <select name="budget" id="budget" class="form-select" required>
-                          <option selected>الميزانية المتوقعة</option>
+                          <option selected>{{"Choose_Budget"|translate}}</option>
                         </select>
                       </div>
                       <div class="col" >
-                        <label for="Time" class="form-label">وقت التسليم المتوقع (بالأيام) </label>
+                        <label for="Time" class="form-label">{{"choose_DeliveryDuration"|translate}}</label>
                         <select name="Time" id="Time" class="form-select" required>
-                          <option selected>وقت التسليم المتوقع</option>
+                          <option selected>{{"choose_DeliveryDuration"|translate}}</option>
                         </select>
                       </div>
 
                   </div>
 
-                    <button type="submit" class="btn btn-success fw-bold fs-5 w-100 mb-2" (click)="GetAddProjcet()">اضف</button>
+                    <button type="submit" class="btn btn-success fw-bold fs-5 w-100 mb-2" (click)="GetAddProjcet()">{{"Set_add"|translate}}</button>
 
             </form>
         </div>
         <!-- left Side -->
         <div class=" col-lg-4  col-sm-none">
           <div>
-            <h3>نشر مشروعك على كفيل</h3>
+            <h3>{{"Set_H1"|translate}}</h3>
             <!-- <iframe
               width="450"
               height="315"
@@ -63,33 +63,18 @@
             ></iframe> -->
            </div>
           <p class="text-muted">
-            تساعدك منصة كفيل على تنفيذ أعمالك ومشاريعك بسهوله وإحترافية عن طريق
-            توصيلك بأفضل المستقلين المتخصصين القادرين على التعاون معك لتنفيذ
-            متطلباتك, فقط أنشئ مشروع جديد وأكتب متطلباتك وأنتظر عروض المستقلين
-            المختلفين للمقارنة بينهم وإختيار أفضلهم
+            {{"Set_P1"|translate}}
           </p>
           <div>
-            <h3><i class="fa-solid fa-lightbulb"></i> نصائح لإضافة مشروعك</h3>
+            <h3><i class="fa-solid fa-lightbulb"></i>  {{"Set_H2"|translate}}</h3>
             <ul class="text-muted">
-              <li>ضف عنوان معبر لمشروعك</li>
-              <li>
-                اشرح متطلباتك بشكل واضح باللغة العربية حتى يسهل على المستقلين فهمها
-                وتنفيذها
-              </li>
-              <li>
-                أضف قسم ومهارات مناسبة لمشروعك حتى يسهل على المستقلين المتخصصين
-                الوصل إلى مشروعك
-              </li>
-              <li>
-                حدد النقاط الهامة في المشروع في نقاط رئيسية والتي لا تتوقع اكتمال
-                المشروع بدونها
-              </li>
-              <li>
-                جزء مشروعك إلى مشاريع أصغر حتى تحصل على أفضل العروض في كل تخصص على
-                حدى
-              </li>
-              <li>حدد مدة تنفيذ و ميزانية كافية منطقية مع متطلبات مشروعك</li>
-              <li>وفر امثلة في حالة توافرها لضمان وضوح أكثر لمتطلباتك</li>
+              <li>{{"Set_Point1"|translate}}</li>
+              <li>{{"Set_Point2"|translate}}</li>
+              <li>{{"Set_Point3"|translate}}</li>
+              <li>{{"Set_Point4"|translate}}</li>
+              <li>{{"Set_Point5"|translate}}</li>
+              <li>{{"Set_Point6"|translate}}</li>
+              <li>{{"Set_Point7"|translate}}</li>
             </ul>
           </div>
           <div>
@@ -98,12 +83,10 @@
                 class="fas fa-shield-alt"
                 style="color: #1dbf73; font-size: larger"
               ></p>
-              <h3>كفيل يضمن حقوقك</h3>
+              <h3> {{"Set_H3"|translate}}</h3>
             </div>
             <p class="text-muted">
-              توفر لك منصة كفيل بيئه متكاملة لعرض خدماتك و التواصل والدفع وسحب
-              الأرباح وغيره, تلعب فيها دور الوسيط بين البائع و المشتري لتضمن تجربه
-              ناجحه مرضيه للطرفين.
+              {{"Set_P2"|translate}}
             </p>
           </div>
         </div>
