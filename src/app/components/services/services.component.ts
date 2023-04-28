@@ -282,9 +282,7 @@ export class ServicesComponent implements OnInit, DoCheck {
   ];
   async ngOnInit() {
     this.spinner.show();
-    setTimeout(() => {
-      this.spinner.hide();
-    }, 2000);
+
     // let preloader = this.preloadermodalbtn.nativeElement;
     // preloader.click();
 
@@ -311,9 +309,10 @@ export class ServicesComponent implements OnInit, DoCheck {
           ? (this.serviceslist = [...this.serviceslist, element])
           : null;
       });
-      // setTimeout(() => {
-      //   this.spinner.hide;
-      // }, 500);
+
+      setTimeout(() => {
+        this.spinner.hide();
+      }, 500);
     });
 
     for (let service of this.serviceslist) {
