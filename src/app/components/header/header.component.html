@@ -235,44 +235,14 @@
               </ng-container>
             </div>
             <div class="language mx-2">
-              <button
-                class="btn dropdown-toggle border-end ps-0"
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <i class="fa-solid fa-globe"></i>
-                <!-- <span class="lang-name">العربية</span> -->
-              </button>
-              <ul class="dropdown-menu">
-                <li>
-                  <button
-                    (click)="changeLang('ar')"
-                    class="dropdown-item"
-                    type="button"
-                  >
-                    العرية<img
-                      class="lang-img"
-                      src="https://cdn-icons-png.flaticon.com/512/6211/6211614.png"
-                      alt=""
-                    />
-                  </button>
-                </li>
-                <li>
-                  <button
-                    (click)="changeLang('en')"
-                    class="dropdown-item"
-                    type="button"
-                  >
-                    English
-                    <img
-                      class="lang-img"
-                      src="https://cdn-icons-png.flaticon.com/512/4060/4060233.png"
-                      alt=""
-                    />
-                  </button>
-                </li>
-              </ul>
+              <select class="form-select border-end ps-0" (change)="changeLang(lang.value)" #lang>
+                <option value="ar" >
+                  العربية
+                </option>
+                <option value="en"  >
+                  English
+                </option>
+              </select>
             </div>
           </div>
         </div>

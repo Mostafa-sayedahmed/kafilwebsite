@@ -1,7 +1,7 @@
 <div>
   <div class="row m-0 p-3">
     <div class="col-3 d-none d-lg-flex flex-column p-3">
-      <span class="fs-4 my-3">إنشر خدمتك المصغرة على كفيل</span>
+      <span class="fs-4 my-3">{{'post'| translate}} </span>
       <iframe
         width="370"
         height="210"
@@ -12,39 +12,32 @@
         allowfullscreen
       ></iframe>
       <p class="text-black-50 my-4">
-        تساعدك منصة كفيل على الربح من مهاراتك عن طريق نشر خدمتك بداً من 5
-        دولار والوصول إلى ألاف المشتريين المهتميين. فقط أضف خدمتك وبمجرد
-        قبولها من الإدارة, تصبح متاحة للجميع
+        {{'KafiilPlatformHelps'| translate}}
       </p>
-      <h5><span class="fas fa-lightbulb"></span> نصائح لإضافة خدمتك</h5>
+      <h5><span class="fas fa-lightbulb"></span>{{'Tips'| translate}}</h5>
       <ul class="px-3 tips-content">
-        <li>قم بوضح عنوان واضح ومعبر عن خدمتك وما تقدمه</li>
+        <li>{{'Tips1'| translate}}</li>
         <li>
-          أضف قسم ومهارات مناسبه لخدمتك حتى يسهل على المستخدمين الوصول لها
+          {{'Tips2'| translate}}
         </li>
         <li>
-          اوصف خدمتك باللغة العربيه بشكل واضح حتى يسهل على المشتري فهم ما سوف
-          يحصل عليه من خدمتك
+          {{'Tips3'| translate}}
         </li>
-        <li>أضف صوره رئيسيه معبره جذابه بجودة عاليه لخدمتك</li>
+        <li> {{'Tips4'| translate}} </li>
         <li>
-          أكتب تعليماتك للمشتري بشكل مختصر حتى تظهر له التعليمات بعد شراءه
-          لخدمتك
+          {{'Tips5'| translate}}
         </li>
         <li>
-          أضف سعر مناسب و منافس للخدمة التى تقدمها بعد الإطلاع على الخدمات
-          الشبيهه على المنصة
+          {{'Tips6'| translate}}
         </li>
       </ul>
       <div class="col-12 px-0 mb-4">
         <h5>
-          <span class="fas fa-shield-alt" style="color: #1dbf73"> </span>كفيل
-          يضمن حقوقك
+          <span class="fas fa-shield-alt" style="color: #1dbf73"> </span>
+          {{'KafiilGuarantees'| translate}}
         </h5>
         <div class="col-12 px-0 tips-content">
-          توفر لك منصة كفيل بيئه متكاملة لعرض خدماتك و التواصل والدفع وسحب
-          الأرباح وغيره, تلعب فيها دور الوسيط بين البائع و المشتري لتضمن تجربه
-          ناجحه مرضيه للطرفين.
+          {{'KafiilPlatform'| translate}}
         </div>
       </div>
     </div>
@@ -53,7 +46,7 @@
     
       <form class="p-3" (ngSubmit)="addData()">
         <div class="mb-3">
-          <label for="name">الاسم</label>
+          <label for="name">{{'name'| translate}}</label>
           <input
             type="text"
             class="form-control"
@@ -63,7 +56,7 @@
           />
         </div>
         <div class="mb-3">
-          <label for="ownerimg">صورة صاحب العمل</label>
+          <label for="ownerimg">{{'imgowner'| translate}}</label>
           <input
             type="text"
             class="form-control"
@@ -84,7 +77,7 @@
           />
         </div>
         <div class="mb-3">
-          <label for="img">الصورة</label>
+          <label for="img">{{'img'| translate}}</label>
           <input
             type="text"
             class="form-control"
@@ -127,7 +120,7 @@
             />
           </div>
           <div class="mb-3">
-            <label for="like">الإعجابات</label>
+            <label for="like">{{'like'| translate}}</label>
             <input
               type="number"
               class="form-control"
@@ -137,11 +130,11 @@
             />
           </div>
           <div class="col">
-            <label for="skills" class="form-label">المهارات</label>
+            <label for="skills" class="form-label">{{'skill'| translate}}</label>
             <input type="text" class="form-control text-muted" id="skills" />
           </div>
         </div>
-        <button type="submit">اضف</button>
+        <button type="submit">{{'add'| translate}}</button>
       </form>
     </div>
   </div>
