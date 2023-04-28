@@ -62,6 +62,7 @@ const routes: Routes = [
   },
   { path: 'projects', component: ProjectsComponent },
   { path: 'projects/:projectID', component: ProjectsDetailsComponent },
+  { path: 'home', component: HomeComponent },
 
   { path: '**', component: NotfoundComponent },
 ];

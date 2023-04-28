@@ -5,7 +5,7 @@
         class="px-2 py-3 text-nowrap text-center fs-5 fw-bold mb-3 rounded bg-success"
       >
         <a routerLink="/addproject" class="text-decoration-none text-white"
-          ><i class="far fa-plus-square mx-3"></i> اضف مشروع
+          ><i class="far fa-plus-square mx-3"></i> {{ "add_project" | translate }}'
         </a>
       </div>
       <!-- canvas Btn -->
@@ -29,7 +29,7 @@
           class="px-2 py-3 text-nowrap text-center fs-5 fw-bold mb-3 rounded bgcolorbtn"
         >
           <a routerLink="/addproject" class="text-decoration-none text-white"
-            ><i class="far fa-plus-square mx-3"></i> اضف مشروع
+            ><i class="far fa-plus-square mx-3"></i> {{ "add_project" | translate }}
           </a>
         </div>
         <!-- canvas Btn
@@ -63,7 +63,7 @@
                 aria-expanded="true"
                 aria-controls="collapseOne"
               >
-                الأقسام
+              {{"category"|translate}}
               </button>
             </h2>
             <div
@@ -87,7 +87,7 @@
                 aria-expanded="false"
                 aria-controls="collapseTwo"
               >
-                المهارات
+              {{"skills"|translate}}
               </button>
             </h2>
             <div
@@ -111,7 +111,7 @@
                 aria-expanded="false"
                 aria-controls="collapseThree"
               >
-                مدة التسليم
+              {{"delivery_Duration"|translate}} 
               </button>
             </h2>
             <div
@@ -140,7 +140,7 @@
               aria-expanded="true"
               aria-controls="collapseOne"
             >
-              الأقسام
+            {{"category"|translate}}
             </button>
           </h2>
           <div
@@ -164,7 +164,7 @@
               aria-expanded="false"
               aria-controls="collapseTwo"
             >
-              المهارات
+              {{"skills"|translate}}
             </button>
           </h2>
           <div
@@ -188,7 +188,7 @@
               aria-expanded="false"
               aria-controls="collapseThree"
             >
-              مدة التسليم
+            {{"delivery_Duration"|translate}}
             </button>
           </h2>
           <div
@@ -212,18 +212,18 @@
 
     <!-- start main side {cards} -->
     <!-- first card {heading} -->
-    <div class="col-lg-8 col-md-12">
+    <div class="col-lg-8 col-md-12 ">
 
-      <div class="d-flex justify-content-between text-muted shadow p-3 rounded">
+      <div class="d-flex justify-content-between bg-white text-muted shadow p-3 rounded">
         <!-- heading -->
         <h4 class="d-md-block">
-          <i class="fa-solid fa-comment-dots"></i> المشاريع
+          <i class="fa-solid fa-comment-dots"></i> {{"projects"|translate}}
         </h4>
         <div class="d-flex">
           <!-- input-check -->
           <div class="border rounded mx-2">
             <div class="form-check form-check-inline">
-              <label class="form-check-label" for="inlineRadio1">الكل </label>
+              <label class="form-check-label" for="inlineRadio1">{{"all"|translate}} </label>
               <input
                 class="form-check-input"
                 type="radio"
@@ -236,7 +236,7 @@
               />
             </div>
             <div class="form-check form-check-inline">
-              <label class="form-check-label" for="inlineRadio2">المفتوح</label>
+              <label class="form-check-label" for="inlineRadio2">{{"open"|translate}}</label>
               <input
                 class="form-check-input"
                 type="radio"
@@ -257,7 +257,7 @@
               aria-expanded="false"
             >
               <i class="fa-solid fa-filter p-1"></i>
-              الأحدث
+              {{"Latest"|translate}}
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
               <li><a class="dropdown-item" href="#">الأحدث</a></li>
@@ -278,7 +278,7 @@
 
       <!-- <button  (click)="getData()" >get data</button> -->
       <ng-container *ngFor="let data of ListOfProject; let i = index">
-        <div class="d-flex p-4 shadow-lg rounded my-2" >
+        <div class="d-flex p-4  shadow-lg rounded my-3 bg-white " >
           <img
             class="d-sm-none d-lg-block ms-2 my-2"
             style="border-radius: 50%; width: 9%"
@@ -291,7 +291,7 @@
                 <a
                   class="text-white text-decoration-none p-1 bgcolorbtn rounded"
                   href="#"
-                  >مفتوح</a
+                  >{{"open"|translate}}</a
                 >
               </div>
               <h4 class="p-2" (click)="Detailsproject(data.id)" style="cursor: pointer;">{{ data.title }}</h4>

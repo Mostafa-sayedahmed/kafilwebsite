@@ -62,30 +62,30 @@ export class AddserviceComponent implements OnInit, AfterViewInit {
 
   @ViewChild('loadingmodalbtn', { static: true })
   modalbtn!: ElementRef<HTMLElement>;
-  @ViewChild('preloadermodalbtn', { static: true })
-  preloadermodalbtn!: ElementRef<HTMLElement>;
-  @ViewChild('preloaderdismissmodalbtn', { static: true })
-  preloaderdismissmodalbtn!: ElementRef<HTMLElement>;
+  // @ViewChild('preloadermodalbtn', { static: true })
+  // preloadermodalbtn!: ElementRef<HTMLElement>;
+  // @ViewChild('preloaderdismissmodalbtn', { static: true })
+  // preloaderdismissmodalbtn!: ElementRef<HTMLElement>;
   ngOnInit() {
-    let preloader = this.preloadermodalbtn.nativeElement;
-    let dismiss = this.preloaderdismissmodalbtn.nativeElement;
-    preloader.click();
+    // let preloader = this.preloadermodalbtn.nativeElement;
+    // let dismiss = this.preloaderdismissmodalbtn.nativeElement;
+    // preloader.click();
 
     this.Category.getcategories()
       .then((res) => {
         this.categorylist = Array.from(res);
-        dismiss.click();
+        // dismiss.click();
       })
       .catch((err) => {
         console.log(err);
-        preloader.click();
+        // preloader.click();
       });
 
     console.log('dismiss');
   }
   ngAfterViewInit() {
-    let dismiss = this.preloaderdismissmodalbtn.nativeElement;
-    dismiss.click();
+    // let dismiss = this.preloaderdismissmodalbtn.nativeElement;
+    // dismiss.click();
   }
   onfilechange(input: any) {
     const file = input.target.files[0];
