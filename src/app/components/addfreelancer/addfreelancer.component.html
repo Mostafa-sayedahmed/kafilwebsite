@@ -195,14 +195,14 @@
             >
               <div class="form-row">
                 <div class="form-group">
-                  <label for="inputEmail4" class="my-2">الاسم كاملاً :</label>
+                  <label for="inputEmail4" class="my-2">{{"Fullname"|translate}}</label>
                   <input
                     type="text"
                     name="name"
                     [(ngModel)]="newFreelancer.name"
                     class="form-control"
                     id="inputEmail4"
-                    placeholder=" الاسم ..."
+                    placeholder=" {{'name'|translate}}"
                     #freelancerName="ngModel"
                     required
                     pattern="[أ-ي \s]{3,}"
@@ -216,16 +216,16 @@
                     [hidden]="freelancerName.valid || freelancerName.untouched"
                   >
                     <small *ngIf="freelancerName.errors?.['required']"
-                      >يجب اضافة الأسم</small
+                      > {{"must add name"|translate}}</small
                     >
                     <small *ngIf="freelancerName.errors?.['pattern']">
-                      الاسم على الاقل 3 حروف وباللغة العربية</small
+                      {{"name must be at least 3 characers"|translate}} </small
                     >
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="inputPassword4" class="my-2"
-                    >البريد الالكتروني :</label
+                    >{{"Email"|translate}}:</label
                   >
                   <input
                     #email
@@ -233,25 +233,25 @@
                     name="email"
                     class="form-control"
                     id="inputPassword4"
-                    placeholder="البريد الالكتروني ... "
+                    placeholder="{{'Email'|translate}} "
                     required
                   />
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputAddress" class="my-2">الدولة :</label>
+                <label for="inputAddress" class="my-2">{{"Country"|translate}} :</label>
                 <input
                   type="text"
                   name="country"
                   class="form-control"
                   id="inputAddress"
-                  placeholder="الدولة ..."
+                  placeholder="{{'Country'|translate}} ..."
                   required
                   pattern="[أ-ي]{3,12}"
                 />
               </div>
               <div class="form-group">
-                <label for="title" class="my-2"> الوظيفة :</label>
+                <label for="title" class="my-2"> {{"Job"|translate}} :</label>
                 <input
                   #freelancerTitle="ngModel"
                   type="text"
@@ -259,7 +259,7 @@
                   [(ngModel)]="newFreelancer.title"
                   class="form-control"
                   id="title"
-                  placeholder="المهارات التي اتحلى بها ..."
+                  placeholder="{{'Which Skills I have'|translate}}"
                   required
                   pattern="[أ-ي \s]{3,}"
                   [class.is-valid]="freelancerTitle.valid"
@@ -272,16 +272,16 @@
                   [hidden]="freelancerTitle.valid || freelancerTitle.untouched"
                 >
                   <small *ngIf="freelancerTitle.errors?.['required']"
-                    >يجب اضافة الوظيفة</small
+                    >{{'Must add Job'|translate}}</small
                   >
                   <small *ngIf="freelancerTitle.errors?.['pattern']"
-                    >الوظيفة على الاقل 3 حروقوباللغة العربية
+                    >{{'Job must be at least 3 characters'|translate}}
                   </small>
                 </div>
               </div>
               <div class="form-group">
                 <label for="inputAddress3" class="my-2">
-                  الصورة الشخصية (رابط الصورة) :</label
+                  {{'Personal Pic ( URL )'|translate}} </label
                 >
                 <input
                   #freelancerImg="ngModel"
@@ -290,7 +290,7 @@
                   [(ngModel)]="newFreelancer.img"
                   class="form-control"
                   id="inputAddress3"
-                  placeholder="رابط صورتي الشخصية ..."
+                  placeholder="{{'Personal Pic ( URL )'|translate}}"
                   required
                   pattern="https?://.+"
                   [class.is-valid]="freelancerImg.valid"
@@ -303,13 +303,13 @@
                   [hidden]="freelancerImg.valid || freelancerImg.untouched"
                 >
                   <small *ngIf="freelancerImg.errors?.['required']"
-                    >يجب اضافة رابط الصورة</small
+                    >{{'Must Add Pic'|translate}}</small
                   >
                 </div>
               </div>
 
               <div class="form-group">
-                <label for="foru" class="my-2">ملخص عن أعمالك وخبراتك :</label
+                <label for="foru" class="my-2"> {{'A summary of your work and experience'|translate}}:</label
                 ><br />
                 <input
                   type="text"
@@ -321,13 +321,13 @@
               </div>
 
               <div class="form-group col-md-4">
-                <label for="inputState" class="my-2">المدينة :</label>
+                <label for="inputState" class="my-2"> {{'City'|translate}}:</label>
                 <select id="inputState" class="form-control">
-                  <option selected>حدد المدينة</option>
-                  <option>القاهرة</option>
-                  <option>الجيزة</option>
-                  <option>الاسكندرية</option>
-                  <option>قنا</option>
+                  <option selected>{{'Choose City'|translate}}</option>
+                  <option>{{'Cairo'|translate}}</option>
+                  <option>{{'Giza'|translate}}</option>
+                  <option>{{'Alex'|translate}}</option>
+                  <option>{{'Qena'|translate}}</option>
                 </select>
               </div>
 
@@ -338,7 +338,7 @@
                     type="checkbox"
                     id="gridCheck"
                     required
-                  />اوافق على الشروط والاحكام
+                  />{{'I agree to the terms and conditions'|translate}}
                 </div>
               </div>
 
@@ -347,7 +347,7 @@
                 class="btn btn-success w-50 BTNForSub"
                 [disabled]="addingFreelancerForm.invalid"
               >
-                تسجيل
+              {{'Submit'|translate}}
               </button>
             </form>
           </div>
