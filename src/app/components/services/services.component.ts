@@ -11,6 +11,7 @@ import { CategoriesService } from 'src/app/services/categories.service';
 import { GetservicesService } from 'src/app/services/getservices.service';
 import { Service } from '../../models/service';
 import { filter } from 'rxjs';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-services',
@@ -28,7 +29,8 @@ export class ServicesComponent implements OnInit, DoCheck {
 
   constructor(
     public service: GetservicesService,
-    public category: CategoriesService
+    public category: CategoriesService,
+    private spinner: NgxSpinnerService
   ) {}
   ngDoCheck(): void {}
   // @ViewChild('preloadermodalbtn', { static: true })
@@ -279,6 +281,10 @@ export class ServicesComponent implements OnInit, DoCheck {
     },
   ];
   async ngOnInit() {
+    this.spinner.show();
+    setTimeout(() => {
+      this.spinner.hide();
+    }, 2000);
     // let preloader = this.preloadermodalbtn.nativeElement;
     // preloader.click();
 
@@ -306,7 +312,7 @@ export class ServicesComponent implements OnInit, DoCheck {
           : null;
       });
       // setTimeout(() => {
-      //   preloader.click();
+      //   this.spinner.hide;
       // }, 500);
     });
 
