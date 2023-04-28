@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" [dir]="'dir' | translate">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -50,7 +50,7 @@
             aria-labelledby="navbarOffcanvasLgLabel"
           >
             <div class="header-right d-flex align-items-center">
-              <a class="navbar-brand" href="#">
+              <a class="navbar-brand" routerLink="#">
                 <img class="header-logo mx-3" src="assets/main-logo.svg" />
                 <!-- <button class="btn btn-light border closeoffcanvas">
                   <i class="fa-solid fa-x"></i>
@@ -80,7 +80,7 @@
                 <ng-container
                   *ngFor="let item of headsearchlist; let i = index"
                 >
-                  <a *ngIf="i < 5" href="services/{{ item.uid }}">{{
+                  <a *ngIf="i < 5" routerLink="services/{{ item.uid }}">{{
                     item.data.title
                   }}</a>
                 </ng-container>
@@ -89,39 +89,39 @@
             <div class="borderseprator"></div>
             <ul class="nav-list d-flex justify-content-between">
               <li class="headerlistitem">
-                <a href="/services" class="link active">
+                <a routerLink="/services" class="link active">
                   <i class="fas fa-shopping-cart"></i>
-                  الخدمات
+                  {{ "Serves" | translate }}
                 </a>
               </li>
               <li class="headerlistitem">
-                <a href="/contests" class="link active">
+                <a routerLink="/contests" class="link active">
                   <i class="fas fa-trophy"></i>
-                  المسابقات
+                  {{ "contests" | translate }}
                 </a>
               </li>
               <li class="headerlistitem">
-                <a href="/projects" class="link active">
+                <a routerLink="/projects" class="link active">
                   <i class="fas fa-briefcase"></i>
-                  المشاريع
+                  {{ "projects" | translate }}
                 </a>
               </li>
               <li class="headerlistitem">
-                <a href="/portfolios" class="link active">
+                <a routerLink="/portfolios" class="link active">
                   <i class="far fa-image"></i>
-                  الأعمال
+                  {{ "portfolois" | translate }}
                 </a>
               </li>
               <li class="headerlistitem">
-                <a href="/freelancers" class="link active">
+                <a routerLink="/freelancers" class="link active">
                   <i class="fas fa-users"></i>
-                  المستقلين
+                  {{ "freelancers" | translate }}
                 </a>
               </li>
               <li class="headerlistitem">
-                <a href="#" class="link active">
+                <a routerLink="#" class="link active">
                   <i class="fas fa-bars"></i>
-                  المزيد
+                  {{ "more" | translate }}
                 </a>
               </li>
             </ul>
@@ -137,7 +137,7 @@
               <i class="fas fa-search fs-5 px-2"></i>
               <input
                 type="text"
-                placeholder="ابحث عن ..."
+                placeholder=' {{ "search" | translate }}'
                 class="searchbox-input"
                 #searchtxtsmall
               />
@@ -180,29 +180,31 @@
                       <li>
                         <a
                           class="dropdown-item active bg-success rounded py-2"
-                          href="#"
+                          routerLink="#"
                           >{{ user.displayName }}</a
                         >
                       </li>
                       <li>
                         <a
                           class="dropdown-item d-flex justify-content-between"
-                          href="/createservice"
-                          >اضافة خدمة</a
+                          routerLink="/createservice"
+                        >
+                          {{ "addService" | translate }}</a
                         >
                       </li>
                       <li>
                         <a
                           class="dropdown-item d-flex justify-content-between"
                           routerLink="/addContest"
-                          >اضافة مسابقة</a
+                          >{{ "addContest" | translate }}</a
                         >
                       </li>
                       <li>
                         <a
                           class="dropdown-item d-flex justify-content-between"
                           routerLink="/newportfolio"
-                          >اضافة اعمال</a
+                        >
+                          {{ "addPortfolio" | translate }}</a
                         >
                       </li>
                       <li>
@@ -213,7 +215,7 @@
                           class="dropdown-item d-flex justify-content-between"
                           (click)="logout()"
                         >
-                          <span> تسجيل الخروج </span>
+                          <span> {{ "logout" | translate }} </span>
                           <i class="fa-solid fa-power-off"></i>
                         </a>
                       </li>
@@ -222,11 +224,15 @@
                 </div>
               </ng-container>
               <ng-container *ngIf="user == null">
-                <a href="/sign-in">
-                  <button class="btn btn-light px-4 border">دخول</button>
+                <a routerLink="/sign-in">
+                  <button class="btn btn-light px-4 border">
+                    {{ "Login" | translate }}
+                  </button>
                 </a>
-                <a href="/register">
-                  <button class="btn btn-register border">حساب جديد</button>
+                <a routerLink="/register">
+                  <button class="btn btn-register border">
+                    {{ "RegisterNow" | translate }}
+                  </button>
                 </a>
               </ng-container>
             </div>
@@ -238,7 +244,7 @@
                 aria-expanded="false"
               >
                 <i class="fa-solid fa-globe"></i>
-                <span class="lang-name">العربية</span>
+                <!-- <span class="lang-name">العربية</span> -->
               </button>
               <ul class="dropdown-menu">
                 <li>

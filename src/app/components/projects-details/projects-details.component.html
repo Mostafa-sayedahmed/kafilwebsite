@@ -1,27 +1,16 @@
 <section class="container my-5">
-  <div class="project-info-head" dir="rtl">
+  <div class="project-info-head" >
     <div class="d-flex">
-      <a href="#" class="text-decoration-none">
-        <img
-          src="https://kafiil.com/storage/images/users/9558529a-9ff7-40c2-945f-66b435009f0d.jpg"
-          alt=""
-        />
-      </a>
+     
+        <img src={{project.img}} alt=""/>
+    
       <div>
-        <a href="#" class="text-center text-black text-decoration-none">
-          <b>مطلوب كتابة ريبورت</b>
-        </a>
-        <div class="d-flex align-items-center">
-          <span class="text">
-            <i class="fas fa-align-justify ms-3"></i>
-            <a href="#" class="text-black text-decoration-none"
-              >كتابة, صناعة محتوي, ترجمة و لغات</a
-            >
-          </span>
-          <span class="text" title="2023-01-29 15:47:45">
-            <i class="fas fa-clock ms-3"></i>
-            منذ 3 أيام
-          </span>
+       
+          <h4>{{project.title}}</h4>
+        <div class="mt-3">
+           <span> <i class="fas fa-align-justify mx-2" style="color: #1dbf73;"></i> {{project.catId}}</span> 
+           <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>   
+           <span><i class="fa-solid fa-clock mx-1" style="color: #1dbf73;"></i> {{project.time}}</span> 
         </div>
       </div>
     </div>
@@ -44,7 +33,7 @@
             reportable_id="4613"
             reportable_type="project"
             href="#"
-            ><i class="far fa-flag"></i> بلاغ</a
+            ><i class="far fa-flag"></i> بلاغ </a
           >
         </div>
       </div>
@@ -58,20 +47,20 @@
           <h2 class="accordion-header" id="headingOne">
             <button
               class="accordion-button text-black fw-bold"
-              dir="rtl"
+              
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseOne"
               aria-expanded="true"
               aria-controls="collapseOne"
             >
-              <i class="fas fa-user ms-3"></i>
-              صاحب المشروع
+              <i class="fas fa-user mx-3"></i>
+              {{"Project_Owner"|translate}}
             </button>
           </h2>
           <div
             id="collapseOne"
-            dir="rtl"
+            
             class="accordion-collapse collapse show"
             aria-labelledby="headingOne"
             data-bs-parent="#accordionExample"
@@ -91,7 +80,7 @@
                         href="#"
                         class="text-muted text-decoration-none d-block"
                       >
-                        Ahmad Alanazi
+                        {{project.personName}}
                       </a>
                       <span class="text text-muted">
                         <i class="fas fa-map-marker-alt ms-2"></i>
@@ -111,20 +100,20 @@
           <h2 class="accordion-header" id="headingTwo">
             <button
               class="accordion-button text-black fw-bold"
-              dir="rtl"
+              
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseTwo"
               aria-expanded="true"
               aria-controls="collapseTwo"
             >
-              <i class="fas fa-list-alt ms-3"></i>
-              معلومات المشروع
+              <i class="fas fa-list-alt mx-3"></i>
+              {{'Project_Info'|translate}}
             </button>
           </h2>
           <div
             id="collapseTwo"
-            dir="rtl"
+            
             class="accordion-collapse collapse show"
             aria-labelledby="headingTwo"
             data-bs-parent="#accordionTwo"
@@ -133,42 +122,43 @@
               <div class="block-body-two text-muted">
                 <div class="d-flex justify-content-between py-3">
                   <div>
-                    <i class="fas fa-clock"></i>
-                    تاريخ النشر
+                    <i class="fas fa-clock mx-2"></i>
+                    {{'Publishing_Date'|translate}}
                   </div>
-                  <div>2023-01-29</div>
+                  <div>{{project.publishData}}</div>
                 </div>
 
                 <div class="dark d-flex justify-content-between py-3">
                   <div>
-                    <i class="fas fa-money-bill-alt"></i>
-                    الميزانية
+                    <i class="fas fa-money-bill-alt mx-2"></i>
+                    {{'Budget'|translate}}
                   </div>
-                  <div>$25 - $50</div>
+                  <div>{{project.budget}}</div>
                 </div>
 
                 <div class="d-flex justify-content-between py-3">
                   <div>
-                    <i class="fas fa-clock"></i>
-                    مدة المشروع
+                    <i class="fas fa-clock mx-2"></i>
+                    {{'Project_Duration'|translate}}
                   </div>
-                  <div>يومين</div>
+                  <div>{{project.durationproject}}</div>
                 </div>
 
                 <div class="dark d-flex justify-content-between py-3">
                   <div>
-                    <i class="fas fa-suitcase"></i>
-                    عدد العروض
+                    <i class="fas fa-suitcase mx-2"></i>
+                    {{'Bids_Average'|translate}}
                   </div>
-                  <div>117</div>
+                  <div>{{project.offers}}</div>
                 </div>
 
-                <div class="d-flex justify-content-between py-3">
+                <!-- <div class="d-flex justify-content-between py-3" [hidden]="project.Averageoffers === ''" > -->
+                <div class="d-flex justify-content-between py-3" *ngIf="project.Averageoffers === ''" >
                   <div>
                     <i class="fas fa-money-bill-alt"></i>
-                    متوسط العروض
+                    {{'Bids_Average'|translate}}
                   </div>
-                  <div>$32.26</div>
+                  <div  >{{project.Averageoffers}}</div>
                 </div>
               </div>
             </div>
@@ -176,25 +166,25 @@
         </div>
       </div>
 
-      <div class="accordion mb-3" id="accordionThree">
+      <div class="accordion mb-3 " id="accordionThree">
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingThree">
             <button
               class="accordion-button text-black fw-bold"
-              dir="rtl"
+              
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseThree"
               aria-expanded="true"
               aria-controls="collapseThree"
             >
-              <i class="fas fa-share-alt ms-3"></i>
-              شارك واربح
+              <i class="fas fa-share-alt mx-3"></i>
+              {{'Share_And_Earn'|translate}}
             </button>
           </h2>
           <div
             id="collapseThree"
-            dir="rtl"
+
             class="accordion-collapse collapse show"
             aria-labelledby="headingThree"
             data-bs-parent="#accordionThree"
@@ -251,7 +241,7 @@
       </div>
     </div>
 
-    <div class="col-12 col-lg-8" dir="rtl">
+    <div class="col-12 col-lg-8" >
       <div class="filter">
         <div class="p-4">
           <div
@@ -261,15 +251,15 @@
             <span class="progress-bar"></span>
             <div class="step position-relative current active closed">
               <span class="number"> 1 </span>
-              <span class="title"> تم الإلغاء </span>
+              <span class="title"> {{'Receiving_Offers_Stage'|translate}}</span>
             </div>
             <div class="step position-relative">
               <span class="number"> 2 </span>
-              <span class="title"> مرحلة التنفيذ </span>
+              <span class="title"> {{'Execution_Stage'|translate}}</span>
             </div>
             <div class="step position-relative">
               <span class="number"> 3 </span>
-              <span class="title"> مرحلة الإستلام </span>
+              <span class="title"> {{'Delivery_Stage'|translate}} </span>
             </div>
           </div>
         </div>
@@ -278,18 +268,16 @@
       <div class="filter">
         <div class="head text-black fw-bold">
           <i class="fas fa-list-alt ms-3"></i>
-          تفاصيل المشروع
+          {{'Project_Details'|translate}}
         </div>
-        <div class="text-black">
+        <div class="text-muted">
           <p>
-            مطلوب كتابة ريبورت 200 كلمة عن<br />
-            تخيل ان بطارية هاتفك تموت دائما بهذة السرعة اكتب سببين رئيسيين لهذة
-            المشكلة
+              {{project.discription}}
           </p>
         </div>
       </div>
 
-      <div class="filter">
+      <!-- <div class="filter">
         <div class="head text-black fw-bold">
           <i class="far fa-star ms-3"></i>
           المهارات المطلوبة
@@ -300,7 +288,7 @@
             الانجليزية
           </p>
         </div>
-      </div>
+      </div> -->
 
       <div class="last-filter">
         <div class="head text-black fw-bold">
@@ -308,8 +296,8 @@
           العروض
         </div>
 
-        <div class="inner-row" id="row">
-          <ng-container *ngFor="let proj of project; let i = index">
+         <div class="inner-row" id="row">
+          <!-- <ng-container *ngFor="let proj of project; let i = index">
             <div>
               <div class="d-flex">
                 <a href="#" class="text-black text-decoration-none">
@@ -352,12 +340,12 @@
                 </p>
               </div>
             </div>
-          </ng-container>
+          </ng-container> -->
         </div>
       </div>
 
       <div class="add mb-3">
-        <button class="form-control">اضف عروضك</button>
+        <button class="form-control">{{"Add_Your_Bid"|translate}}</button>
       </div>
     </div>
   </div>
