@@ -73,12 +73,12 @@
           />
         </div>
         <div class="mb-3">
-          <label for="address" class="form-label">العنوان</label>
+          <label for="address" class="form-label"> {{'title'| translate}}</label>
           <input
             type="text"
             class="form-control"
             id="address"
-            placeholder="العنوان"
+            placeholder=" {{'title'| translate}}"
             name="title"
             [(ngModel)]="newportfolois.protfoloiName"
           />
@@ -95,7 +95,7 @@
         </div>
 
         <div class="mb-3">
-          <label for="discription" class="form-label">الوصف</label>
+          <label for="discription" class="form-label">{{'description'| translate}}</label>
           <textarea
             rows="4"
             class="form-control text-muted"
@@ -105,11 +105,11 @@
         </div>
         <div class="mb-3">
           <div class="col">
-            <label for="category" class="form-label">القسم</label>
+            <label for="category" class="form-label">{{'section'| translate}}</label>
             <input
               type="text"
               class="form-control text-muted"
-              placeholder="القسم"
+              placeholder="{{'section'| translate}}"
               id="category"
               name="category"
               [(ngModel)]="newportfolois.category"
@@ -117,7 +117,7 @@
           </div>
 
           <div class="mb-3">
-            <label for="watch">المشاهدات</label>
+            <label for="watch">{{'Views'| translate}}</label>
             <input
               type="number"
               class="form-control"

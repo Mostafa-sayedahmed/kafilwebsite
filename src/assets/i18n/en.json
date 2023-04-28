@@ -182,6 +182,15 @@
 
   "Remote": "Remote training, education and assistance",
 
-  "OtherThings": "Other Things"
+  "OtherThings": "Other Things",
+  "BusinessFair":"Business Fair",
+  "TheBest":"The Best",
+  "TheMostRecent":"The Most Recent",
+  "MostWatched":"Most Watched",
+  "MostPreferred":"Most Preferred",
+  "JobOffer":"Job Offer",
+  "TheDetails":"The Details",
+  "hireMe":"Hire Me"
+
 }
 
