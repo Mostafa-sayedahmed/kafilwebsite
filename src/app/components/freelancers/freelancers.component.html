@@ -179,7 +179,7 @@
 
         <!-- The Spinner -->
         <div
-          *ngIf="spinner"
+          *ngIf="dataspinner"
           class="spinner-border text-success spinner"
           role="status"
         >
@@ -237,3 +237,11 @@
     </div>
   </div>
 </div>
+<ngx-spinner
+  bdColor="#1dcf73"
+  size="medium"
+  color="#fff"
+  [fullScreen]="true"
+  size="large"
+  type="line-scale-pulse-out"
+></ngx-spinner>

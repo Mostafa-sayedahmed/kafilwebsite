@@ -4,6 +4,7 @@ import { IcontestSection } from 'src/app/models/icontestsection';
 import { ContestsService } from 'src/app/services/contests.service';
 import { UserService } from 'src/app/services/user.service';
 import { Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-contests',
@@ -21,10 +22,12 @@ export class ContestsComponent {
   constructor(
     private CS: ContestsService,
     private router: Router,
-    private US: UserService
+    private US: UserService,
+    private spinner: NgxSpinnerService
   ) {}
 
   ngOnInit() {
+    this.spinner.show();
     this.contestWithComment = [];
     this.GetAllContests();
     console.log(this.contest);
@@ -45,6 +48,7 @@ export class ContestsComponent {
         this.contest = this.contestWithComment;
         this.contestArr = this.contestWithComment;
       }
+      this.spinner.hide();
     });
   }
 

@@ -7,7 +7,7 @@
             routerLink="/newportfolio"
             class="w-100 text-center text-white text-decoration-none"
           >
-          {{'addPortfolio'| translate}} 
+            {{ "addPortfolio" | translate }}
             <i class="far fa-plus-square mx-3"></i>
           </a>
         </div>
@@ -19,7 +19,7 @@
           <input
             type="search"
             class="form-control py-2"
-            placeholder=' {{ "search" | translate }}'
+            placeholder=" {{ 'search' | translate }}"
             aria-label="search"
             aria-describedby="basic-search"
           />
@@ -36,7 +36,7 @@
                 aria-expanded="true"
                 aria-controls="collapseOne"
               >
-              {{'Categories'| translate}}
+                {{ "Categories" | translate }}
               </button>
             </h2>
             <div
@@ -48,40 +48,39 @@
               <div class="accordion-body p-0">
                 <div class="right p-3">
                   <i class="fa-solid fa-suitcase"></i>
-                  {{'BusinessAndServices'| translate}}
+                  {{ "BusinessAndServices" | translate }}
                 </div>
                 <div class="right p-3">
                   <i class="fa-solid fa-code"></i>
-                  {{'Programming'| translate}}
+                  {{ "Programming" | translate }}
                 </div>
                 <div class="right p-3">
                   <i class="fa-solid fa-paintbrush"></i>
-                  {{'Design'| translate}}
-
+                  {{ "Design" | translate }}
                 </div>
                 <div class="right p-3">
                   <i class="fa-solid fa-video"></i>
-                  {{'Video'| translate}}
+                  {{ "Video" | translate }}
                 </div>
                 <div class="right p-3">
                   <i class="fa-solid fa-microphone-lines"></i>
-                  {{'Audios'| translate}}
+                  {{ "Audios" | translate }}
                 </div>
                 <div class="right p-3">
                   <i class="fa-solid fa-bullhorn"></i>
-                  {{'MarketingAndSales'| translate}}
+                  {{ "MarketingAndSales" | translate }}
                 </div>
                 <div class="right p-3">
                   <i class="fa-solid fa-pen-clip"></i>
-                  {{'Writing'| translate}}
+                  {{ "Writing" | translate }}
                 </div>
                 <div class="right p-3">
                   <i class="fa-solid fa-chalkboard-user"></i>
-                  {{'Remote'| translate}}
+                  {{ "Remote" | translate }}
                 </div>
                 <div class="right p-3">
                   <i class="fas fa-bars"></i>
-                  {{'OtherThings'| translate}}
+                  {{ "OtherThings" | translate }}
                 </div>
               </div>
             </div>
@@ -305,3 +304,11 @@
     </div>
   </div>
 </body>
+<ngx-spinner
+  bdColor="#1dcf73"
+  size="medium"
+  color="#fff"
+  [fullScreen]="true"
+  size="large"
+  type="line-scale-pulse-out"
+></ngx-spinner>
