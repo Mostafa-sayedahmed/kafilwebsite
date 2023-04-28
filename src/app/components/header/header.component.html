@@ -50,7 +50,7 @@
             aria-labelledby="navbarOffcanvasLgLabel"
           >
             <div class="header-right d-flex align-items-center">
-              <a class="navbar-brand" routerLink="#">
+              <a class="navbar-brand" href="#">
                 <img class="header-logo mx-3" src="assets/main-logo.svg" />
                 <!-- <button class="btn btn-light border closeoffcanvas">
                   <i class="fa-solid fa-x"></i>
@@ -80,7 +80,7 @@
                 <ng-container
                   *ngFor="let item of headsearchlist; let i = index"
                 >
-                  <a *ngIf="i < 5" routerLink="services/{{ item.uid }}">{{
+                  <a *ngIf="i < 5" href="services/{{ item.uid }}">{{
                     item.data.title
                   }}</a>
                 </ng-container>
@@ -89,37 +89,37 @@
             <div class="borderseprator"></div>
             <ul class="nav-list d-flex justify-content-between">
               <li class="headerlistitem">
-                <a routerLink="/services" class="link active">
+                <a href="/services" class="link active">
                   <i class="fas fa-shopping-cart"></i>
                   {{ "Serves" | translate }}
                 </a>
               </li>
               <li class="headerlistitem">
-                <a routerLink="/contests" class="link active">
+                <a href="/contests" class="link active">
                   <i class="fas fa-trophy"></i>
                   {{ "contests" | translate }}
                 </a>
               </li>
               <li class="headerlistitem">
-                <a routerLink="/projects" class="link active">
+                <a href="/projects" class="link active">
                   <i class="fas fa-briefcase"></i>
                   {{ "projects" | translate }}
                 </a>
               </li>
               <li class="headerlistitem">
-                <a routerLink="/portfolios" class="link active">
+                <a href="/portfolios" class="link active">
                   <i class="far fa-image"></i>
                   {{ "portfolois" | translate }}
                 </a>
               </li>
               <li class="headerlistitem">
-                <a routerLink="/freelancers" class="link active">
+                <a href="/freelancers" class="link active">
                   <i class="fas fa-users"></i>
                   {{ "freelancers" | translate }}
                 </a>
               </li>
               <li class="headerlistitem">
-                <a routerLink="#" class="link active">
+                <a href="#" class="link active">
                   <i class="fas fa-bars"></i>
                   {{ "more" | translate }}
                 </a>
@@ -180,14 +180,14 @@
                       <li>
                         <a
                           class="dropdown-item active bg-success rounded py-2"
-                          routerLink="#"
+                          href="#"
                           >{{ user.displayName }}</a
                         >
                       </li>
                       <li>
                         <a
                           class="dropdown-item d-flex justify-content-between"
-                          routerLink="/createservice"
+                          href="/createservice"
                         >
                           {{ "addService" | translate }}</a
                         >
@@ -224,12 +224,12 @@
                 </div>
               </ng-container>
               <ng-container *ngIf="user == null">
-                <a routerLink="/sign-in">
+                <a href="/sign-in">
                   <button class="btn btn-light px-4 border">
                     {{ "Login" | translate }}
                   </button>
                 </a>
-                <a routerLink="/register">
+                <a href="/register">
                   <button class="btn btn-register border">
                     {{ "RegisterNow" | translate }}
                   </button>

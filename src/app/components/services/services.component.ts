@@ -31,10 +31,10 @@ export class ServicesComponent implements OnInit, DoCheck {
     public category: CategoriesService
   ) {}
   ngDoCheck(): void {}
-  // @ViewChild('preloadermodalbtn', { static: true })
-  // preloadermodalbtn!: ElementRef<HTMLElement>;
-  // @ViewChild('preloaderdismissmodalbtn', { static: true })
-  // preloaderdismissmodalbtn!: ElementRef<HTMLElement>;
+  @ViewChild('preloadermodalbtn', { static: true })
+  preloadermodalbtn!: ElementRef<HTMLElement>;
+  @ViewChild('preloaderdismissmodalbtn', { static: true })
+  preloaderdismissmodalbtn!: ElementRef<HTMLElement>;
 
   // @ViewChildren('categorybtn') categorybtn: QueryList<ElementRef> | undefined;
   searchlist = [
@@ -279,10 +279,10 @@ export class ServicesComponent implements OnInit, DoCheck {
     },
   ];
   async ngOnInit() {
-    // let preloader = this.preloadermodalbtn.nativeElement;
-    // preloader.click();
+    let preloader = this.preloadermodalbtn.nativeElement;
+    let dismiss = this.preloaderdismissmodalbtn.nativeElement;
 
-    // let dismiss = this.preloaderdismissmodalbtn.nativeElement;
+    preloader.click();
 
     if (window.innerWidth < 770) {
       this.showcount = this.showcountSM;
@@ -299,15 +299,25 @@ export class ServicesComponent implements OnInit, DoCheck {
         console.log(err);
       });
     await this.service.getservices().then((results) => {
-      this.serviceslist = [];
+      // this.searchlist = [];
       results.forEach((element) => {
         element.data.state == 'approved'
           ? (this.serviceslist = [...this.serviceslist, element])
           : null;
       });
-      // setTimeout(() => {
-      //   preloader.click();
-      // }, 500);
+      // console.log(this.serviceslist);
+
+      preloader.click();
+      // return data;
+      // console.log(data);
+
+      // this.serviceslist = data;
+      // // this.serviceslist = [...new Set(this.serviceslist)];
+      // console.log(
+      //   results.filter((service) => {
+      //     service.data.rating = 0;
+      //   })
+      // );
     });
 
     for (let service of this.serviceslist) {
