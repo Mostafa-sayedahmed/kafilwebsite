@@ -104,6 +104,58 @@
   "delete_addon": "Delete addon",
   "add_addon": "Add more addons",
   "place_service": "Place service",
+
+
+  "add_project":"Add project",
+  "projects":"projects",
+  "all":"All",
+  "open":"Open",
+  "Latest":"Latest",
+  "category":"Category",
+  "skills":"Skills",
+  "delivery_Duration":"Delivery Duration",
+
+  "Set_title":"Title",
+  "Set_discription":"Description",
+  "Choose_Category ":"Category ",
+  "Choose_skills":"Skills (Optional)",
+  "Choose_Budget":"Expected Budget",
+  "choose_DeliveryDuration":"Estimated Delivery Time (In Days)",
+  "Set_Attachments":"Attachments (Optional)",
+  "Set_add":"Add",
+  "Set_H1":"Publish Your Project On Kafiil",
+  "Set_P1":"Kafiil Platform Helps You To Implement Your Projects Easily And Professionally By Connecting You With The Best Specialized Freelancers Who Are Able To Cooperate With You To Implement Your Requirements. Just Create A New Project And Write Your Requirements And Wait For The Offers Of Different Freelancers To Compare And Choose The Best Of Them",
+  "Set_H2":" Tips For Adding Your Project",
+  "Set_Point1":"Add An Expressive Title For Your Project",
+  "Set_Point2":"Describe Your Requirements In Arabic Clearly So That It Is Easier For The Freelancers To Understand Your Requirements",
+  "Set_Point3":"Add An Appropriate Category And Skills To Your Project So That Freelancers Can Easily Find It",
+  "Set_Point4":"Define Critical Points In Your Project Without Which You Do Not Expect The Project To Be Completed",
+  "Set_Point5":"Divide Your Project Into Smaller Projects To Get The Best Bids In Each Specialty",
+  "Set_Point6":"Determine An Adequate Implementation Period And Budget That Is Reasonable With The Requirements Of Your Project",
+  "Set_Point7":"Provide Examples, If Available, To Ensure More Clarity Of Your Requirements",
+  "Set_H3":"Kafiil Guarantees Your Rights",
+  "Set_P2":"Kafiil Platform Provides You With An Integrated Environment To List Your Services, Easily Communicate, Pay, Withdraw Profits, Etc.., In Which They Play The Role Of Mediator Between The Seller And The Buyer To Ensure A Successful And Satisfactory Experience For Both Parties.",
+
+
+  "Project_Owner":"Project Owner",
+  "Project_Info":"Project Info",
+  "Share_And_Earn":"Share And Earn",
+  "Project_Details":"Project Details",
+  "Add_Your_Offer":"Add Your Bid",
+  "choose_Delivery_Duration":"Delivery Duration",
+  "Bid_Value ":"Bid Value ",
+  "Bid_Details ":"Bid Details ",
+  "Add_Your_Bid ":"Add Your Bid ",
+  "Receiving_Offers_Stage":"Receiving Offers Stage",
+  "Execution_Stage":"Execution Stage",
+  "Delivery_Stage":"Delivery Stage",
+  "Publishing_Date":"Publishing Date",
+  "Budget":" Budget",
+  "Project_Duration":" Project Duration",
+  "Bids_Number":" Bids Number",
+  "Bids_Average":" Bids Average"
+
+
   "Serves": "Serves",
 
   "contests": "Contests",
@@ -184,4 +236,5 @@
 
   "OtherThings": "Other Things"
 }
+
 
