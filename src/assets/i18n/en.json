@@ -105,13 +105,94 @@
   "add_addon": "Add more addons",
   "place_service": "Place service",
 
+  "Serves": "Serves",
+
+  "contests": "Contests",
+
+  "projects": "Projects",
+
+  "portfolois": "Portfolois",
+
+  "freelancers": "Freelancers",
+
+  "more": "More",
+
+  "addPortfolio": " Add Portfolio",
+
+  "addService": "Add Service",
+
+  "logout": " Logout",
+
+  "HelpAndSupport": "Help and support",
+
+  "HelpCenter": "Help Center",
+
+  "CommonQuestions": "Common Questions",
+
+  "QuestionBank": "Question Bank",
+
+  "ContactUs": "Contact Us",
+
+  "kafiil": "kafiil",
+
+  "TermsOfService": "Terms Of Service",
+
+  "Privacy": "Privacy",
+
+  "AboutKafiil": "About Kafiil",
+
+  "HowKafiilGuaranteeYourRights": "How Kafiil Guarantee Your Rights",
+
+  "AffiliateMarketing": "Affiliate Marketing",
+
+  "KafiilForum": "Kafiil Forum",
+
+  "UsersLevels": "Users Levels",
+
+  "PointsSystem": "Points System",
+
+  "KafiilBlog": "Kafiil Blog",
+
+  "howDoISell": "How do I sell my first service on a sponsor website?! (8 Important Tips)",
+
+  "WhyIsTheSponsor": "Why is the sponsor website the perfect choice for freelancers in the Arab world?",
+
+  "ImportantMicroservices": "Important microservices for entrepreneurs and startup owners",
+
+  "FalseMyths": "7 False Myths About Online Business That Are Unfounded",
+
+  "MoreArticles": "More Articles",
+
+  "PaymentMethods": "Payment Methods",
+
+  "WithdrawalsMethods": "Withdrawals Methods",
+
+  "BusinessAndServices": "Consulting and management business and services",
+
+  "Programming": "Programming, developing websites and applications",
+
+  "Design": "Design",
+
+  "Video": "Video",
+
+  "Audios": "Audios",
+
+  "MarketingAndSales": "Marketing And Sales",
+
+  "Writing": "Writing, content creation, translation and languages",
+
+  "Remote": "Remote training, education and assistance",
+
+  "OtherThings": "Other Things",
+
+
   "add_project":"Add project",
-  "projects":"projects",
-  "all":"All",
-  "open":"Open",
+  "Projects":"projects",
+  "All":"All",
+  "Open":"Open",
   "Latest":"Latest",
-  "category":"Category",
-  "skills":"Skills",
+  "Category":"Category",
+  "Skills":"Skills",
   "delivery_Duration":"Delivery Duration",
 
   "Set_title":"Title",
@@ -153,11 +234,6 @@
   "Project_Duration":" Project Duration",
   "Bids_Number":" Bids Number",
   "Bids_Average":" Bids Average"
-
-
-  
-
 }
-
 
 
