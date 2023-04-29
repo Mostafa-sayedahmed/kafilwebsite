@@ -106,7 +106,7 @@
               class="w-100 text-center text-white text-decoration-none"
             >
               <i class="far fa-plus-square mx-3"></i>
-              أضف عملك
+              {{'addPortfolio'| translate}}
             </a>
           </div>
           <button
@@ -122,7 +122,7 @@
 
         <div class="filter bg-white rounded-2 mb-3 mb-2">
           <div class=" ">
-            <h4>معرض الاعمال</h4>
+            <h4> {{'BusinessFair'| translate}}</h4>
           </div>
           <div class="dropdown type-radio">
             <button
@@ -131,23 +131,23 @@
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              <i class="fa-solid fa-sliders"></i> الافضل
+              <i class="fa-solid fa-sliders"></i>  {{'TheBest'| translate}}
             </button>
             <ul class="dropdown-menu">
               <li>
-                <button class="dropdown-item" type="button">الافضل</button>
+                <button class="dropdown-item" type="button"> {{'TheBest'| translate}}</button>
               </li>
               <li>
-                <button class="dropdown-item" type="button">الأحدث</button>
+                <button class="dropdown-item" type="button">{{'TheMostRecent'| translate}}</button>
               </li>
               <li>
                 <button class="dropdown-item" type="button">
-                  الاكثر مشاهدات
+                  {{'MostWatched'| translate}}
                 </button>
               </li>
               <li>
                 <button class="dropdown-item" type="button">
-                  الاكثر تفضيلا
+                  {{'MostPreferred'| translate}}
                 </button>
               </li>
             </ul>
@@ -199,7 +199,7 @@
   >
     <div class="offcanvas-header">
       <button class="canvasTitle offcanvas-title" id="offcanvasRightLabel">
-        عرض النتائج
+        '{{ "Show_results" | translate }}'
       </button>
       <button
         type="button"
@@ -207,14 +207,14 @@
         data-bs-dismiss="offcanvas"
         aria-label="Close"
       >
-        رجوع
+      '{{ "back" | translate }}'
         <i class="fas fa-arrow-right"></i>
       </button>
     </div>
     <div class="offcanvas-body">
       <div class="pluse text-center py-3 mb-3 rounded-2">
         <a href="#" class="w-100 text-center text-white text-decoration-none">
-          أضف عملك
+          {{'addPortfolio'| translate}}
           <i class="far fa-plus-square mx-3"></i>
         </a>
       </div>
@@ -226,7 +226,7 @@
         <input
           type="search"
           class="form-control py-2"
-          placeholder="ابحث عن ..."
+          placeholder='{{ "search" | translate }}'
           aria-label="search"
           aria-describedby="basic-search"
         />
@@ -243,7 +243,7 @@
               aria-expanded="true"
               aria-controls="collapseOne"
             >
-              الأقسام
+            {{'Categories'| translate}}
             </button>
           </h2>
           <div
@@ -255,39 +255,40 @@
             <div class="accordion-body p-0">
               <div class="right p-3">
                 <i class="fa-solid fa-suitcase"></i>
-                أعمال وخدمات إستشارية وإدارية
+                {{'BusinessAndServices'| translate}}
               </div>
               <div class="right p-3">
                 <i class="fa-solid fa-code"></i>
-                برمجة,تطوير المواقع والتطبيقات
+                {{'Programming'| translate}}
               </div>
               <div class="right p-3">
                 <i class="fa-solid fa-paintbrush"></i>
-                تصميم
+                {{'Design'| translate}}
+
               </div>
               <div class="right p-3">
                 <i class="fa-solid fa-video"></i>
-                فيديو
+                {{'Video'| translate}}
               </div>
               <div class="right p-3">
                 <i class="fa-solid fa-microphone-lines"></i>
-                صوتيات
+                {{'Audios'| translate}}
               </div>
               <div class="right p-3">
                 <i class="fa-solid fa-bullhorn"></i>
-                التسويق والمبعات
+                {{'MarketingAndSales'| translate}}
               </div>
               <div class="right p-3">
                 <i class="fa-solid fa-pen-clip"></i>
-                كتابة,صناعة محتوى,ترجمةولغات
+                {{'Writing'| translate}}
               </div>
               <div class="right p-3">
                 <i class="fa-solid fa-chalkboard-user"></i>
-                تدريب,تعليم ومساعدة عن بعد
+                {{'Remote'| translate}}
               </div>
               <div class="right p-3">
                 <i class="fas fa-bars"></i>
-                اخري
+                {{'OtherThings'| translate}}
               </div>
             </div>
           </div>
