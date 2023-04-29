@@ -55,6 +55,9 @@ export class ServicesCategoryComponent implements OnInit {
     private spinner: NgxSpinnerService
   ) {}
   async ngOnInit(): Promise<void> {
+    this.getalldata();
+  }
+  async getalldata() {
     this.spinner.show();
 
     this.categriesList = [];
@@ -90,38 +93,11 @@ export class ServicesCategoryComponent implements OnInit {
     this.serviceslist = [];
 
     this.spinner.show();
-    if (this.currentCategory == categorynav) {
-      this.categriesList = [];
-      this.serviceslist = [];
-      this.activatedroute.paramMap.subscribe(async (params: any) => {
-        this.currentCategory = params.get('categoryID');
-        console.log(this.currentCategory);
-        await this.category
-          .getcategories()
-          .then((result) => {
-            this.categriesList = Array.from(result);
-          })
-          .catch((err) => {
-            console.log(err);
-          });
-        await this.services
-          .getservicesbyCategory(this.currentCategory)
-          .then((results) => {
-            results.forEach((element) => {
-              element.data.state == 'approved'
-                ? (this.serviceslist = [...this.serviceslist, element])
-                : null;
-            });
-            this.spinner.hide();
-          })
-          .catch((err) => {
-            console.log(err);
-            this.spinner.hide();
-          });
-      });
-    }
-
-    this.Router.navigate(['/services_category/' + categorynav]);
+    this.currentCategory == categorynav
+      ? this.Router.navigate(['/']).then(() => {
+          this.Router.navigate(['/services_category/' + categorynav]);
+        })
+      : this.Router.navigate(['/services_category/' + categorynav]);
   }
   filterfeatured() {
     this.Featured = !this.Featured;
