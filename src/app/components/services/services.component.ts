@@ -310,9 +310,9 @@ export class ServicesComponent implements OnInit, DoCheck {
           : null;
       });
 
-      setTimeout(() => {
-        this.spinner.hide();
-      }, 500);
+      this.spinner.hide();
+      // setTimeout(() => {
+      // }, 500);
     });
 
     for (let service of this.serviceslist) {
