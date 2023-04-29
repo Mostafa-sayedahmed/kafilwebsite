@@ -39,6 +39,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AddProjectComponent } from './components/add-project/add-project.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ServicesCategoryComponent } from './components/services-category/services-category.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ProjectsDetailsComponent,
     FooterComponent,
     AddProjectComponent,
+    ServicesCategoryComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
