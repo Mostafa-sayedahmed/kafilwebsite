@@ -12,21 +12,6 @@
           </a>
         </div>
 
-        <!-- <div class="input-group mb-3">
-          <input
-            type="search"
-            class="input-my-input form-control py-2"
-            placeholder=" {{ 'search' | translate }}"
-            aria-label="search"
-            aria-describedby="basic-search"
-            #search
-          />
-
-          <span class="input-my-text" id="basic-search">
-            <i class="fas fa-search" type="button"></i>
-          </span>
-        </div> -->
-
         <div class="accordion mb-3" id="accordionExample">
           <div class="accordion-item text-muted">
             <h2 class="accordion-header" id="headingOne">
@@ -48,18 +33,22 @@
               data-bs-parent="#accordionExample"
             >
               <div class="accordion-body p-0">
-                <!-- <ng-container
-                  *ngFor="let sect of contestSections; let i = index"
+                <div type="button" (click)="getallservices()" class="right p-3">
+                  <i class="fas fa-paint-brush"></i>
+                  {{ "all" | translate }}
+                </div>
+                <ng-container
+                  *ngFor="let category of categriesList; let i = index"
                 >
                   <div
                     type="button"
-                    (click)="ChangeContestSectionId(sect.id)"
+                    (click)="categoryFilter(category.categoryName)"
                     class="right p-3"
                   >
                     <i class="fas fa-paint-brush"></i>
-                    {{ sect.name }}
+                    {{ category.categoryName }}
                   </div>
-                </ng-container> -->
+                </ng-container>
               </div>
             </div>
           </div>
@@ -111,6 +100,7 @@
               type="checkbox"
               role="switch"
               id="flexSwitchCheckChecked"
+              (change)="filterfeatured()"
             />
             <label class="form-check-label" for="flexSwitchCheckChecked">{{
               "featured" | translate
@@ -118,7 +108,33 @@
           </div>
         </div>
 
-        <div></div>
+        <div class="container d-flex gap-3 justify-content-center flex-wrap">
+          <ng-container *ngIf="serviceslist.length < 1">
+            <img
+              src="assets/images/empty-box.png"
+              style="width: 200px; margin: 10%"
+              alt=""
+            />
+          </ng-container>
+          <ng-container *ngIf="serviceslist.length > 0">
+            <ng-container *ngIf="Featured == true">
+              <ng-container *ngFor="let item of serviceslist">
+                <app-servicecard
+                  *ngIf="item.data['isfeatured']"
+                  #cardRef
+                  [carddata]="item"
+                ></app-servicecard>
+              </ng-container>
+            </ng-container>
+            <ng-container *ngIf="Featured == false">
+              <app-servicecard
+                *ngFor="let item of serviceslist"
+                #cardRef
+                [carddata]="item"
+              ></app-servicecard>
+            </ng-container>
+          </ng-container>
+        </div>
       </div>
     </div>
   </section>
@@ -149,28 +165,9 @@
           href="/createservice"
           class="w-100 text-center text-white text-decoration-none"
         >
-          {{ "addContest" | translate }}
+          {{ "addService" | translate }}
           <i class="far fa-plus-square mx-3"></i>
         </a>
-      </div>
-
-      <div class="input-group mb-3">
-        <input
-          type="search"
-          class="input-my-input form-control py-2"
-          placeholder=" {{ 'search' | translate }}"
-          aria-label="search"
-          aria-describedby="basic-search"
-          #search
-        />
-
-        <span class="input-my-text" id="basic-search">
-          <!-- <i
-            class="fas fa-search"
-            type="button"
-            (click)="searchByName(search.value)"
-          ></i> -->
-        </span>
       </div>
 
       <div class="accordion mb-3" id="accordionExample">
@@ -193,7 +190,25 @@
             aria-labelledby="headingOne"
             data-bs-parent="#accordionExample"
           >
-            <div class="accordion-body p-0"></div>
+            <div class="accordion-body p-0">
+              <div type="button" (click)="getallservices()" class="right p-3">
+                <i class="fas fa-paint-brush"></i>
+                {{ "all" | translate }}
+              </div>
+
+              <ng-container
+                *ngFor="let category of categriesList; let i = index"
+              >
+                <div
+                  type="button"
+                  (click)="categoryFilter(category.categoryName)"
+                  class="right p-3"
+                >
+                  <i class="fas fa-paint-brush"></i>
+                  {{ category.categoryName }}
+                </div>
+              </ng-container>
+            </div>
           </div>
         </div>
       </div>

@@ -10,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Service } from 'src/app/models/service';
 import { GetservicesService } from 'src/app/services/getservices.service';
 import { UserService } from 'src/app/services/user.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-singleservice',
@@ -21,10 +22,10 @@ export class SingleserviceComponent implements OnInit {
   constructor(
     private activatedroute: ActivatedRoute,
     private getservice: GetservicesService,
-    private users: UserService
+    private users: UserService,
+    private spinner: NgxSpinnerService
   ) {}
-  @ViewChild('preloadermodalbtn', { static: true })
-  preloadermodalbtn!: ElementRef<HTMLElement>;
+
   myservice: Service = {};
   userinfo = {
     uid: '',
@@ -35,9 +36,7 @@ export class SingleserviceComponent implements OnInit {
   totalprice: number = 0;
   amount: number = 1;
   ngOnInit(): void {
-    let preloader = this.preloadermodalbtn.nativeElement;
-    preloader.click();
-
+    this.spinner.show();
     this.activatedroute.paramMap.subscribe(async (params: any) => {
       this.serviceID = params.get('serviceID');
 
@@ -55,11 +54,10 @@ export class SingleserviceComponent implements OnInit {
             email: '';
             imgUrl: '';
           };
-          preloader.click();
+          this.spinner.hide();
         })
         .catch((err) => {
           console.log(err);
-          preloader.click();
         });
     });
   }
