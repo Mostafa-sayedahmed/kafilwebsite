@@ -5,6 +5,7 @@ import { Freelancer } from 'src/app/models/freelancer';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { AngularFirestoreDocument } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-freelancers',
@@ -12,31 +13,34 @@ import { Router } from '@angular/router';
   styleUrls: ['./freelancers.component.scss'],
 })
 export class FreelancersComponent implements OnInit {
-  spinner:boolean=true;
+  dataspinner: boolean = true;
   freelancers: Freelancer[] = [];
   test: any;
-  constructor(private myService: CrudService, private router: Router) {}
+  constructor(
+    private myService: CrudService,
+    private router: Router,
+    private spinner: NgxSpinnerService
+  ) {}
   ngOnInit(): void {
+    this.spinner.show();
+
     //to get the id we have to use snapshotchanges in service
-    this.myService.getAllFreelancers().subscribe(data => {
-      this.spinner=false;
-      this.freelancers = data.map(ele => {
+    this.myService.getAllFreelancers().subscribe((data) => {
+      this.dataspinner = false;
+      this.freelancers = data.map((ele) => {
         return {
           id: ele.payload.doc.id,
           ...ele.payload.doc.data(),
         };
       });
-    }
-    );
-    
+      this.spinner.hide();
+    });
   }
 
-  getDetailsOfFreelancer(id:string){
-   this.router.navigate(["freelancers",id]);
-   
+  getDetailsOfFreelancer(id: string) {
+    this.router.navigate(['freelancers', id]);
   }
-  goToAddFreelancer(){
-   this.router.navigate(['addFreelancer']);
+  goToAddFreelancer() {
+    this.router.navigate(['addFreelancer']);
   }
-
 }

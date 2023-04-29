@@ -41,12 +41,16 @@
   background-color: #fff;
   border-radius: 10px;
   padding: 0.1rem;
-  max-width: 250px;
+  max-width: 350px;
   max-height: 400px;
   overflow-x: hidden;
   text-overflow: ellipsis;
   flex-wrap: nowrap;
   a {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: start;
     padding: 0.3rem;
     border-radius: 5px;
     text-decoration: none;
@@ -55,6 +59,11 @@
     transition: 0.4s;
     &:hover {
       background-color: #1dbf7385;
+    }
+    &:after {
+      content: "";
+      margin-top: 0.4rem;
+      border-bottom: 1px solid #dedede;
     }
   }
 }
@@ -140,7 +149,8 @@
   .search-result {
     position: sticky;
     margin-top: 0.4rem;
-    left: 50%;
+    left: 0%;
+    text-align: start;
   }
   .borderseprator {
     display: none;

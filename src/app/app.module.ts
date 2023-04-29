@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -37,6 +37,9 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { ProjectsDetailsComponent } from './components/projects-details/projects-details.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AddProjectComponent } from './components/add-project/add-project.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -74,6 +77,9 @@ import { AddProjectComponent } from './components/add-project/add-project.compon
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgxSpinnerModule,
+    BrowserAnimationsModule,
+
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -89,5 +95,6 @@ import { AddProjectComponent } from './components/add-project/add-project.compon
   ],
   providers: [],
   bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {}

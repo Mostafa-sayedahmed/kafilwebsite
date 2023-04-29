@@ -15,7 +15,7 @@
               class="btn btn-success w-100"
               (click)="goToAddFreelancer()"
             >
-              <i class="fa-solid fa-users fa-lg ms-2"></i> انضم الى المستقلين
+              <i class="fa-solid fa-users fa-lg ms-2"></i>  {{"Join the Freelancers"|translate}}
             </button>
           </div>
 
@@ -36,7 +36,7 @@
                     aria-expanded="true"
                     aria-controls="panelsStayOpen-collapseOne"
                   >
-                    <h6>الاقسام</h6>
+                    <h6>{{"Departments"|translate}}</h6>
                   </button>
                 </h2>
                 <div
@@ -46,17 +46,15 @@
                 >
                   <ul class="list-group">
                     <li class="list-group-item p-3">
-                      أعمال و خدمات إستشارية و إدارية
-                    </li>
+{{"Business and advisory and administrative services"|translate}}                    </li>
                     <li class="list-group-item p-3">
-                      برمجة, تطوير المواقع و التطبيقات
-                    </li>
-                    <li class="list-group-item p-3">تصميم, فيديو و صوتيات</li>
-                    <li class="list-group-item p-3">التسويق و المبيعات</li>
-                    <li class="list-group-item p-3">كتابة, صناعة محتوي</li>
-                    <li class="list-group-item p-3">ترجمة و لغات</li>
-                    <li class="list-group-item p-3">مساعدة عن بعد</li>
-                    <li class="list-group-item p-3">أمور اخرى</li>
+{{"Software, developing websites and applications"|translate}}                    </li>
+                    <li class="list-group-item p-3">{{"Design"|translate}} ,{{"Video"|translate}} ,{{"Audio"|translate}}   </li>
+                    <li class="list-group-item p-3"> {{"Marketing"|translate}} , {{"Sales"|translate}}</li>
+                    <li class="list-group-item p-3">{{"Writing ang Content Creation"|translate}}</li>
+                    <li class="list-group-item p-3"> {{"Translation and Languages"|translate}}</li>
+                    <li class="list-group-item p-3">{{"Remote assistance"|translate}}</li>
+                    <li class="list-group-item p-3">{{"Others"|translate}} </li>
                   </ul>
                 </div>
               </div>
@@ -80,7 +78,7 @@
                     aria-expanded="true"
                     aria-controls="panelsStayOpen-Search"
                   >
-                    <h6>المهارات</h6>
+                    <h6>{{"Join the Freelancers"|translate}}</h6>
                   </button>
                 </h2>
                 <div
@@ -92,7 +90,7 @@
                     <input
                       type="search"
                       class="form-control rounded"
-                      placeholder="ابحث ..."
+                      placeholder="{{'Search'|translate}}"
                       aria-label="Search"
                       aria-describedby="search-addon"
                     />
@@ -119,7 +117,7 @@
                     aria-expanded="true"
                     aria-controls="panelsStayOpen-2"
                   >
-                    <h6>مرشحات أخرى</h6>
+                    <h6>{{"Other Filters"|translate}} </h6>
                   </button>
                 </h2>
                 <div
@@ -128,8 +126,8 @@
                   aria-labelledby="panelsStayOpen-headingS"
                 >
                   <ul class="list-group">
-                    <li class="list-group-item p-3">متصل الأن</li>
-                    <li class="list-group-item p-3">هوية موثقة</li>
+                    <li class="list-group-item p-3">{{"Connected Now"|translate}} </li>
+                    <li class="list-group-item p-3">{{"Verified Identity"|translate}}</li>
                   </ul>
                 </div>
               </div>
@@ -150,7 +148,7 @@
                     aria-expanded="true"
                     aria-controls="panelsStayOpen-2"
                   >
-                    <h6>التقييم</h6>
+                    <h6>{{"Rating"|translate}}</h6>
                   </button>
                 </h2>
                 <div
@@ -173,13 +171,13 @@
       <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-8 col-xxl-8">
         <div class="p-3 bg-white mx-3" style="border-radius: 10px">
           <i class="fa-solid fa-users fa-xl ms-2"></i>
-          المستقلين
+          {{"Freelancers"|translate}}
         </div>
         <!-- div of users -->
 
         <!-- The Spinner -->
         <div
-          *ngIf="spinner"
+          *ngIf="dataspinner"
           class="spinner-border text-success spinner"
           role="status"
         >
@@ -193,7 +191,7 @@
           >
             <img class="userImg" [src]="freelancer.img" />
             <h6>{{ freelancer.name }}</h6>
-            <h6>التقييم : {{ freelancer.rating }}</h6>
+            <h6>{{"Rating"|translate}} : {{ freelancer.rating }}</h6>
             <!-- rating -->
             <div class="p-2">
               <span class="fa fa-star checked"></span>
@@ -218,7 +216,7 @@
                 class="myBtn m-2 p-2"
                 (click)="getDetailsOfFreelancer(freelancer.id)"
               >
-                الملف الشخصي
+              {{"Personal File"|translate}}
               </button>
             </div>
 
@@ -229,11 +227,19 @@
             class="p-3 bg-white text-center w-100"
             style="border-radius: 10px"
           >
-            <button class="npBtn mx-2">التالي</button>
-            <button class="npBtn">السابق</button>
+            <button class="npBtn mx-2">{{"Next"|translate}}</button>
+            <button class="npBtn">{{"Prev"|translate}}</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+<ngx-spinner
+  bdColor="#1dcf73"
+  size="medium"
+  color="#fff"
+  [fullScreen]="true"
+  size="large"
+  type="line-scale-pulse-out"
+></ngx-spinner>
