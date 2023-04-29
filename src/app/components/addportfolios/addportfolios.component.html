@@ -1,7 +1,7 @@
 <div>
   <div class="row m-0 p-3">
-    <div class="col-3 d-none d-lg-flex flex-column p-3">
-      <span class="fs-4 my-3">{{'post'| translate}} </span>
+    <div class="col-3 d-none d-lg-flex flex-column mx-3 p-3">
+      <span class="fs-4 my-3">{{ "post" | translate }} </span>
       <iframe
         width="370"
         height="210"
@@ -12,41 +12,40 @@
         allowfullscreen
       ></iframe>
       <p class="text-black-50 my-4">
-        {{'KafiilPlatformHelps'| translate}}
+        {{ "KafiilPlatformHelps" | translate }}
       </p>
-      <h5><span class="fas fa-lightbulb"></span>{{'Tips'| translate}}</h5>
+      <h5><span class="fas fa-lightbulb"></span>{{ "Tips" | translate }}</h5>
       <ul class="px-3 tips-content">
-        <li>{{'Tips1'| translate}}</li>
+        <li>{{ "Tips1" | translate }}</li>
         <li>
-          {{'Tips2'| translate}}
+          {{ "Tips2" | translate }}
         </li>
         <li>
-          {{'Tips3'| translate}}
+          {{ "Tips3" | translate }}
         </li>
-        <li> {{'Tips4'| translate}} </li>
+        <li>{{ "Tips4" | translate }}</li>
         <li>
-          {{'Tips5'| translate}}
+          {{ "Tips5" | translate }}
         </li>
         <li>
-          {{'Tips6'| translate}}
+          {{ "Tips6" | translate }}
         </li>
       </ul>
       <div class="col-12 px-0 mb-4">
         <h5>
           <span class="fas fa-shield-alt" style="color: #1dbf73"> </span>
-          {{'KafiilGuarantees'| translate}}
+          {{ "KafiilGuarantees" | translate }}
         </h5>
         <div class="col-12 px-0 tips-content">
-          {{'KafiilPlatform'| translate}}
+          {{ "KafiilPlatform" | translate }}
         </div>
       </div>
     </div>
 
     <div class="col-8 P-form p-3 m-3">
-    
       <form class="p-3" (ngSubmit)="addData()">
         <div class="mb-3">
-          <label for="name">{{'nameowner'| translate}}</label>
+          <label for="name">{{ "nameowner" | translate }}</label>
           <input
             type="text"
             class="form-control"
@@ -56,7 +55,7 @@
           />
         </div>
         <div class="mb-3">
-          <label for="ownerimg">{{'imgowner'| translate}}</label>
+          <label for="ownerimg">{{ "imgowner" | translate }}</label>
           <input
             type="text"
             class="form-control"
@@ -66,18 +65,20 @@
           />
         </div>
         <div class="mb-3">
-          <label for="address" class="form-label"> {{'title'| translate}}</label>
+          <label for="address" class="form-label">
+            {{ "title" | translate }}</label
+          >
           <input
             type="text"
             class="form-control"
             id="address"
-            placeholder=" {{'title'| translate}}"
+            placeholder=" {{ 'title' | translate }}"
             name="title"
             [(ngModel)]="newportfolois.protfoloiName"
           />
         </div>
         <div class="mb-3">
-          <label for="img">{{'img'| translate}}</label>
+          <label for="img">{{ "img" | translate }}</label>
           <input
             type="text"
             class="form-control"
@@ -88,7 +89,9 @@
         </div>
 
         <div class="mb-3">
-          <label for="discription" class="form-label">{{'description'| translate}}</label>
+          <label for="discription" class="form-label">{{
+            "description" | translate
+          }}</label>
           <textarea
             rows="4"
             class="form-control text-muted"
@@ -98,11 +101,13 @@
         </div>
         <div class="mb-3">
           <div class="col">
-            <label for="category" class="form-label">{{'section'| translate}}</label>
+            <label for="category" class="form-label">{{
+              "section" | translate
+            }}</label>
             <input
               type="text"
               class="form-control text-muted"
-              placeholder="{{'section'| translate}}"
+              placeholder="{{ 'section' | translate }}"
               id="category"
               name="category"
               [(ngModel)]="newportfolois.category"
@@ -110,7 +115,7 @@
           </div>
 
           <div class="mb-3">
-            <label for="watch">{{'Views'| translate}}</label>
+            <label for="watch">{{ "Views" | translate }}</label>
             <input
               type="number"
               class="form-control"
@@ -120,7 +125,7 @@
             />
           </div>
           <div class="mb-3">
-            <label for="like">{{'like'| translate}}</label>
+            <label for="like">{{ "like" | translate }}</label>
             <input
               type="number"
               class="form-control"
@@ -130,11 +135,13 @@
             />
           </div>
           <div class="col">
-            <label for="skills" class="form-label">{{'skill'| translate}}</label>
+            <label for="skills" class="form-label">{{
+              "skill" | translate
+            }}</label>
             <input type="text" class="form-control text-muted" id="skills" />
           </div>
         </div>
-        <button type="submit">{{'add'| translate}}</button>
+        <button type="submit">{{ "add" | translate }}</button>
       </form>
     </div>
   </div>
