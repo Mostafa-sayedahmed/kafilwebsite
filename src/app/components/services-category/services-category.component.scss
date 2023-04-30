@@ -11,7 +11,10 @@ $main: #1dbf73;
 .right:last-child {
   border-bottom: none;
 }
-
+.accordion-button:not(.collapsed) {
+  background-color: #f8f8f8;
+  color: #181818;
+}
 .accordion-button::after {
   margin-left: unset !important;
   margin-right: auto !important;
