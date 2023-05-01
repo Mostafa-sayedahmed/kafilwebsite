@@ -54,6 +54,15 @@
                 <a routerLink="/home">
                   <img class="header-logo mx-3" src="assets/main-logo.svg" />
                 </a>
+                <select
+                  class="form-select border-end ps-0 d-md-none"
+                  (change)="changeLang(lang.value)"
+                  #lang
+                  style="width: 30%"
+                >
+                  <option value="ar">العربية</option>
+                  <option value="en">English</option>
+                </select>
 
                 <button
                   type="button"
@@ -202,7 +211,7 @@
               </ng-container>
               <ng-container *ngIf="user == null">
                 <a routerLink="/sign-in">
-                  <button class="btn btn-light px-1 px-md-4 border">
+                  <button class="btn btn-light px-3 px-md-4 border">
                     {{ "Login" | translate }}
                   </button>
                 </a>
@@ -215,7 +224,7 @@
             </div>
             <div class="language mx-2">
               <select
-                class="form-select border-end ps-0"
+                class="form-select border-end ps-0 d-none d-md-block"
                 (change)="changeLang(lang.value)"
                 #lang
               >
