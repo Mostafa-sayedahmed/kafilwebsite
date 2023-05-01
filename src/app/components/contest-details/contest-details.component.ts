@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Icontest } from 'src/app/models/icontest';
 import { ContestsService } from 'src/app/services/contests.service';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-contest-details',
   templateUrl: './contest-details.component.html',
@@ -19,12 +20,10 @@ export class ContestDetailsComponent implements OnInit {
   contestComments: any[] = [];
   numberOfComments: number = 0;
 
-  userName: string = JSON.parse(localStorage.getItem('user')!).displayName;
-  userImg: string = JSON.parse(localStorage.getItem('user')!).photoURL;
-
   constructor(
     private CS: ContestsService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -50,13 +49,19 @@ export class ContestDetailsComponent implements OnInit {
   }
 
   addComment(comment: string) {
-    this.CS.addComments(
-      this.currentContestID,
-      this.userName,
-      this.userImg,
-      comment
-    );
-    this.getCommentsByContestId();
+    console.log(localStorage.getItem('user'))
+    if(localStorage.getItem('user') != null) {
+        this.CS.addComments(
+        this.currentContestID,
+        JSON.parse(localStorage.getItem('user')!).displayName,
+        JSON.parse(localStorage.getItem('user')!).photoURL,
+        comment
+      );
+      this.getCommentsByContestId();
+    }else{
+      this.router.navigateByUrl('/sign-in');
+    }
+    
   }
 
   getContestById() {
