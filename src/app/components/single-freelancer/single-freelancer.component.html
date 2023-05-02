@@ -1,8 +1,5 @@
-
-      
-   
-    <div class="body">
-        <div
+<div class="body">
+  <!-- <div
           class="dropdown d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none"
         >
           <button
@@ -20,229 +17,232 @@
             <li><a class="dropdown-item text-center" href="#">المهارات</a></li>
             <li><a class="dropdown-item text-center" href="#">مرشحات أخرى</a></li>
           </ul>
-        </div>
-        <div class="container-fluid">
-          <div class="row mt-5">
-            <!-- divider -->
+        </div> -->
+  <div class="container-fluid">
+    <div class="row mt-5">
+      <!-- divider -->
+      <div
+        class="col-0 col-0 col-sm-0 col-md-0 col-lg-0 col-xl-1 col-xxl-1"
+      ></div>
+      <div
+        class="col-0 col-0-12 col-md-0 col-lg-2 col-xl-2 col-xxl-2 d-none d-sm-none d-md-none d-lg-flex d-flex justify-content-center"
+      >
+        <div class="w-100">
+          <div class="input-group rounded w-100 p-2 mt-2">
+            <div class="w-100 p-2 mt-2">
+              <button
+                type="button"
+                class="btn btn-success w-100"
+                (click)="goToAddFreelancer()"
+              >
+                <i class="fa-solid fa-users fa-lg ms-2"></i> انضم الى المستقلين
+              </button>
+            </div>
+          </div>
+
+          <!-- accordion 1-->
+
+          <div>
             <div
-              class="col-0 col-0 col-sm-0 col-md-0 col-lg-0 col-xl-1 col-xxl-1"
-            ></div>
-            <div
-              class="col-0 col-0-12 col-md-0 col-lg-2 col-xl-2 col-xxl-2 d-none d-sm-none d-md-none d-lg-flex d-flex justify-content-center"
+              class="accordion col-12 mt-3"
+              id="accordionPanelsStayOpenExample"
             >
-              <div class="w-100">
-                <div class="input-group rounded w-100 p-2 mt-2">
-                  <div class="w-100 p-2 mt-2">
-                    <button type="button" class="btn btn-success w-100" (click)="goToAddFreelancer()"> <i class="fa-solid fa-users fa-lg ms-2"></i> انضم الى المستقلين</button>
-    
-                  </div>
-                </div>
-  
-                <!-- accordion 1-->
-  
-                <div>
-                  <div
-                    class="accordion col-12 mt-3"
-                    id="accordionPanelsStayOpenExample"
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                  <button
+                    class="accordion-button p-3"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseOne"
+                    aria-expanded="true"
+                    aria-controls="panelsStayOpen-collapseOne"
                   >
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                        <button
-                          class="accordion-button p-3"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#panelsStayOpen-collapseOne"
-                          aria-expanded="true"
-                          aria-controls="panelsStayOpen-collapseOne"
-                        >
-                          <h6>الاقسام</h6>
-                        </button>
-                      </h2>
-                      <div
-                        id="panelsStayOpen-collapseOne"
-                        class="accordion-collapse collapse show"
-                        aria-labelledby="panelsStayOpen-headingOne"
-                      >
-                        <ul class="list-group">
-                          <li class="list-group-item p-3">
-                            أعمال و خدمات إستشارية و إدارية
-                          </li>
-                          <li class="list-group-item p-3">
-                            برمجة, تطوير المواقع و التطبيقات
-                          </li>
-                          <li class="list-group-item p-3">
-                            تصميم, فيديو و صوتيات
-                          </li>
-                          <li class="list-group-item p-3">التسويق و المبيعات</li>
-                          <li class="list-group-item p-3">كتابة, صناعة محتوي</li>
-                          <li class="list-group-item p-3">ترجمة و لغات</li>
-                          <li class="list-group-item p-3">مساعدة عن بعد</li>
-                          <li class="list-group-item p-3">أمور اخرى</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
+                    <h6>الاقسام</h6>
+                  </button>
+                </h2>
+                <div
+                  id="panelsStayOpen-collapseOne"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="panelsStayOpen-headingOne"
+                >
+                  <ul class="list-group">
+                    <li class="list-group-item p-3">
+                      أعمال و خدمات إستشارية و إدارية
+                    </li>
+                    <li class="list-group-item p-3">
+                      برمجة, تطوير المواقع و التطبيقات
+                    </li>
+                    <li class="list-group-item p-3">تصميم, فيديو و صوتيات</li>
+                    <li class="list-group-item p-3">التسويق و المبيعات</li>
+                    <li class="list-group-item p-3">كتابة, صناعة محتوي</li>
+                    <li class="list-group-item p-3">ترجمة و لغات</li>
+                    <li class="list-group-item p-3">مساعدة عن بعد</li>
+                    <li class="list-group-item p-3">أمور اخرى</li>
+                  </ul>
                 </div>
-  
-                <!-- accordion 1-->
-  
-                <div>
-                  <div
-                    class="accordion col-12 mt-3"
-                    id="accordionPanelsStayOpenExample"
+              </div>
+            </div>
+          </div>
+
+          <!-- accordion 1-->
+
+          <div>
+            <div
+              class="accordion col-12 mt-3"
+              id="accordionPanelsStayOpenExample"
+            >
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingS">
+                  <button
+                    class="accordion-button p-3"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-Search"
+                    aria-expanded="true"
+                    aria-controls="panelsStayOpen-Search"
                   >
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="panelsStayOpen-headingS">
-                        <button
-                          class="accordion-button p-3"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#panelsStayOpen-Search"
-                          aria-expanded="true"
-                          aria-controls="panelsStayOpen-Search"
-                        >
-                          <h6>المهارات</h6>
-                        </button>
-                      </h2>
-                      <div
-                        id="panelsStayOpen-Search"
-                        class="accordion-collapse collapse show"
-                        aria-labelledby="panelsStayOpen-headingS"
-                      >
-                        <div class="input-group rounded w-75 p-2 me-4">
-                          <input
-                            type="search"
-                            class="form-control rounded"
-                            placeholder="ابحث ..."
-                            aria-label="Search"
-                            aria-describedby="search-addon"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-  
-                <!-- accordion 1-->
-  
-                <div>
-                  <div
-                    class="accordion col-12 mt-3"
-                    id="accordionPanelsStayOpenExample"
-                  >
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="panelsStayOpen-headingS">
-                        <button
-                          class="accordion-button p-3"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#panelsStayOpen-2"
-                          aria-expanded="true"
-                          aria-controls="panelsStayOpen-2"
-                        >
-                          <h6>مرشحات أخرى</h6>
-                        </button>
-                      </h2>
-                      <div
-                        id="panelsStayOpen-2"
-                        class="accordion-collapse collapse show"
-                        aria-labelledby="panelsStayOpen-headingS"
-                      >
-                        <ul class="list-group">
-                          <li class="list-group-item p-3">متصل الأن</li>
-                          <li class="list-group-item p-3">هوية موثقة</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-  
-                <!-- accordion 1-->
-  
-                <div>
-                  <div class="accordion col-12 mt-3" id="OpenExample">
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="panelsStayOpen-headingS">
-                        <button
-                          class="accordion-button p-3"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#panelsStayOpen-2"
-                          aria-expanded="true"
-                          aria-controls="panelsStayOpen-2"
-                        >
-                          <h6>التقييم</h6>
-                        </button>
-                      </h2>
-                      <div
-                        id="panelsStayOpen-2"
-                        class="accordion-collapse collapse show p-2 text-center"
-                        aria-labelledby="panelsStayOpen-headingS"
-                      >
-                        <i class="fa-solid fa-star" id="test"></i>
-                        <i class="fa-solid fa-star" id="test"></i>
-                        <i class="fa-solid fa-star" id="test"></i>
-                        <i class="fa-solid fa-star" id="test"></i>
-                        <i class="fa-solid fa-star" id="test"></i>
-                      </div>
-                    </div>
+                    <h6>المهارات</h6>
+                  </button>
+                </h2>
+                <div
+                  id="panelsStayOpen-Search"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="panelsStayOpen-headingS"
+                >
+                  <div class="input-group rounded w-75 p-2 me-4">
+                    <input
+                      type="search"
+                      class="form-control rounded"
+                      placeholder="ابحث ..."
+                      aria-label="Search"
+                      aria-describedby="search-addon"
+                    />
                   </div>
                 </div>
               </div>
             </div>
-  
-            <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-8 col-xxl-8">
-              <div class="p-3 bg-white mx-3" style="border-radius: 10px">
-                <i class="fa-solid fa-user fa-xl ms-2"></i>
-                المستقل
-              </div>
-             
-              <div class="d-flex flex-wrap">
-                <!-- USER -->
-                <div class="userCard shadow p-3 mb-5 bg-white rounded" >
-                   <!-- The Spinner -->
-              <div *ngIf="spinner" class="spinner-border text-success spinner" role="status">
-                <span class="sr-only">Loading...</span>
-              </div>
-                  <img
-                    class="userImg"
-                    [src]="Freelancer?.img"
-                  />
-                  <h6 class="my-4"> الاسم : {{Freelancer?.name}} </h6>
-                  <h6 class="my-2"> التقييم : {{Freelancer?.rating}}</h6>
-                  <!-- rating -->
-                  <div class="p-2 my-2">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                  </div>
-                  <div class="p-2 my-2">
-                    <p class="about">
-                      <i class="fa-solid fa-user"></i>المهنة :  {{Freelancer?.title}}
-                    </p>
-                  </div>
-                  <div class="my-2">
-                    <p class="my-2">
-                      المشاهدات : {{Freelancer?.views}} <i class="fa-solid fa-eye "></i>
-                      الاعجاب : {{Freelancer?.likes}}<i
-                        class="fa-solid fa-heart mx-1"
-                      ></i
-                      >الاعمال : {{Freelancer?.portfolio}}<i class="fa-solid fa-image mx-1"></i>
-                    </p >
-                  <button class="myBtn m-2 p-2 " (click)="backToFreelancers()"> عودة الى المستقلين</button>
-                  <button class="myBtn m-2 p-2 "  (click)="backToHomepage()" >  الرئيسية </button>
+          </div>
+
+          <!-- accordion 1-->
+
+          <div>
+            <div
+              class="accordion col-12 mt-3"
+              id="accordionPanelsStayOpenExample"
+            >
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingS">
+                  <button
+                    class="accordion-button p-3"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-2"
+                    aria-expanded="true"
+                    aria-controls="panelsStayOpen-2"
+                  >
+                    <h6>مرشحات أخرى</h6>
+                  </button>
+                </h2>
+                <div
+                  id="panelsStayOpen-2"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="panelsStayOpen-headingS"
+                >
+                  <ul class="list-group">
+                    <li class="list-group-item p-3">متصل الأن</li>
+                    <li class="list-group-item p-3">هوية موثقة</li>
+                  </ul>
                 </div>
-                <!-- ------------------------------------------------------------------------------------------------------------ -->
-  
-               
-              
-             
-             
+              </div>
+            </div>
+          </div>
+
+          <!-- accordion 1-->
+
+          <div>
+            <div class="accordion col-12 mt-3" id="OpenExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingS">
+                  <button
+                    class="accordion-button p-3"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-2"
+                    aria-expanded="true"
+                    aria-controls="panelsStayOpen-2"
+                  >
+                    <h6>التقييم</h6>
+                  </button>
+                </h2>
+                <div
+                  id="panelsStayOpen-2"
+                  class="accordion-collapse collapse show p-2 text-center"
+                  aria-labelledby="panelsStayOpen-headingS"
+                >
+                  <i class="fa-solid fa-star" id="test"></i>
+                  <i class="fa-solid fa-star" id="test"></i>
+                  <i class="fa-solid fa-star" id="test"></i>
+                  <i class="fa-solid fa-star" id="test"></i>
+                  <i class="fa-solid fa-star" id="test"></i>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-     
-  
+
+      <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-8 col-xxl-8">
+        <div class="p-3 bg-white mx-3" style="border-radius: 10px">
+          <i class="fa-solid fa-user fa-xl ms-2"></i>
+          المستقل
+        </div>
+
+        <div class="d-flex flex-wrap">
+          <!-- USER -->
+          <div class="userCard shadow p-3 mb-5 bg-white rounded">
+            <!-- The Spinner -->
+            <div
+              *ngIf="spinner"
+              class="spinner-border text-success spinner"
+              role="status"
+            >
+              <span class="sr-only">Loading...</span>
+            </div>
+            <img class="userImg" [src]="Freelancer?.img" />
+            <h6 class="my-4">الاسم : {{ Freelancer?.name }}</h6>
+            <h6 class="my-2">التقييم : {{ Freelancer?.rating }}</h6>
+            <!-- rating -->
+            <div class="p-2 my-2">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+            <div class="p-2 my-2">
+              <p class="about">
+                <i class="fa-solid fa-user"></i>المهنة : {{ Freelancer?.title }}
+              </p>
+            </div>
+            <div class="my-2">
+              <p class="my-2">
+                المشاهدات : {{ Freelancer?.views }}
+                <i class="fa-solid fa-eye"></i> الاعجاب : {{ Freelancer?.likes
+                }}<i class="fa-solid fa-heart mx-1"></i>الاعمال :
+                {{ Freelancer?.portfolio
+                }}<i class="fa-solid fa-image mx-1"></i>
+              </p>
+              <button class="myBtn m-2 p-2" (click)="backToFreelancers()">
+                عودة الى المستقلين
+              </button>
+              <button class="myBtn m-2 p-2" (click)="backToHomepage()">
+                الرئيسية
+              </button>
+            </div>
+            <!-- ------------------------------------------------------------------------------------------------------------ -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
