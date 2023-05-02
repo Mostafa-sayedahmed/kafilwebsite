@@ -50,11 +50,20 @@
             aria-labelledby="navbarOffcanvasLgLabel"
           >
             <div class="header-right d-flex align-items-center">
-              <a class="navbar-brand" routerLink="/home">
-                <img class="header-logo mx-3" src="assets/main-logo.svg" />
-                <!-- <button class="btn btn-light border closeoffcanvas">
-                  <i class="fa-solid fa-x"></i>
-                </button> -->
+              <a class="navbar-brand">
+                <a routerLink="/home">
+                  <img class="header-logo mx-3" src="assets/main-logo.svg" />
+                </a>
+                <select
+                  class="form-select border-end ps-0 d-md-none"
+                  (change)="changeLang(lang.value)"
+                  #lang
+                  style="width: 30%"
+                >
+                  <option value="ar">العربية</option>
+                  <option value="en">English</option>
+                </select>
+
                 <button
                   type="button"
                   class="btn-close border p-2 closeoffcanvas"
@@ -119,12 +128,6 @@
                   {{ "freelancers" | translate }}
                 </a>
               </li>
-              <!-- <li class="headerlistitem">
-                <a routerLink="#" class="link active">
-                  <i class="fas fa-bars"></i>
-                  {{ "more" | translate }}
-                </a>
-              </li> -->
             </ul>
             <div class="borderseprator"></div>
           </div>
@@ -208,7 +211,7 @@
               </ng-container>
               <ng-container *ngIf="user == null">
                 <a routerLink="/sign-in">
-                  <button class="btn btn-light px-4 border">
+                  <button class="btn btn-light px-3 px-md-4 border">
                     {{ "Login" | translate }}
                   </button>
                 </a>
@@ -221,7 +224,7 @@
             </div>
             <div class="language mx-2">
               <select
-                class="form-select border-end ps-0"
+                class="form-select border-end ps-0 d-none d-md-block"
                 (change)="changeLang(lang.value)"
                 #lang
               >
