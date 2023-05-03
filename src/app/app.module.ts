@@ -37,6 +37,8 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { ProjectsDetailsComponent } from './components/projects-details/projects-details.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AddProjectComponent } from './components/add-project/add-project.component';
+
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServicesCategoryComponent } from './components/services-category/services-category.component';
@@ -94,6 +96,7 @@ import { ServicesCategoryComponent } from './components/services-category/servic
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

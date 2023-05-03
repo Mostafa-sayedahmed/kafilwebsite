@@ -74,6 +74,12 @@
   background-color: #1dbf73;
   color: azure;
 }
+ngb-rating {
+  color: #FFC107;
+  font-size: 30px;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
 .list-group-item:hover {
   background-color: #f1f2f2;
 }
@@ -95,12 +101,24 @@ li {
 
 @media only screen and (max-width: 700px) {
   .userCard {
-    width: 100% !important;
+    width: 80%;
+    max-height: fit-content;
+    padding: 20px;
+    margin: 10%;
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
   }
 }
 @media only screen and (max-width: 823px) and (min-width: 700px) {
   .userCard {
-    width: 45% !important;
+    width: 80%;
+    max-height: fit-content;
+    padding: 20px;
+    margin: 10%;
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
   }
 }
 #dropDown {
