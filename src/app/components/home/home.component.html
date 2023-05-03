@@ -1,4 +1,4 @@
-<div class="container-fluid" >
+<div class="container-fluid">
   <div class="row">
     <div class="container-fluid carousel" style="background-color: #f1f2f2">
       <!-- Carousel in the beggining of page  -->
@@ -57,20 +57,19 @@
               <div
                 class="m-3 col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-5"
               >
-                <h1 class="my-3">{{'Services'|translate}}</h1>
+                <h1 class="my-3">{{ "Services" | translate }}</h1>
                 <p class="my-3">
-                  {{'Services slide txt'|translate}}
+                  {{ "Services slide txt" | translate }}
                 </p>
                 <button class="myBtn ms-3" routerLink="/services">
-                  {{'Explore Services'|translate}}
-
+                  {{ "Explore Services" | translate }}
                 </button>
                 <a
                   href="https://www.youtube.com/watch?v=U-3knuWDrXk"
                   target="_blank"
                   class="mx-3"
                   ><i class="fa-regular fa-circle-play fa-2xl ms-2"></i>
-                  <span> {{'watch the video'|translate}} </span></a
+                  <span> {{ "watch the video" | translate }} </span></a
                 >
               </div>
               <div
@@ -88,15 +87,15 @@
               <div
                 class="m-3 col-12 col-sm-12 col-md-12 col-lg-5 col-xl-6 col-xxl-5"
               >
-                <h1 class="my-2">    {{'Welcome to kafill'|translate}}</h1>
+                <h1 class="my-2">{{ "Welcome to kafill" | translate }}</h1>
                 <p class="my-2">
-                  {{'first slide txt1'|translate}}
+                  {{ "first slide txt1" | translate }}
                 </p>
                 <div class="input-group mb-3">
                   <input
                     type="search"
                     class="form-control rounded my-2"
-                    placeholder="{{'any many more'|translate}}"
+                    placeholder="{{ 'any many more' | translate }}"
                     aria-label="Search"
                     aria-describedby="search-addon"
                   />
@@ -108,14 +107,14 @@
                   </button>
                 </div>
                 <button class="myBtn ms-3" routerLink="/register">
-                  {{'register now'|translate}}
+                  {{ "register now" | translate }}
                 </button>
                 <a
                   href="https://www.youtube.com/watch?v=U-3knuWDrXk"
                   target="_blank"
                   class="mx-3"
                   ><i class="fa-regular fa-circle-play fa-2xl ms-2"></i>
-                  <span>{{'watch the video'|translate}} </span></a
+                  <span>{{ "watch the video" | translate }} </span></a
                 >
               </div>
               <div
@@ -133,19 +132,19 @@
               <div
                 class="m-3 col-12 col-sm-12 col-md-12 col-lg-6 col-xl-5 col-xxl-5"
               >
-                <h1 class="my-4">{{'Projects'|translate}}</h1>
+                <h1 class="my-4">{{ "Projects" | translate }}</h1>
                 <p class="my-2">
-                  {{'Projects slide txt'|translate}}
+                  {{ "Projects slide txt" | translate }}
                 </p>
                 <button class="myBtn ms-3 my-2" routerLink="/portfolois">
-                  {{'Explore Projects'|translate}}
+                  {{ "Explore Projects" | translate }}
                 </button>
                 <a
                   href="https://www.youtube.com/watch?v=U-3knuWDrXk"
                   target="_blank"
                   class="mx-2"
                   ><i class="fa-regular fa-circle-play fa-2xl ms-2"></i>
-                  <span>{{'watch the video'|translate}} </span></a
+                  <span>{{ "watch the video" | translate }} </span></a
                 >
               </div>
               <div
@@ -166,13 +165,19 @@
               <i class="fa-solid fa-suitcase fa-2xl"></i>
             </div>
             <div class="m-3">
-              <h2>  {{'how it works'|translate}}</h2>
+              <h2>{{ "how it works" | translate }}</h2>
             </div>
           </div>
           <div class="p-3 d-flex justify-content-center">
-            <div class="w-25 p-3 tab" routerLink="/services"> {{'Services'|translate}}</div>
-            <div class="w-25 p-3 tab" routerLink="/projects">{{'Projects'|translate}}</div>
-            <div class="w-25 p-3 tab" routerLink="/contests">{{'Contests'|translate}}</div>
+            <div class="w-25 p-3 tab" routerLink="/services">
+              {{ "Services" | translate }}
+            </div>
+            <div class="w-25 p-3 tab" routerLink="/projects">
+              {{ "Projects" | translate }}
+            </div>
+            <div class="w-25 p-3 tab" routerLink="/contests">
+              {{ "Contests" | translate }}
+            </div>
           </div>
         </div>
       </div>
@@ -201,8 +206,13 @@
                 <div class="d-flex justify-content-center p-3 w-100 mb-3">
                   <div class="myIcon">1</div>
                 </div>
-                <h4>{{'Explore Services'|translate}} </h4>
-                <p>{{'Browse and compare services to choose the most suitable for you'|translate}}</p>
+                <h4>{{ "Explore Services" | translate }}</h4>
+                <p>
+                  {{
+                    "Browse and compare services to choose the most suitable for you"
+                      | translate
+                  }}
+                </p>
               </div>
             </div>
             <div
@@ -216,8 +226,13 @@
                     class="fa-solid fa-circle-play mb-4 fa-xl"
                     style="color: #1dbf73 !important"
                   ></i>
-                  <h4>{{'Ask for a Service'|translate}}</h4>
-                  <p>{{'Browse and compare services to choose the most suitable for you'|translate}}</p>
+                  <h4>{{ "Ask for a Service" | translate }}</h4>
+                  <p>
+                    {{
+                      "Browse and compare services to choose the most suitable for you"
+                        | translate
+                    }}
+                  </p>
                 </div>
               </div>
               <div class="h-50 p-5">
@@ -248,8 +263,13 @@
                 <div class="d-flex justify-content-center p-3 w-100">
                   <div class="myIcon">3</div>
                 </div>
-                <h4>{{'Recive'|translate}}</h4>
-                <p> {{'Receive your service with quality and on the agreed date'|translate}}</p>
+                <h4>{{ "Recive" | translate }}</h4>
+                <p>
+                  {{
+                    "Receive your service with quality and on the agreed date"
+                      | translate
+                  }}
+                </p>
               </div>
             </div>
           </div>
@@ -260,9 +280,12 @@
     <div class="container" style="background-color: #f1f2f2">
       <div class="row">
         <div class="col-12 text-center mt-5">
-          <h3>{{'Why Kafill ?'|translate}}</h3>
+          <h3>{{ "Why Kafill ?" | translate }}</h3>
           <p>
-            {{'Kafeel works to provide a professional and safe environment for dealing between entrepreneurs and independents through:'|translate}}
+            {{
+              "Kafeel works to provide a professional and safe environment for dealing between entrepreneurs and independents through:"
+                | translate
+            }}
           </p>
         </div>
 
@@ -272,12 +295,31 @@
           <div
             class="m-5 p-5 col-10 col-sm-10 col-md-10 col-lg-5 col-xl-5 col-xxl-5"
           >
-            <h5 style="color: #1dbf73">{{'Business Owner'|translate}} </h5>
+            <h5 style="color: #1dbf73">{{ "Business Owner" | translate }}</h5>
             <ul>
-              <li>{{'Full guarantee of your rights and outstanding technical support at your service'|translate}}</li>
-              <li>{{'No additional fees, just pay for your purchases'|translate}}</li>
-              <li>{{'Enjoy the contests department, the exclusive department in the arab world'|translate}}</li>
-              <li>{{'Various, secure and flexible payment methods suitable for all countries'|translate}}</li>
+              <li>
+                {{
+                  "Full guarantee of your rights and outstanding technical support at your service"
+                    | translate
+                }}
+              </li>
+              <li>
+                {{
+                  "No additional fees, just pay for your purchases" | translate
+                }}
+              </li>
+              <li>
+                {{
+                  "Enjoy the contests department, the exclusive department in the arab world"
+                    | translate
+                }}
+              </li>
+              <li>
+                {{
+                  "Various, secure and flexible payment methods suitable for all countries"
+                    | translate
+                }}
+              </li>
             </ul>
           </div>
           <div class="col-10 col-sm-10 col-md-10 col-lg-5 col-xl-5 col-xxl-5">
@@ -302,13 +344,30 @@
           <div
             class="m-5 p-5 col-10 col-sm-10 col-md-10 col-lg-6 col-xl-6 col-xxl-5"
           >
-            <h5 style="color: #1dbf73">{{'Freelancer'|translate}}</h5>
+            <h5 style="color: #1dbf73">{{ "Freelancer" | translate }}</h5>
             <ul>
-              <li>{{'Full guarantee of your rights and outstanding technical support at your service'|translate}} </li>
-              <li>{{'Profits suspension period may be up to two days only'|translate}}</li>
-              <li>{{"Kafiil platform commission may be up to 10% only"|translate}}</li>
               <li>
-                {{'Various and easy profit withdrawal methods (paypal / vodafone cash / bank transfer / and many other means ....)'|translate}}
+                {{
+                  "Full guarantee of your rights and outstanding technical support at your service"
+                    | translate
+                }}
+              </li>
+              <li>
+                {{
+                  "Profits suspension period may be up to two days only"
+                    | translate
+                }}
+              </li>
+              <li>
+                {{
+                  "Kafiil platform commission may be up to 10% only" | translate
+                }}
+              </li>
+              <li>
+                {{
+                  "Various and easy profit withdrawal methods (paypal / vodafone cash / bank transfer / and many other means ....)"
+                    | translate
+                }}
               </li>
             </ul>
           </div>
@@ -319,123 +378,132 @@
     <div class="container">
       <div class="row">
         <div class="col-12 text-center p-5">
-          <h2>{{'Our Departments'|translate}}</h2>
+          <h2>{{ "Our Departments" | translate }}</h2>
           <p>
-            {{'Kafiil has many different departments (contests / mini-services / projects) that meet your different needs to develop your business'|translate}}
+            {{
+              "Kafiil has many different departments (contests / mini-services / projects) that meet your different needs to develop your business"
+                | translate
+            }}
           </p>
         </div>
       </div>
       <div class="p-3 d-flex justify-content-center text-center">
-        <div class="w-25 p-3 tab" routerLink="/services">{{'Services'|translate}}</div>
-        <div class="w-25 p-3 tab" routerLink="/projects">{{'Projects'|translate}}</div>
-        <div class="w-25 p-3 tab" routerLink="/contests">{{'Contests'|translate}}</div>
+        <div class="w-25 p-3 tab" routerLink="/services">
+          {{ "Services" | translate }}
+        </div>
+        <div class="w-25 p-3 tab" routerLink="/projects">
+          {{ "Projects" | translate }}
+        </div>
+        <div class="w-25 p-3 tab" routerLink="/contests">
+          {{ "Contests" | translate }}
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 <div class="row m-0">
-<div id="containerOfTabs">
-  <div class="col-12 d-flex text-center">
-    <div class="servicesTabsCon w-100">
-      <div
-        class="servicesTabs col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4"
-      >
-        <div class="insideTab">
-          <i class="fa-solid fa-suitcase fa-2xl" style="color: #1dbf73"></i>
-          <h5 class="my-3">{{'Business'|translate}}</h5>
+  <div id="containerOfTabs">
+    <div class="col-12 d-flex text-center">
+      <div class="servicesTabsCon w-100">
+        <div
+          class="servicesTabs col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4"
+        >
+          <div class="insideTab">
+            <i class="fa-solid fa-suitcase fa-2xl" style="color: #1dbf73"></i>
+            <h5 class="my-3">{{ "Business" | translate }}</h5>
+          </div>
         </div>
-      </div>
-      <div
-        class="servicesTabs col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4"
-      >
-        <div class="insideTab">
-          <i
-            class="fa-sharp fa-solid fa-code fa-2xl"
-            style="color: #1dbf73"
-          ></i>
-          <h5 class="my-3">{{'Software'|translate}}</h5>
+        <div
+          class="servicesTabs col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4"
+        >
+          <div class="insideTab">
+            <i
+              class="fa-sharp fa-solid fa-code fa-2xl"
+              style="color: #1dbf73"
+            ></i>
+            <h5 class="my-3">{{ "Software" | translate }}</h5>
+          </div>
         </div>
-      </div>
-      <div
-        class="servicesTabs col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4"
-      >
-        <div class="insideTab">
-          <i
-            class="fa-solid fa-square-poll-vertical fa-2xl"
-            style="color: #1dbf73"
-          ></i>
-          <h5 class="my-3">{{'Marketing'|translate}}</h5>
+        <div
+          class="servicesTabs col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4"
+        >
+          <div class="insideTab">
+            <i
+              class="fa-solid fa-square-poll-vertical fa-2xl"
+              style="color: #1dbf73"
+            ></i>
+            <h5 class="my-3">{{ "Marketing" | translate }}</h5>
+          </div>
         </div>
-      </div>
-      <div
-        class="servicesTabs col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4"
-      >
-        <div class="insideTab">
-          <i class="fa-solid fa-pen-nib fa-2xl" style="color: #1dbf73"></i>
-          <h5 class="my-3">{{'Design'|translate}}</h5>
+        <div
+          class="servicesTabs col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4"
+        >
+          <div class="insideTab">
+            <i class="fa-solid fa-pen-nib fa-2xl" style="color: #1dbf73"></i>
+            <h5 class="my-3">{{ "Design" | translate }}</h5>
+          </div>
         </div>
-      </div>
-      <div
-        class="servicesTabs col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4"
-      >
-        <div class="insideTab">
-          <i class="fa-solid fa-video fa-2xl" style="color: #1dbf73"></i>
-          <h5 class="my-3">{{'Video'|translate}}</h5>
+        <div
+          class="servicesTabs col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4"
+        >
+          <div class="insideTab">
+            <i class="fa-solid fa-video fa-2xl" style="color: #1dbf73"></i>
+            <h5 class="my-3">{{ "Video" | translate }}</h5>
+          </div>
         </div>
-      </div>
-      <div
-        class="servicesTabs col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4"
-      >
-        <div class="insideTab">
-          <i class="fa-solid fa-microphone fa-2xl" style="color: #1dbf73"></i>
-          <h5 class="my-3">{{'Audio'|translate}}</h5>
+        <div
+          class="servicesTabs col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4"
+        >
+          <div class="insideTab">
+            <i class="fa-solid fa-microphone fa-2xl" style="color: #1dbf73"></i>
+            <h5 class="my-3">{{ "Audio" | translate }}</h5>
+          </div>
         </div>
-      </div>
-      <div
-        class="servicesTabs col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4"
-      >
-        <div class="insideTab">
-          <i class="fa-solid fa-language fa-2xl" style="color: #1dbf73"></i>
-          <h5 class="my-3">{{'Writing And Translation'|translate}} </h5>
+        <div
+          class="servicesTabs col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4"
+        >
+          <div class="insideTab">
+            <i class="fa-solid fa-language fa-2xl" style="color: #1dbf73"></i>
+            <h5 class="my-3">{{ "Writing And Translation" | translate }}</h5>
+          </div>
         </div>
-      </div>
-      <div
-        class="servicesTabs col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4"
-      >
-        <div class="insideTab">
-          <i
-            class="fa-solid fa-chalkboard-user fa-2xl"
-            style="color: #1dbf73"
-          ></i>
-          <h5 class="my-3">{{'Education And Consulting'|translate}} </h5>
+        <div
+          class="servicesTabs col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4"
+        >
+          <div class="insideTab">
+            <i
+              class="fa-solid fa-chalkboard-user fa-2xl"
+              style="color: #1dbf73"
+            ></i>
+            <h5 class="my-3">{{ "Education And Consulting" | translate }}</h5>
+          </div>
         </div>
-      </div>
-      <div
-        class="servicesTabs col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4"
-      >
-        <div class="insideTab">
-          <i
-            class="fa-solid fa-comments-dollar fa-2xl"
-            style="color: #1dbf73"
-          ></i>
-          <h5 class="my-3">{{'Financial Services'|translate}} </h5>
+        <div
+          class="servicesTabs col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4"
+        >
+          <div class="insideTab">
+            <i
+              class="fa-solid fa-comments-dollar fa-2xl"
+              style="color: #1dbf73"
+            ></i>
+            <h5 class="my-3">{{ "Financial Services" | translate }}</h5>
+          </div>
         </div>
-      </div>
-      <div
-        class="servicesTabs col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4"
-      >
-        <div class="insideTab">
-          <i
-            class="fa-sharp fa-solid fa-list-ul fa-2xl"
-            style="color: #1dbf73"
-          ></i>
-          <h5 class="my-3">{{'Other Services'|translate}} </h5>
+        <div
+          class="servicesTabs col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4"
+        >
+          <div class="insideTab">
+            <i
+              class="fa-sharp fa-solid fa-list-ul fa-2xl"
+              style="color: #1dbf73"
+            ></i>
+            <h5 class="my-3">{{ "Other Services" | translate }}</h5>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 </div>
 
 <div
@@ -447,11 +515,14 @@
       class="col-12 d-block d-sm-block d-md-block d-lg-flex d-xl-flex d-xxl-flex p-5"
     >
       <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-5 p-5">
-        <h1 class="m-3">{{'Register in Kafeel'|translate}}</h1>
+        <h1 class="m-3">{{ "Register in Kafeel" | translate }}</h1>
         <p class="m-3">
-          {{"Enjoy Kafeel's various sections (contests / projects / micro-services) that provide you with all your needs for the growth of your projects with a selection of the best independent candidates nominated by Kafeel"|translate}}
+          {{
+            "Enjoy Kafeel's various sections (contests / projects / micro-services) that provide you with all your needs for the growth of your projects with a selection of the best independent candidates nominated by Kafeel"
+              | translate
+          }}
         </p>
-        <button class="myBtn w-25 m-3">{{'register now'|translate}}</button>
+        <button class="myBtn w-25 m-3">{{ "register now" | translate }}</button>
       </div>
       <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-5">
         <img
@@ -468,7 +539,7 @@
   <div class="row">
     <div class="col-12">
       <div class="text-center">
-        <h2>{{"Frequently Asked Questions"|translate}}</h2>
+        <h2>{{ "Frequently Asked Questions" | translate }}</h2>
       </div>
       <div
         class="d-block d-sm-block d-md-block d-lg-flex d-xl-flex d-xxl-flex m-5 p-5"
@@ -481,7 +552,7 @@
                   class="fa-solid fa-suitcase fa-lg ms-3"
                   style="color: #1dbf73"
                 ></i>
-                {{"General"|translate}}</a
+                {{ "General" | translate }}</a
               >
             </li>
             <li class="nav-item m-0 navBar p-1">
@@ -490,7 +561,7 @@
                   class="fa-solid fa-suitcase fa-lg ms-3"
                   style="color: #1dbf73"
                 ></i>
-                {{'Services'|translate}}</a
+                {{ "Services" | translate }}</a
               >
             </li>
             <li class="nav-item m-0 navBar p-1">
@@ -499,7 +570,7 @@
                   class="fa-solid fa-suitcase fa-lg ms-3"
                   style="color: #1dbf73"
                 ></i>
-                {{'Projects'|translate}}</a
+                {{ "Projects" | translate }}</a
               >
             </li>
             <li class="nav-item m-0 navBar p-1">
@@ -508,7 +579,7 @@
                   class="fa-solid fa-suitcase fa-lg ms-3"
                   style="color: #1dbf73"
                 ></i>
-                {{"Contests"|translate}}</a
+                {{ "Contests" | translate }}</a
               >
             </li>
           </ul>
@@ -525,7 +596,7 @@
                   aria-expanded="true"
                   aria-controls="panelsStayOpen-collapseOne"
                 >
-                  <div> هي منصةما كفيل ؟</div>
+                  <div>{{ "What is Kafiil ?" | translate }}</div>
                 </button>
               </h2>
               <div
@@ -535,11 +606,7 @@
               >
                 <div class="accordion-body p-3">
                   <p>
-                    منصة كفيل تمثل حلقة الوصل بين آلاف من المحترفين في شتى
-                    التخصصات من مختلف الدول العربية و بين رواد الأعمال مهما كانت
-                    مجالات مشاريعهم و شركاتهم الناشئة, حيث يمكن لهم توظيف
-                    المستقلين أصحاب المهارات عن بعد لإنجاز مهام محددة بضمانة
-                    كاملة من كفيل من خلال بيئة إحترافية وبسيطة وموثوقة.
+                    {{ "What is Kafiil txt" | translate }}
                   </p>
                 </div>
               </div>
@@ -554,7 +621,9 @@
                   aria-expanded="false"
                   aria-controls="panelsStayOpen-collapseTwo"
                 >
-                  كيف يمكن لأصحاب المهارات الاستفادة من كفيل؟
+                  {{
+                    "How can Talanted people benefit from Kafiil?" | translate
+                  }}
                 </button>
               </h2>
               <div
@@ -564,13 +633,10 @@
               >
                 <div class="accordion-body p-3">
                   <p>
-                    بالنسبة للمستقلين أصحاب المهارات فيمكنهم توظيف مهاراتهم
-                    واستثمارها لتحويلها لمصدر دخل متميز وذلك من خلال عرض خدماتهم
-                    والمشاركة بعروضهم على المشاريع والمسابقات التي تختص بمجال
-                    عملهم ومن ثم يتم اختيارهم من قبل المشتريين لتنفيذ بعض تلك
-                    المهام المطلوبة ليحصلوا على الأجر المادي المتفق عليه في
-                    مقابل ما بذلوه من جهد , مع العلم أن المنصة تضمن لهم كامل
-                    حقوقهم.
+                    {{
+                      "How can Talanted people benefit from Kafiil txt"
+                        | translate
+                    }}
                   </p>
                 </div>
               </div>
@@ -585,7 +651,10 @@
                   aria-expanded="false"
                   aria-controls="panelsStayOpen-collapseThree"
                 >
-                  كيف يضمن كفيل حقوقي كمشتري؟
+                  {{
+                    "How does Kafiil guarantee my rights as a buyer?"
+                      | translate
+                  }}
                 </button>
               </h2>
               <div
@@ -595,9 +664,10 @@
               >
                 <div class="accordion-body p-3">
                   <p>
-                    في حال حدوث أي تقصير من البائع في تنفيذ الخدمة بشكلها الكامل
-                    يضمن الموقع إعادة المال كاملاً للمشتري دون أي نقصان وذلك
-                    وفقا لشروط الإستخدام، فقط كل ما عليك هو فتح تذكرة دعم فني.
+                    {{
+                      "How does Kafiil guarantee my rights as a buyer? txt"
+                        | translate
+                    }}
                   </p>
                 </div>
               </div>
@@ -612,7 +682,10 @@
                   aria-expanded="false"
                   aria-controls="panelsStayOpen-collapse1"
                 >
-                  كيف يضمن كفيل حقوقي كمستقل؟
+                  {{
+                    "How does Kafiil guarantee my rights as a Freelancer?"
+                      | translate
+                  }}
                 </button>
               </h2>
               <div
@@ -622,11 +695,10 @@
               >
                 <div class="accordion-body p-3">
                   <p>
-                    قبل تنفيذك للعمل المطلوب فإن مبلغ ذلك العمل سواء كان خدمة أو
-                    مشروع أو مسابقة يتم اقتطاعه من رصيد المشتري ليظل معلقاً في
-                    الموقع لحين إنتهائك من تسليم العمل المطلوب حتى يتثنى لك تسلم
-                    أرباحك, وفي حال تعرضك لأي ظلم أو محاولة للإستغلال يمكنك
-                    التواصل مع الدعم الفني , فنحن دوماً في خدمتك.
+                    {{
+                      "How does Kafiil guarantee my rights as a Freelancer? txt"
+                        | translate
+                    }}
                   </p>
                 </div>
               </div>
@@ -641,7 +713,10 @@
                   aria-expanded="false"
                   aria-controls="panelsStayOpen-collapse2"
                 >
-                  ما هي مستويات الباعة (المستقلين) في كفيل؟
+                  {{
+                    "What are the levels of (Freelancers) sellers in Kafil?"
+                      | translate
+                  }}
                 </button>
               </h2>
               <div
@@ -651,14 +726,10 @@
               >
                 <div class="accordion-body p-3">
                   <p>
-                    بائع جديد : لم يحقق بعد أي مبيعات بائع مستوى 1 : حقق مبيعات
-                    تترواح من 5 إلى 300 دولار من خلال 5 أعمال منفذة على الأقل
-                    وبحد أدني تقييم 3 نجوم بائع مستوى 2 : حقق مبيعات تترواح من
-                    301 إلى 1000 دولار من خلال 20 عمل منفذ على الأقل وبحد أدني
-                    تقييم 4,25 نجمة بائع مستوى 3 : حقق مبيعات أكثر من 1000 دولار
-                    من خلال 50 عمل منفذ على الأقل وبحد أدني تقييم 4,5 نجمة بائع
-                    خبير : يتم إختياره يدويا من إدارة كفيل على أن يجمع بين أخلاق
-                    وإحترافية ونشاط المستقل المتميز
+                    {{
+                      "What are the levels of (Freelancers) sellers in Kafil? txt"
+                        | translate
+                    }}
                   </p>
                 </div>
               </div>
@@ -673,7 +744,9 @@
                   aria-expanded="false"
                   aria-controls="panelsStayOpen-collapse3"
                 >
-                  ما هي مستويات المشتريين في كفيل؟
+                  {{
+                    "What are the levels of buyers in in Kafiil?" | translate
+                  }}
                 </button>
               </h2>
               <div
@@ -683,12 +756,10 @@
               >
                 <div class="accordion-body p-3">
                   <p>
-                    مشتري جديد : لم يقم بأي عملية شراء مشتري مستوى 1 : قام
-                    بعمليات شراء تترواح قيمتها من 5 إلى 300 دولار مشتري مستوى 2
-                    : قام بعمليات شراء تتراوح قيمتها من 301 إلى 1000 دولار مشتري
-                    مستوى 3 : قام بعمليات شراء تزيد عن 1000 دولار مشتري VIP :
-                    يتم إختياره يدويا من إدارة كفيل ولابد أن يتحلى بمواصفات
-                    وأخلاق المشتري المتميز
+                    {{
+                      "What are the levels of buyers in in Kafiil? txt"
+                        | translate
+                    }}
                   </p>
                 </div>
               </div>
@@ -703,7 +774,10 @@
                   aria-expanded="false"
                   aria-controls="panelsStayOpen-collapse4"
                 >
-                  ما المميزات الممنوحة لمستويات الباعة (المستقلين) المختلفة؟
+                  {{
+                    "What are the advantages granted to the different levels of (Freelancers) sellers?"
+                      | translate
+                  }}
                 </button>
               </h2>
               <div
@@ -713,19 +787,10 @@
               >
                 <div class="accordion-body p-3">
                   <p>
-                    بائع جديد : إضافة 5 خدمات مصغرة وتقديم عروض على 5 مشاريع
-                    نشطة, كما يمكنه سحب أرباحه بعد مرور 8 أيام على تسليم العمل.
-                    بائع مستوى 1 : إضافة 10 خدمات مصغرة وتقديم عروض على 10
-                    مشاريع نشطة, كما يمكنه سحب أرباحه بعد مرور 6 أيام على تسليم
-                    العمل. بائع مستوى 2 : إضافة 15 خدمات مصغرة وتقديم عروض على
-                    15 مشاريع نشطة , كما يمكنه سحب أرباحه بعد مرور 4 أيام على
-                    تسليم العمل. بائع مستوى 3 : إضافة 30 خدمات مصغرة وتقديم عروض
-                    على 20 مشاريع نشطة بالإضافة لأولوية في الدعم الفني وبادج
-                    خاص, كما يمكنه سحب أرباحه بعد مرور يومين على تسليم العمل.
-                    بائع خبير : إضافة أي عدد من الخدمات المصغرة وتقديم أي عدد من
-                    العروض بالإضافة لأولوية في الدعم الفني وبادج خاص ويحق له
-                    الترويج مجانا لأحد خدماته كل شهر, كما يمكنه سحب رصيده فور
-                    تسليم العمل دون أي انتظار.
+                    {{
+                      "What are the advantages granted to the different levels of (Freelancers) sellers? txt"
+                        | translate
+                    }}
                   </p>
                 </div>
               </div>
@@ -740,7 +805,10 @@
                   aria-expanded="false"
                   aria-controls="panelsStayOpen-collapse5"
                 >
-                  كيف يمكنني الربح من برنامج التسويق بالعمولة؟
+                  {{
+                    "How can I earn from the affiliate marketing program?"
+                      | translate
+                  }}
                 </button>
               </h2>
               <div
@@ -750,11 +818,10 @@
               >
                 <div class="accordion-body p-3">
                   <p>
-                    انسخ الرابط الخاص بك وابدأ نشره في الموقع والمدونات ومنصات
-                    التواصل الإجتماعي وبذلك تحصل على 5% من قيمة أول طلب يقوم
-                    المشتري بإتمامه من خلال رابط الإحالة الخاصة بك بحد أقصى 50
-                    دولار لكل عميل لمدة عام كامل, ودون حد أقصى لإجمالي ما يمكنك
-                    ربحه عبر برنامج التسويق بالعمولة.
+                    {{
+                      "How can I earn from the affiliate marketing program? txt"
+                        | translate
+                    }}
                   </p>
                 </div>
               </div>
@@ -769,7 +836,10 @@
                   aria-expanded="false"
                   aria-controls="panelsStayOpen-collapse6"
                 >
-                  ما هي الأسباب التي قد تؤدي لإيقاف حساب المستخدم؟
+                  {{
+                    "What are the reasons that may lead to the suspension of the user's account?"
+                      | translate
+                  }}
                 </button>
               </h2>
               <div
@@ -779,10 +849,10 @@
               >
                 <div class="accordion-body p-3">
                   <p>
-                    يوجد عدة أسباب مذكرة في صفحة "شروط الاستخدام" لعل من أبرزها:
-                    إنشاء أكثر من حساب – التجاوز الأخلاقي بأي شكل وتجاه أي شخص
-                    على الموقع – محاولة الاحتيال أو الغش - ارسال وسائل التواصل
-                    الخارجي ضمن أي قسم من أقسام الموقع بهدف التعامل خارج المنصة.
+                    {{
+                      "What are the reasons that may lead to the suspension of the user's account? txt"
+                        | translate
+                    }}
                   </p>
                 </div>
               </div>
@@ -797,7 +867,10 @@
                   aria-expanded="false"
                   aria-controls="panelsStayOpen-collapse7"
                 >
-                  هل سأتمكن من سحب الرصيد في حالة إيقاف حسابي بشكل نهائي؟
+                  {{
+                    "Will I be able to withdraw the balance if my account is permanently suspended?"
+                      | translate
+                  }}
                 </button>
               </h2>
               <div
@@ -807,13 +880,10 @@
               >
                 <div class="accordion-body p-3">
                   <p>
-                    في حالة الحظر النهائي من الموقع (ولا يتم ذلك إلا بعد إرتكاب
-                    مخالفة جسيمة كما هو موضح في صفحة شروط الإستخدام) يتم مراجعة
-                    كافة المعاملات التي قُمت بها لتقدير أي ضرر أو أذى لأحد
-                    الأعضاء أو للمنصة قد تسببت به وذلك حتى يتم خصمه من الرصيد
-                    كتعويض عن ذلك ثم يحق لك عقب ذلك سحب باقي المبلغ عقب مرور 30
-                    يوم عمل من تاريخ تجميد حسابك وذلك من خلال التواصل مع الدعم
-                    الفني عبر الدردشة المباشرة أسفل يسار صفحات الموقع
+                    {{
+                      "Will I be able to withdraw the balance if my account is permanently suspended? txt"
+                        | translate
+                    }}
                   </p>
                 </div>
               </div>

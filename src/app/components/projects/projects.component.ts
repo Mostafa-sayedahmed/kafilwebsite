@@ -11,35 +11,50 @@ import { Router } from '@angular/router';
 })
 export class ProjectsComponent {
   ListOfProject: Project[] = [];
-  ListofCatproj : categoryprojects [] = [] ;
-  ListofDeliverytimeprojects:categoryprojects [] = [];
-  spinner:boolean=true;
+  ListofCatproj: categoryprojects[] = [];
+  ListofDeliverytimeprojects: categoryprojects[] = [];
+  spinner: boolean = true;
+  searchTerm = '';
 
-
-  constructor(private proj: ProjectsService,private router: Router) {}
+  constructor(private proj: ProjectsService, private router: Router) {}
   ngOnInit(): void {
-    this.proj.getallprojects().subscribe((res) => {this.spinner=false ;this.ListOfProject = res});
-    this.proj.getCategoryProject().subscribe((res)=>{this.ListofCatproj=res});
-    this.proj.getprojectsByDeliverytime().subscribe( res => this.ListofDeliverytimeprojects = res )
+    this.proj.getallprojects().subscribe((res) => {
+      this.spinner = false;
+      this.ListOfProject = res;
+    });
+    this.proj.getCategoryProject().subscribe((res) => {
+      this.ListofCatproj = res;
+    });
+    this.proj
+      .getprojectsByDeliverytime()
+      .subscribe((res) => (this.ListofDeliverytimeprojects = res));
   }
-  getprojects(){
-    this.proj.getallprojects().subscribe((res) => {this.spinner=false ;this.ListOfProject = res});
+  getprojects() {
+    this.proj.getallprojects().subscribe((res) => {
+      this.spinner = false;
+      this.ListOfProject = res;
+    });
   }
   // getcategory By ID
-  ChangeCatID(id:string){
-    this.proj.getCategoryByID(id).then((res) => { this.ListOfProject = res} );
+  ChangeCatID(id: string) {
+    console.log(id);
+    this.proj.getCategoryByID(id).then((res) => {
+      this.ListOfProject = res;
+    });
   }
   // getcategory By status
-  ChangeCatByStatus(){
-    this.proj.getCategoryByopenStatus().then((res) => { this.ListOfProject = res} );
+  ChangeCatByStatus() {
+    this.proj.getCategoryByopenStatus().then((res) => {
+      this.ListOfProject = res;
+    });
   }
 
   // get project By ID
-  Detailsproject(projectID:any){
+  Detailsproject(projectID: any) {
     // console.log(projectID);
-    this.router.navigate(["projects",projectID]);
-}
+    this.router.navigate(['projects', projectID]);
+  }
 
-
-
+  ///// Handling Search ///
+  Search(val: string) {}
 }

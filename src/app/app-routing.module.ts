@@ -21,6 +21,7 @@ import { DetailsPortfoliosComponent } from './components/details-portfolios/deta
 import { ProjectsDetailsComponent } from './components/projects-details/projects-details.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { AddProjectComponent } from './components/add-project/add-project.component';
+import { ServicesCategoryComponent } from './components/services-category/services-category.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -41,8 +42,13 @@ const routes: Routes = [
     component: AddContestComponent,
     canActivate: [AuthGuard],
   },
+  // { path: 'ServicesCategory', component: ServicesCategoryComponent },
   { path: 'services', component: ServicesComponent },
   { path: 'services/:serviceID', component: SingleserviceComponent },
+  {
+    path: 'services_category/:categoryID',
+    component: ServicesCategoryComponent,
+  },
   {
     path: 'createservice',
     component: AddserviceComponent,
@@ -56,8 +62,8 @@ const routes: Routes = [
   },
   { path: 'detailsPortfolois/:id', component: DetailsPortfoliosComponent },
   {
-    path:'addproject',
-    component:AddProjectComponent,
+    path: 'addproject',
+    component: AddProjectComponent,
     canActivate: [AuthGuard],
   },
   { path: 'projects', component: ProjectsComponent },

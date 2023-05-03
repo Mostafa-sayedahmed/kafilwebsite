@@ -20,6 +20,7 @@ export class CategoriesService {
       });
   }
   async getcategories() {
+    this.categriesList = [];
     const querySnapshot = await getDocs(
       collection(this.firestore, 'categories')
     );

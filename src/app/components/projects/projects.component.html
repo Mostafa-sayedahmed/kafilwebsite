@@ -5,7 +5,8 @@
         class="px-2 py-3 text-nowrap text-center fs-5 fw-bold mb-3 rounded bg-success"
       >
         <a routerLink="/addproject" class="text-decoration-none text-white"
-          ><i class="far fa-plus-square mx-3"></i> {{ "add_project" | translate }}'
+          ><i class="far fa-plus-square mx-3"></i>
+          {{ "add_project" | translate }}'
         </a>
       </div>
       <!-- canvas Btn -->
@@ -29,7 +30,8 @@
           class="px-2 py-3 text-nowrap text-center fs-5 fw-bold mb-3 rounded bgcolorbtn"
         >
           <a routerLink="/addproject" class="text-decoration-none text-white"
-            ><i class="far fa-plus-square mx-3"></i> {{ "add_project" | translate }}
+            ><i class="far fa-plus-square mx-3"></i>
+            {{ "add_project" | translate }}
           </a>
         </div>
         <!-- canvas Btn
@@ -63,7 +65,7 @@
                 aria-expanded="true"
                 aria-controls="collapseOne"
               >
-              {{"category"|translate}}
+                {{ "Category" | translate }}
               </button>
             </h2>
             <div
@@ -72,12 +74,22 @@
               aria-labelledby="headingOne"
               data-bs-parent="#accordionExample"
             >
-              <div class="accordion-body p-0 fs-5" *ngFor="let cat of ListofCatproj,let i = index">
-                <div  class="border p-2 "><a type="button" class="  text-decoration-none text-muted" (click)="ChangeCatID(cat.id)"><i class="fa-solid {{cat.icon}} ms-2"></i> {{cat.name}} </a> </div>
+              <div
+                class="accordion-body p-0 fs-5"
+                *ngFor="let cat of ListofCatproj"
+              >
+                <div class="border p-2">
+                  <a
+                    type="button"
+                    class="text-decoration-none text-muted"
+                    (click)="ChangeCatID(cat.id)"
+                    ><i class="fa-solid {{ cat.icon }} ms-2"></i> {{ cat.name }}
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-          <div class="accordion-item">
+          <!-- <div class="accordion-item">
             <h2 class="accordion-header" id="headingTwo">
               <button
                 class="accordion-button collapsed text-muted"
@@ -87,7 +99,7 @@
                 aria-expanded="false"
                 aria-controls="collapseTwo"
               >
-              {{"skills"|translate}}
+              {{"Skills"|translate}}
               </button>
             </h2>
             <div
@@ -100,7 +112,7 @@
                 <input type="search" class="form-control" />
               </div>
             </div>
-          </div>
+          </div> -->
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingThree">
               <button
@@ -111,7 +123,7 @@
                 aria-expanded="false"
                 aria-controls="collapseThree"
               >
-              {{"delivery_Duration"|translate}} 
+                {{ "delivery_Duration" | translate }}
               </button>
             </h2>
             <div
@@ -120,9 +132,15 @@
               aria-labelledby="headingThree"
               data-bs-parent="#accordionExample"
             >
-            <div class="accordion-body border-2 border-bottom text-muted fs-5" *ngFor="let DeliveryTime of ListofDeliverytimeprojects;let i = index">
-              <div ><input type="checkbox" /> {{DeliveryTime.name}}</div>
-            </div>
+              <div
+                class="accordion-body border-2 border-bottom text-muted fs-5"
+                *ngFor="
+                  let DeliveryTime of ListofDeliverytimeprojects;
+                  let i = index
+                "
+              >
+                <div><input type="checkbox" /> {{ DeliveryTime.name }}</div>
+              </div>
             </div>
           </div>
         </div>
@@ -140,7 +158,7 @@
               aria-expanded="true"
               aria-controls="collapseOne"
             >
-            {{"category"|translate}}
+              {{ "Category" | translate }}
             </button>
           </h2>
           <div
@@ -149,12 +167,22 @@
             aria-labelledby="headingOne"
             data-bs-parent="#accordionExample"
           >
-            <div class="accordion-body p-0 fs-5" *ngFor="let cat of ListofCatproj ; let i = index">
-                <div  class="border p-2 "><a type="button" class="  text-decoration-none text-muted" (click)="ChangeCatID(cat.id)"><i class="fa-solid {{cat.icon}} ms-2"></i> {{cat.name}} </a> </div>
+            <div
+              class="accordion-body p-0 fs-5"
+              *ngFor="let cat of ListofCatproj; let i = index"
+            >
+              <div class="border p-2">
+                <a
+                  type="button"
+                  class="text-decoration-none text-muted"
+                  (click)="ChangeCatID(cat.id)"
+                  ><i class="fa-solid {{ cat.icon }} ms-2"></i> {{ cat.name }}
+                </a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="accordion-item">
+        <!--   <div class="accordion-item">
           <h2 class="accordion-header" id="headingTwo">
             <button
               class="accordion-button collapsed text-muted fs-5 fw-bold"
@@ -164,7 +192,7 @@
               aria-expanded="false"
               aria-controls="collapseTwo"
             >
-              {{"skills"|translate}}
+              {{"Skills"|translate}}
             </button>
           </h2>
           <div
@@ -177,7 +205,7 @@
               <input type="search" class="form-control" />
             </div>
           </div>
-        </div>
+        </div> -->
         <div class="accordion-item mb-3">
           <h2 class="accordion-header" id="headingThree">
             <button
@@ -188,7 +216,7 @@
               aria-expanded="false"
               aria-controls="collapseThree"
             >
-            {{"delivery_Duration"|translate}}
+              {{ "delivery_Duration" | translate }}
             </button>
           </h2>
           <div
@@ -197,9 +225,14 @@
             aria-labelledby="headingThree"
             data-bs-parent="#accordionExample"
           >
-            <div class="accordion-body border-2 border-bottom text-muted fs-5" *ngFor="let DeliveryTime of ListofDeliverytimeprojects;let i = index">
-              <div ><input type="checkbox" /> {{DeliveryTime.name}}</div>
-
+            <div
+              class="accordion-body border-2 border-bottom text-muted fs-5"
+              *ngFor="
+                let DeliveryTime of ListofDeliverytimeprojects;
+                let i = index
+              "
+            >
+              <div><input type="checkbox" /> {{ DeliveryTime.name }}</div>
             </div>
           </div>
         </div>
@@ -212,18 +245,21 @@
 
     <!-- start main side {cards} -->
     <!-- first card {heading} -->
-    <div class="col-lg-8 col-md-12 ">
-
-      <div class="d-flex justify-content-between bg-white text-muted shadow p-3 rounded">
+    <div class="col-lg-8 col-md-12">
+      <div
+        class="d-flex justify-content-between bg-white text-muted shadow p-3 rounded"
+      >
         <!-- heading -->
         <h4 class="d-md-block">
-          <i class="fa-solid fa-comment-dots"></i> {{"projects"|translate}}
+          <i class="fa-solid fa-comment-dots"></i> {{ "Projects" | translate }}
         </h4>
         <div class="d-flex">
           <!-- input-check -->
           <div class="border rounded mx-2">
             <div class="form-check form-check-inline">
-              <label class="form-check-label" for="inlineRadio1">{{"all"|translate}} </label>
+              <label class="form-check-label" for="inlineRadio1"
+                >{{ "All" | translate }}
+              </label>
               <input
                 class="form-check-input"
                 type="radio"
@@ -232,11 +268,12 @@
                 value="all"
                 checked
                 (click)="getprojects()"
-
               />
             </div>
             <div class="form-check form-check-inline">
-              <label class="form-check-label" for="inlineRadio2">{{"open"|translate}}</label>
+              <label class="form-check-label" for="inlineRadio2">{{
+                "Open" | translate
+              }}</label>
               <input
                 class="form-check-input"
                 type="radio"
@@ -247,62 +284,56 @@
               />
             </div>
           </div>
-          <!-- dropdown -->
-          <div class="dropdown border rounded">
-            <button
-              class="btn btn-secondary dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton1"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <i class="fa-solid fa-filter p-1"></i>
-              {{"Latest"|translate}}
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">الأحدث</a></li>
-              <li><a class="dropdown-item" href="#">الأقدم</a></li>
-              <li><a class="dropdown-item" href="#">الأقل عروضاٌ </a></li>
-              <li><a class="dropdown-item" href="#">الاكثر عروضاٌ </a></li>
-            </ul>
-          </div>
         </div>
       </div>
       <!-- second card  -->
       <!-- spinner -->
       <div class="text-center mt-5 spinner" *ngIf="spinner">
-        <div class="spinner-border mt-5 text-bg-success " role="status">
+        <div class="spinner-border mt-5 text-bg-success" role="status">
           <span class="visually-hidden">Loading...</span>
         </div>
       </div>
 
       <!-- <button  (click)="getData()" >get data</button> -->
       <ng-container *ngFor="let data of ListOfProject; let i = index">
-        <div class="d-flex p-4  shadow-lg rounded my-3 bg-white " >
-          <img
-            class="d-sm-none d-lg-block ms-2 my-2"
-            style="border-radius: 50%; width: 9%"
-            src="{{ data.img }}"
-            alt="avatar"
-          />
-          <div class="ms-auto">
-            <div class="d-flex">
-              <div>
+        <div class="container">
+          <div class="row shadow-lg rounded bg-white p-2 my-3">
+            <img
+              class="col-lg-1 col-md-2 col-sm-3"
+              src="{{ data.img }}"
+              alt="avatar"
+              style="
+                border-radius: 50%;
+                min-width: 7vw;
+                max-width: 15vw;
+                height: fit-content;
+              "
+            />
+            <div class="col-lg-9 col-md-7 col-sm-6 p-2 d-flex flex-column">
+              <div class="d-flex">
                 <a
-                  class="text-white text-decoration-none p-1 bgcolorbtn rounded"
+                  class="text-white text-decoration-none p-1 bgcolorbtn rounded ms-2"
                   href="#"
-                  >{{"open"|translate}}</a
+                  >{{ "open" | translate }}
+                </a>
+                <span
+                  class="fw-bold fs-5"
+                  (click)="Detailsproject(data.id)"
+                  style="cursor: pointer"
+                  >{{ data.title }}</span
                 >
               </div>
-              <h4 class="p-2" (click)="Detailsproject(data.id)" style="cursor: pointer;">{{ data.title }}</h4>
+              <div class="mt-4 text-muted text-nowrap">
+                <i class="fa-solid fa-user-tie"></i> {{ data.personName }} |
+                <i class="fa-regular fa-clock"></i> {{ data.time }} |
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+                {{ data.offers }}
+              </div>
             </div>
-            <div class="mx-4 my-2 text-muted">
-              <i class="fa-solid fa-user-tie"></i> {{ data.personName }} |
-              <i class="fa-regular fa-clock"></i> {{ data.time }} |
-              <i class="fa-solid fa-hand-holding-dollar"></i> {{ data.offers }}
+            <div class="col-lg-1 col-md-2 col-sm-2 text-nowrap fw-bold">
+              {{ data.budget }}
             </div>
           </div>
-          <p class="align-items-center p-3 text-nowrap">{{ data.budget }}</p>
         </div>
       </ng-container>
     </div>

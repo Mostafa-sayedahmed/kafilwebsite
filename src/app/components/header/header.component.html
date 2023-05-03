@@ -50,11 +50,20 @@
             aria-labelledby="navbarOffcanvasLgLabel"
           >
             <div class="header-right d-flex align-items-center">
-              <a class="navbar-brand" routerLink="#">
-                <img class="header-logo mx-3" src="assets/main-logo.svg" />
-                <!-- <button class="btn btn-light border closeoffcanvas">
-                  <i class="fa-solid fa-x"></i>
-                </button> -->
+              <a class="navbar-brand">
+                <a routerLink="/home">
+                  <img class="header-logo mx-3" src="assets/main-logo.svg" />
+                </a>
+                <select
+                  class="form-select border-end ps-0 d-md-none"
+                  (change)="changeLang(lang.value)"
+                  #lang
+                  style="width: 30%"
+                >
+                  <option value="ar">العربية</option>
+                  <option value="en">English</option>
+                </select>
+
                 <button
                   type="button"
                   class="btn-close border p-2 closeoffcanvas"
@@ -66,13 +75,14 @@
                 <i class="fas fa-search fs-5 px-2"></i>
                 <input
                   type="text"
-                  placeholder='{{ "search" | translate }}'
+                  placeholder="{{ 'search' | translate }}"
                   class="searchbox-input"
                   #searchtxt
                   (keydown)="search(searchtxt.value)"
                   (keyup)="search(searchtxt.value)"
                 />
               </form>
+
               <section
                 class="search-result d-flex flex-column align-items-center"
                 *ngIf="searchtxt.value != ''"
@@ -118,12 +128,6 @@
                   {{ "freelancers" | translate }}
                 </a>
               </li>
-              <li class="headerlistitem">
-                <a routerLink="#" class="link active">
-                  <i class="fas fa-bars"></i>
-                  {{ "more" | translate }}
-                </a>
-              </li>
             </ul>
             <div class="borderseprator"></div>
           </div>
@@ -133,37 +137,12 @@
               src="https://kafiil.com/assets/images/logos/small.svg"
               alt="logo small"
             />
-            <!-- <form action="" class="searchbox">
-              <i class="fas fa-search fs-5 px-2"></i>
-              <input
-                type="text"
-                placeholder=' {{ "search" | translate }}'
-                class="searchbox-input"
-                #searchtxtsmall
-              />
-            </form>
-            <section
-              class="search-result d-flex flex-column align-items-center"
-              *ngIf="searchtxtsmall.value != ''"
-            >
-              <ng-container *ngFor="let item of headsearchlist; let i = index">
-                <a *ngIf="i < 5" href="services/{{ item.uid }}">{{
-                  item.data.title
-                }}</a>
-              </ng-container>
-            </section> -->
+
             <div class="userlogin d-flex justify-content-between gap-3">
               <ng-container *ngIf="user !== null">
                 <div
                   class="d-flex allign-items-center justify-content-between flex-grow-1"
                 >
-                  <i
-                    class="fa-regular fa-envelope align-self-center mx-2 p-2 bg-dark-subtle rounded-5"
-                  ></i>
-                  <i
-                    class="fa-regular fa-bell align-self-center mx-2 p-2 bg-dark-subtle rounded-5"
-                  ></i>
-
                   <div class="dropdown">
                     <a
                       class="text-decoration-none text-black-50"
@@ -180,7 +159,6 @@
                       <li>
                         <a
                           class="dropdown-item active bg-success rounded py-2"
-                          routerLink="#"
                           >{{ user.displayName }}</a
                         >
                       </li>
@@ -208,6 +186,14 @@
                         >
                       </li>
                       <li>
+                        <a
+                          class="dropdown-item d-flex justify-content-between"
+                          routerLink="/addproject"
+                        >
+                          {{ "add_project" | translate }}</a
+                        >
+                      </li>
+                      <li>
                         <hr class="dropdown-divider justify-content-between" />
                       </li>
                       <li>
@@ -225,7 +211,7 @@
               </ng-container>
               <ng-container *ngIf="user == null">
                 <a routerLink="/sign-in">
-                  <button class="btn btn-light px-4 border">
+                  <button class="btn btn-light px-3 px-md-4 border">
                     {{ "Login" | translate }}
                   </button>
                 </a>
@@ -237,13 +223,13 @@
               </ng-container>
             </div>
             <div class="language mx-2">
-              <select class="form-select border-end ps-0" (change)="changeLang(lang.value)" #lang>
-                <option value="ar" >
-                  العربية
-                </option>
-                <option value="en"  >
-                  English
-                </option>
+              <select
+                class="form-select border-end ps-0 d-none d-md-block"
+                (change)="changeLang(langlg.value)"
+                #langlg
+              >
+                <option value="ar">العربية</option>
+                <option value="en">English</option>
               </select>
             </div>
           </div>
