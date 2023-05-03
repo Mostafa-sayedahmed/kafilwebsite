@@ -92,15 +92,26 @@ li {
 .accordion-button {
   background-color: #f1f2f2 !important;
 }
-
 @media only screen and (max-width: 700px) {
   .userCard {
-    width: 100% !important;
+    width: 80%;
+    max-height: fit-content;
+    padding: 20px;
+    margin: 10%;
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
   }
 }
 @media only screen and (max-width: 823px) and (min-width: 700px) {
   .userCard {
-    width: 45% !important;
+    width: 80%;
+    max-height: fit-content;
+    padding: 20px;
+    margin: 10%;
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
   }
 }
 #dropDown {
@@ -109,4 +120,10 @@ li {
 }
 .spinner {
   margin: 15% 48% 8% 48%;
+}
+ngb-rating {
+  color: #ffc107;
+  font-size: 30px;
+  transition-property: all;
+  transition-duration: 0.5s;
 }
