@@ -1,55 +1,129 @@
 
 
-    <section class="container p-3 my-5">
+    <section class="container-fluid p-3 my-5">
       <div class="d-flex ">
         <!-- Right Side -->
-        <div class="flex-grow-1 border rounded-3 p-3 bg-white mx-4">
+        <div class="flex-grow-1 border rounded-3 p-3 bg-white mx-3">
             <h4 class="p-3 bg-white"><i class="fa-sharp fa-solid fa-list me-2"></i> {{"add_project"|translate}} </h4>
               <hr>
-            <form action="" >
+            <form #projForm="ngForm" (ngSubmit)="AddNewProjcet()" >
                <div class="mb-3">
                   <label for="title" class="form-label">{{"Set_title"|translate}}</label>
-                  <input class="form-control" type="text" name="Title" id="title" placeholder='{{"Set_title"|translate}}' required>
+                  <input
+                  class="form-control" type="text"
+                  name="Title" id="title" placeholder='{{"Set_title"|translate}}'
+                  [(ngModel)]="NewProj.title"
+                  required
+                  #projInputTitle="ngModel"
+                  [class.is-valid]="projInputTitle.valid"
+                  [class.is-invalid]="projInputTitle.invalid && projInputTitle.touched"
+                  >
+                  <div class="alert alert-danger" [hidden]="projInputTitle.valid||projInputTitle.untouched">
+                   <small *ngIf="projInputTitle.errors?.['required']">the Title is required </small>
+                  </div>
                </div>
                <div class="mb-3">
                 <label for="discription" class="form-label">{{"Set_discription"|translate}}</label>
-                <textarea class="form-control" name="discription" id="discription" cols="30" rows="10" placeholder= '{{"Set_discription"|translate}}' required></textarea>
+                <textarea
+                class="form-control" name="discription" id="discription"
+                 cols="30" rows="10" placeholder= '{{"Set_discription"|translate}}'
+                 [(ngModel)]="NewProj.discription"
+                 required
+                 #projInputdiscription="ngModel"
+                 [class.is-valid]="projInputdiscription.valid"
+                 [class.is-invalid]="projInputdiscription.invalid && projInputdiscription.touched"
+                 ></textarea>
+                 <div class="alert alert-danger" [hidden]="projInputdiscription.valid || projInputdiscription.untouched">
+                  <small *ngIf="projInputdiscription.errors?.['required']">the discription is required </small>
+                 </div>
              </div>
                 <div class="row mb-3">
                     <div class="col">
                          <label for="Department" class="form-label">{{"Choose_Category"|translate}}</label>
-                          <select name="Department" id="Department" class="form-select" required >
-                            <option selected>{{"Choose_Category"|translate}}</option>
-                            <option value={{cat.id}} *ngFor="let cat of LisTOfCat; let i = index">{{cat.name}}</option>
+                          <select
+                          name="Department" id="Department" class="form-select"
+                           required [(ngModel)]="NewProj.catId"
+                           #projInputCategory="ngModel"
+                            [class.is-valid]="projInputCategory.valid"
+                            [class.is-invalid]="projInputCategory.invalid && projInputCategory.touched"
+                           >
+                            <option selected disabled>{{"Choose_Category"|translate}}</option>
+                            <option *ngFor="let cat of LisTOfCat" [value]="cat.id">{{cat.name}}</option>
                           </select>
+                          <div class="alert alert-danger" [hidden]="projInputCategory.valid || projInputCategory.untouched">
+                            <small *ngIf="projInputCategory.errors?.['required']">the Category is required </small>
+                           </div>
                     </div>
-                    <div class="col">
+                    <!-- <div class="col">
                       <label for="skills" class="form-label"> {{"Choose_skills"|translate}} </label>
-                      <input type="text" name="skills" id="skills" placeholder='{{"Choose_skills"|translate}}'  class="form-control">
-                    </div>
+                      <input
+                       type="text" name="skills" id="skills" placeholder='{{"Choose_skills"|translate}}'
+                        class="form-control"
+                        [(ngModel)]="NewProj.skills"
+                        #projInputCategory="ngModel"
+                        >
+                    </div> -->
                 </div>
                   <div class='row mb-5'>
                       <div class="col" >
                         <label for="budget" class="form-label">{{"Choose_Budget"|translate}}</label>
-                        <select name="budget" id="budget" class="form-select" required>
-                          <option selected>{{"Choose_Budget"|translate}}</option>
+                        <select
+                        name="budget" id="budget" class="form-select"
+                        required [(ngModel)]="NewProj.budget"
+                        #projInputBudget="ngModel"
+                        [class.is-valid]="projInputBudget.valid"
+                        [class.is-invalid]="projInputBudget.invalid&&projInputBudget.touched"
+                        >
+                          <option selected disabled>{{"Choose_Budget"|translate}}</option>
+                          <option value="25 - 50 دولار">25  - 50 دولار</option>
+                          <option value="50 - 100 دولار">50  - 100 دولار</option>
+                          <option value="100 - 150 دولار">100 - 150 دولار</option>
+                          <option value="200 - 250 دولار">200 - 250 دولار</option>
+                          <option value="300 - 350 دولار">300 - 350 دولار</option>
+                          <option value="400 - 450 دولار">400 - 450 دولار</option>
+                          <option value="500 - 750 دولار">500 - 750 دولار</option>
+                          <option value="750 - 1000 دولار">750 - 1000 دولار</option>
                         </select>
+                        <div class="alert alert-danger" [hidden]="projInputBudget.valid||projInputBudget.untouched">
+                          <small *ngIf="projInputBudget.errors?.['required']">the Budget is required</small>
+                        </div>
                       </div>
                       <div class="col" >
                         <label for="Time" class="form-label">{{"choose_DeliveryDuration"|translate}}</label>
-                        <select name="Time" id="Time" class="form-select" required>
-                          <option selected>{{"choose_DeliveryDuration"|translate}}</option>
+                        <select
+                         name="Time" id="Time" class="form-select"
+                          required [(ngModel)]="NewProj.durationproject"
+                          #projInput_durationproject="ngModel"
+                          [class.is-valid]="projInput_durationproject.valid"
+                          [class.is-invalid]="projInput_durationproject.invalid&&projInput_durationproject.touched"
+                          >
+                          <option selected disabled>{{"choose_DeliveryDuration"|translate}}</option>
+                          <option value="يوم">يوم</option>
+                          <option value="يومين">يومين</option>
+                          <option value="ايام 3">3 ايام</option>
+                          <option value="ايام 4">4 ايام</option>
+                          <option value="ايام 5">5 ايام</option>
+                          <option value="ايام 6">6 ايام</option>
+                          <option value="ايام 7">7 ايام</option>
+                          <option value="ايام 8">8 ايام</option>
+                          <option value="ايام 9">9 ايام</option>
+                          <option value="ايام 10">10 ايام</option>
                         </select>
+                        <div class="alert alert-danger" [hidden]="projInput_durationproject.valid||projInput_durationproject.untouched">
+                          <small *ngIf="projInput_durationproject.errors?.['required']">The duration project IS required </small>
+                        </div>
                       </div>
 
                   </div>
 
-                    <button type="submit" class="btn btn-success fw-bold fs-5 w-100 mb-2" (click)="GetAddProjcet()">{{"Set_add"|translate}}</button>
+                    <button type="submit" class="btn btn-success fw-bold fs-5 w-100 mb-2" [disabled]="projForm.invalid" >{{"Set_add"|translate}}</button>
 
             </form>
+            <!-- <h2 class="bg-danger">For test : {{ NewProj |json}}</h2> -->
         </div>
         <!-- left Side -->
-        <div class=" col-lg-4  col-sm-none">
+        <div class="col-4 d-none d-sm-none d-md-block d-lg-block ">
+        <!-- <div class=""> -->
           <div>
             <h3>{{"Set_H1"|translate}}</h3>
             <!-- <iframe

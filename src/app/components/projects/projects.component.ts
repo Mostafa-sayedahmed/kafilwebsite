@@ -14,6 +14,7 @@ export class ProjectsComponent {
   ListofCatproj : categoryprojects [] = [] ;
   ListofDeliverytimeprojects:categoryprojects [] = [];
   spinner:boolean=true;
+  searchTerm = '';
 
 
   constructor(private proj: ProjectsService,private router: Router) {}
@@ -27,7 +28,8 @@ export class ProjectsComponent {
   }
   // getcategory By ID
   ChangeCatID(id:string){
-    this.proj.getCategoryByID(id).then((res) => { this.ListOfProject = res} );
+    console.log(id);
+    this.proj.getCategoryByID(id).then((res) => { this.ListOfProject = res } );
   }
   // getcategory By status
   ChangeCatByStatus(){
@@ -40,6 +42,9 @@ export class ProjectsComponent {
     this.router.navigate(["projects",projectID]);
 }
 
+            ///// Handling Search ///
+    Search (val:string ){
 
+    }
 
 }

@@ -10,7 +10,7 @@ import { categoryprojects } from '../models/categoryProject';
   providedIn: 'root',
 })
 export class ProjectsService {
-  Proj: Project = {} as Project;
+  // Proj: Project = {} as Project;
   constructor(private firestore: Firestore) {}
 
   // getdataofprojects
@@ -30,13 +30,15 @@ export class ProjectsService {
   //*********************/
   // //page add project
 
-  AddProject(){
+  AddProject(proj:Project){
     let project = collection(this.firestore, 'projects');
-    addDoc(project, this.Proj)
+    addDoc(project, proj)
     .then( (res) =>{
-        return res;
+         console.log("Added Done");
+        // return res;
     }).catch(err =>{console.log(err.message)});
   }
+
 
 // ==========================================================================================
   // get all Category
@@ -52,7 +54,8 @@ export class ProjectsService {
 
     var Newproj: Project [] = [];
     querySnapshot.forEach((doc) => {
-      Newproj.push(doc.data() as  Project )
+      // Newproj.push(doc.data() as  Project )
+      Newproj = [...Newproj,doc.data()as Project]
       console.log(doc.id, " => ", doc.data())
 
     });

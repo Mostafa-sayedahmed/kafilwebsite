@@ -1,16 +1,16 @@
 <section class="container my-5">
   <div class="project-info-head" >
     <div class="d-flex">
-     
+
         <img src={{project.img}} alt=""/>
-    
+
       <div>
-       
-          <h4>{{project.title}}</h4>
+
+          <h4 class="mx-2">{{project.title}}</h4>
         <div class="mt-3">
-           <span> <i class="fas fa-align-justify mx-2" style="color: #1dbf73;"></i> {{project.catId}}</span> 
-           <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>   
-           <span><i class="fa-solid fa-clock mx-1" style="color: #1dbf73;"></i> {{project.time}}</span> 
+           <span> <i class="fas fa-align-justify mx-2" style="color: #1dbf73;"></i> {{project.catId}}</span>
+           <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+           <span><i class="fa-solid fa-clock mx-1" style="color: #1dbf73;"></i> {{project.time}}</span>
         </div>
       </div>
     </div>
@@ -47,7 +47,7 @@
           <h2 class="accordion-header" id="headingOne">
             <button
               class="accordion-button text-black fw-bold"
-              
+
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseOne"
@@ -60,7 +60,7 @@
           </h2>
           <div
             id="collapseOne"
-            
+
             class="accordion-collapse collapse show"
             aria-labelledby="headingOne"
             data-bs-parent="#accordionExample"
@@ -84,7 +84,7 @@
                       </a>
                       <span class="text text-muted">
                         <i class="fas fa-map-marker-alt ms-2"></i>
-                        المملكة العربية السعودية
+                        {{project.country}}
                       </span>
                     </div>
                   </div>
@@ -100,7 +100,7 @@
           <h2 class="accordion-header" id="headingTwo">
             <button
               class="accordion-button text-black fw-bold"
-              
+
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseTwo"
@@ -113,7 +113,7 @@
           </h2>
           <div
             id="collapseTwo"
-            
+
             class="accordion-collapse collapse show"
             aria-labelledby="headingTwo"
             data-bs-parent="#accordionTwo"
@@ -171,7 +171,7 @@
           <h2 class="accordion-header" id="headingThree">
             <button
               class="accordion-button text-black fw-bold"
-              
+
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseThree"
@@ -242,7 +242,7 @@
     </div>
 
     <div class="col-12 col-lg-8" >
-      <div class="filter">
+      <!-- <div class="filter">
         <div class="p-4">
           <div
             class="d-flex justify-content-around align-items-center position-relative"
@@ -263,7 +263,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <div class="filter">
         <div class="head text-black fw-bold">
@@ -344,9 +344,9 @@
         </div>
       </div>
 
-      <div class="add mb-3">
+      <!-- <div class="add mb-3">
         <button class="form-control">{{"Add_Your_Bid"|translate}}</button>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>
