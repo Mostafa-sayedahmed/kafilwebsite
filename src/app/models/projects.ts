@@ -1,14 +1,22 @@
 export interface Project {
-  id:string,
-  Averageoffers:string,
-  budget:string,
-  discription:string,
-  durationproject:string,
-  img:string,
-  numberoffers:string,
-  offers:string,
-  personName:string,
-  publishData:string,
-  time:string,
-  title:string,
+  id: string;
+  img: string;
+  title: string;
+  personName: string;
+  discription: string;
+  budget: string;
+  durationproject: string;
+  numberoffers?: string;
+  offers?: string;
+  publishData: string;
+  time: string;
+  Averageoffers?: string;
+  skills?: string;
+  open: boolean;
+  isFeatured: boolean;
+  isApproved: boolean;
+  accepted: boolean;
+  country: string;
+  catId: string;
+  catergory?: string;
 }
