@@ -265,6 +265,9 @@
                   <small *ngIf="freelancerImg.errors?.['required']">{{
                     "Must Add Pic" | translate
                   }}</small>
+                  <small *ngIf="freelancerImg.errors?.['pattern']">{{
+                    "Pic must be URL" | translate
+                  }}</small>
                 </div>
               </div>
 

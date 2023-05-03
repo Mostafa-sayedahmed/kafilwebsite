@@ -328,6 +328,7 @@
   "Job must be at least 3 characters": "Job must be at least 3 characters",
   "Personal Pic ( URL )": "Personal Pic ( URL )",
   "Must Add Pic": "Must Add Pic",
+  "Pic must be URL":"Pic must be URL",
   "A summary of your work and experience": "A summary of your work and experience",
   "City": "City",
   "Choose City": "Choose City",
@@ -366,7 +367,8 @@
   "Back to Freelancers":"Back to Freelancers",
   "Departments of Kafiil": "Departments of Kafiil",
   "Name":"name",
-  "Likes":"likes"
+  "Likes":"likes",
+  "Welcome to kafill":"Welcome to kafill !"
 
 
 
