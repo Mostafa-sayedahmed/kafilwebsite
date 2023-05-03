@@ -10,6 +10,9 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
   styleUrls: ['./single-freelancer.component.scss'],
 })
 export class SingleFreelancerComponent implements OnInit, OnChanges {
+  starRating = 0; 
+
+  alertForRaring:boolean=false;
   spinner: boolean = true;
   // Freelancer:Freelancer |undefined|void =undefined;
   Freelancer: any = {};
@@ -21,6 +24,9 @@ export class SingleFreelancerComponent implements OnInit, OnChanges {
   ) {}
   ngOnChanges(changes: SimpleChanges): void {}
   ngOnInit(): void {
+    //handeling the rating
+let stars=document.querySelectorAll(".stars");
+console.log(stars);
     let freelancerID: string = this.activatedRoute.snapshot.paramMap.get('fid')
       ? String(this.activatedRoute.snapshot.paramMap.get('fid'))
       : '';
@@ -48,4 +54,9 @@ export class SingleFreelancerComponent implements OnInit, OnChanges {
   goToAddFreelancer() {
     this.router.navigate(['addFreelancer']);
   }
+  handelTheRating(){
+    this.alertForRaring=!this.alertForRaring   
+    console.log(this.alertForRaring);
+    
+      }
 }

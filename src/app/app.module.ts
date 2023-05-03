@@ -37,6 +37,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { ProjectsDetailsComponent } from './components/projects-details/projects-details.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AddProjectComponent } from './components/add-project/add-project.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -86,6 +87,7 @@ import { AddProjectComponent } from './components/add-project/add-project.compon
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

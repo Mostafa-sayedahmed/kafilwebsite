@@ -152,15 +152,19 @@
                   </button>
                 </h2>
                 <div
-                  id="panelsStayOpen-2"
+                  class="stars"
                   class="accordion-collapse collapse show p-2 text-center"
                   aria-labelledby="panelsStayOpen-headingS"
                 >
-                  <i class="fa-solid fa-star" id="test"></i>
-                  <i class="fa-solid fa-star" id="test"></i>
-                  <i class="fa-solid fa-star" id="test"></i>
-                  <i class="fa-solid fa-star" id="test"></i>
-                  <i class="fa-solid fa-star" id="test"></i>
+                  <div class="stars"> 
+                    <ngb-rating (click)="handelTheRating()" [max]="5" [(rate)]="starRating" [readonly]="false"></ngb-rating>
+                  </div>
+                  <div >
+                    <ngb-alert *ngIf="alertForRaring" [dismissible]="false"
+                    type='success'>
+                      <strong>{{"Thanks for your feedback"|translate}}</strong>
+                    </ngb-alert>
+                   </div>     
                 </div>
               </div>
             </div>

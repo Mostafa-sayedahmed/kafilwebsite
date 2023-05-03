@@ -159,35 +159,39 @@
   
                 <!-- accordion 1-->
   
-                <div>
-                  <div class="accordion col-12 mt-3" id="OpenExample">
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="panelsStayOpen-headingS">
-                        <button
-                          class="accordion-button p-3"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#panelsStayOpen-2"
-                          aria-expanded="true"
-                          aria-controls="panelsStayOpen-2"
-                        >
-                          <h6>التقييم</h6>
-                        </button>
-                      </h2>
-                      <div
-                        id="panelsStayOpen-2"
-                        class="accordion-collapse collapse show p-2 text-center"
-                        aria-labelledby="panelsStayOpen-headingS"
-                      >
-                        <i class="fa-solid fa-star" id="test"></i>
-                        <i class="fa-solid fa-star" id="test"></i>
-                        <i class="fa-solid fa-star" id="test"></i>
-                        <i class="fa-solid fa-star" id="test"></i>
-                        <i class="fa-solid fa-star" id="test"></i>
-                      </div>
-                    </div>
+                  <div>
+            <div class="accordion col-12 mt-3" id="OpenExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingS">
+                  <button
+                    class="accordion-button p-3"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-2"
+                    aria-expanded="true"
+                    aria-controls="panelsStayOpen-2"
+                  >
+                    <h6>{{"Rating"|translate}}</h6>
+                  </button>
+                </h2>
+                <div
+                  class="stars"
+                  class="accordion-collapse collapse show p-2 text-center"
+                  aria-labelledby="panelsStayOpen-headingS"
+                >
+                  <div class="stars"> 
+                    <ngb-rating (click)="handelTheRating()" [max]="5" [(rate)]="starRating" [readonly]="false"></ngb-rating>
                   </div>
+                  <div >
+                    <ngb-alert *ngIf="alertForRaring" [dismissible]="false"
+                    type='success'>
+                    <strong>{{"Thanks for your feedback"|translate}}</strong>
+                  </ngb-alert>
+                   </div>     
                 </div>
+              </div>
+            </div>
+          </div>
               </div>
             </div>
   

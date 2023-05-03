@@ -74,6 +74,12 @@
   background-color: #1dbf73;
   color: azure;
 }
+ngb-rating {
+  color: #FFC107;
+  font-size: 30px;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
 .list-group-item:hover {
   background-color: #f1f2f2;
 }
