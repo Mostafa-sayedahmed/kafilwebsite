@@ -98,4 +98,20 @@ export class ProjectsService {
       categoryprojects[]
     >;
   }
+
+  async GetDeliverytime(delvID: string) {
+    const q = query(
+      collection(this.firestore, 'projects'),
+      where('Deliverytime', '==', delvID)
+    );
+    const querySnapshot = await getDocs(q);
+
+    var Newproj: Project[] = [];
+    querySnapshot.forEach((doc) => {
+      // Newproj.push(doc.data() as  Project )
+      Newproj = [...Newproj, doc.data() as Project];
+      console.log(doc.id, ' => ', doc.data());
+    });
+    return Newproj;
+  }
 }

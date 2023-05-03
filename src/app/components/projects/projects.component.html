@@ -139,7 +139,13 @@
                   let i = index
                 "
               >
-                <div><input type="checkbox" /> {{ DeliveryTime.name }}</div>
+                <div>
+                  <input
+                    type="checkbox"
+                    (click)="ChangeDelivary(DeliveryTime.id)"
+                  />
+                  {{ DeliveryTime.name }}
+                </div>
               </div>
             </div>
           </div>
@@ -232,7 +238,13 @@
                 let i = index
               "
             >
-              <div><input type="checkbox" /> {{ DeliveryTime.name }}</div>
+              <div>
+                <input
+                  type="checkbox"
+                  (click)="ChangeDelivary(DeliveryTime.id)"
+                />
+                {{ DeliveryTime.name }}
+              </div>
             </div>
           </div>
         </div>
