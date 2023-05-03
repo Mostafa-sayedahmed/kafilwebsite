@@ -4,21 +4,19 @@
       <div class="col-12 col-lg-3 d-lg-block d-none">
         <div class="pluse text-center py-3 mb-3 rounded-2">
           <a
-        
-
             routerLink="/addContest"
             class="w-100 text-center text-white text-decoration-none"
           >
-          {{ "addContest" | translate }}
+            {{ "addContest" | translate }}
             <i class="far fa-plus-square mx-3"></i>
           </a>
         </div>
 
-        <div class="input-group mb-3" >
+        <div class="input-group mb-3">
           <input
             type="search"
             class="input-my-input form-control py-2"
-            placeholder=' {{ "search" | translate }}'
+            placeholder=" {{ 'search' | translate }}"
             aria-label="search"
             aria-describedby="basic-search"
             #search
@@ -38,19 +36,17 @@
             <h2 class="accordion-header" id="headingOne">
               <button
                 class="accordion-button text-muted fw-bold"
-            
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#collapseOne"
                 aria-expanded="true"
                 aria-controls="collapseOne"
               >
-              {{ "Categories" | translate }}
+                {{ "Categories" | translate }}
               </button>
             </h2>
             <div
               id="collapseOne"
-              
               class="accordion-collapse collapse show"
               aria-labelledby="headingOne"
               data-bs-parent="#accordionExample"
@@ -107,7 +103,7 @@
         </div>
 
         <div class="filter bg-white rounded-2 mb-3">
-          <div class="type-radio" >
+          <div class="type-radio">
             <label class="custom-radio">
               <input
                 type="radio"
@@ -132,7 +128,6 @@
               {{ "open" | translate }}
             </label>
           </div>
-
         </div>
 
         <div>
@@ -246,10 +241,8 @@
               </div>
             </ng-container>
           </div>
-
         </div>
       </div>
-
     </div>
   </section>
   <!-- offcanvas body -->
@@ -269,7 +262,7 @@
         data-bs-dismiss="offcanvas"
         aria-label="Close"
       >
-      {{ "back" | translate }}
+        {{ "back" | translate }}
         <i class="fas fa-arrow-right"></i>
       </button>
     </div>
@@ -279,16 +272,16 @@
           href="/addContest"
           class="w-100 text-center text-white text-decoration-none"
         >
-        {{ "addContest" | translate }}
+          {{ "addContest" | translate }}
           <i class="far fa-plus-square mx-3"></i>
         </a>
       </div>
 
-      <div class="input-group mb-3" >
+      <div class="input-group mb-3">
         <input
           type="search"
           class="input-my-input form-control py-2"
-          placeholder=' {{ "search" | translate }}'
+          placeholder=" {{ 'search' | translate }}"
           aria-label="search"
           aria-describedby="basic-search"
           #search
@@ -308,19 +301,17 @@
           <h2 class="accordion-header" id="headingOne">
             <button
               class="accordion-button text-muted fw-bold"
-           
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseOne"
               aria-expanded="true"
               aria-controls="collapseOne"
             >
-            {{ "Categories" | translate }}
+              {{ "Categories" | translate }}
             </button>
           </h2>
           <div
             id="collapseOne"
-            
             class="accordion-collapse collapse show"
             aria-labelledby="headingOne"
             data-bs-parent="#accordionExample"
@@ -352,3 +343,11 @@
     </div>
   </div>
 </section>
+<ngx-spinner
+  bdColor="#1dcf73"
+  size="medium"
+  color="#fff"
+  [fullScreen]="true"
+  size="large"
+  type="line-scale-pulse-out"
+></ngx-spinner>

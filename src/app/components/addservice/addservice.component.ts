@@ -62,37 +62,22 @@ export class AddserviceComponent implements OnInit, AfterViewInit {
 
   @ViewChild('loadingmodalbtn', { static: true })
   modalbtn!: ElementRef<HTMLElement>;
-  @ViewChild('preloadermodalbtn', { static: true })
-  preloadermodalbtn!: ElementRef<HTMLElement>;
-  @ViewChild('preloaderdismissmodalbtn', { static: true })
-  preloaderdismissmodalbtn!: ElementRef<HTMLElement>;
-  ngOnInit() {
-    let preloader = this.preloadermodalbtn.nativeElement;
-    let dismiss = this.preloaderdismissmodalbtn.nativeElement;
-    preloader.click();
 
+  ngOnInit() {
+    this.categorylist = [];
     this.Category.getcategories()
       .then((res) => {
         this.categorylist = Array.from(res);
-        dismiss.click();
       })
       .catch((err) => {
         console.log(err);
-        preloader.click();
       });
 
     console.log('dismiss');
   }
-  ngAfterViewInit() {
-    let dismiss = this.preloaderdismissmodalbtn.nativeElement;
-    dismiss.click();
-  }
+  ngAfterViewInit() {}
   onfilechange(input: any) {
     const file = input.target.files[0];
-    if (file) {
-      // console.log(file);
-      // this.firestorage.uploadfile(file);
-    }
   }
   clearpreview() {
     this.mainImg = '';
@@ -117,8 +102,6 @@ export class AddserviceComponent implements OnInit, AfterViewInit {
         this.mainImg = reader.result as string;
       };
       reader.readAsDataURL(this.file);
-
-      //  = await this.firestorage.uploadfile(this.file);
     };
     input.click();
     return false;

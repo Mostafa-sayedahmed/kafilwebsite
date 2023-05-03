@@ -53,30 +53,35 @@ export class AddContestComponent {
   }
 
   addContest() {
-    this.CS.addcontest(this.contestform.value);
-    // this.router.navigateByUrl('/contests');
-
-    this.contestform.setValue({
-      userId: '',
-      userName: '',
-      userImg: '',
-      description: '',
-      title: '',
-      conditions: '',
-      sectionId: '',
-      deliveryDuration: '',
-      contestDuration: '',
-      firstWinner: '',
-      winnersNum: '',
-      skills: '',
-      completed: false,
-      accepted: true,
-      comment: 0,
-      Posts: 0,
-      Views: 0,
-      contestants: 0,
-    });
+    if (this.contestform.valid) {
+      this.CS.addcontest(this.contestform.value);
+      this.contestform.setValue({
+        userId: '',
+        userName: '',
+        userImg: '',
+        description: '',
+        title: '',
+        conditions: '',
+        sectionId: '',
+        deliveryDuration: '',
+        contestDuration: '',
+        firstWinner: '',
+        winnersNum: '',
+        skills: '',
+        completed: false,
+        accepted: true,
+        comment: 0,
+        Posts: 0,
+        Views: 0,
+        contestants: 0,
+      });
+      alert('تم اضافة المسابقة !');
+    } else{     
+      alert( 'فشلت المحاولة , من فضلك تاكد من ملئ البيانات بشكل صحيح وحاول مرة اخري!');
+    }
   }
+
+  
 
   saveDraft() {
     let data = JSON.stringify(this.contestform.value);

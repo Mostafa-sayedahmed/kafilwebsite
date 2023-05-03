@@ -11,6 +11,7 @@ import { CategoriesService } from 'src/app/services/categories.service';
 import { GetservicesService } from 'src/app/services/getservices.service';
 import { Service } from '../../models/service';
 import { filter } from 'rxjs';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-services',
@@ -28,13 +29,14 @@ export class ServicesComponent implements OnInit, DoCheck {
 
   constructor(
     public service: GetservicesService,
-    public category: CategoriesService
+    public category: CategoriesService,
+    private spinner: NgxSpinnerService
   ) {}
   ngDoCheck(): void {}
-  @ViewChild('preloadermodalbtn', { static: true })
-  preloadermodalbtn!: ElementRef<HTMLElement>;
-  @ViewChild('preloaderdismissmodalbtn', { static: true })
-  preloaderdismissmodalbtn!: ElementRef<HTMLElement>;
+  // @ViewChild('preloadermodalbtn', { static: true })
+  // preloadermodalbtn!: ElementRef<HTMLElement>;
+  // @ViewChild('preloaderdismissmodalbtn', { static: true })
+  // preloaderdismissmodalbtn!: ElementRef<HTMLElement>;
 
   // @ViewChildren('categorybtn') categorybtn: QueryList<ElementRef> | undefined;
   searchlist = [
@@ -279,10 +281,12 @@ export class ServicesComponent implements OnInit, DoCheck {
     },
   ];
   async ngOnInit() {
-    let preloader = this.preloadermodalbtn.nativeElement;
-    let dismiss = this.preloaderdismissmodalbtn.nativeElement;
+    this.spinner.show();
 
-    preloader.click();
+    // let preloader = this.preloadermodalbtn.nativeElement;
+    // preloader.click();
+
+    // let dismiss = this.preloaderdismissmodalbtn.nativeElement;
 
     if (window.innerWidth < 770) {
       this.showcount = this.showcountSM;
@@ -299,25 +303,16 @@ export class ServicesComponent implements OnInit, DoCheck {
         console.log(err);
       });
     await this.service.getservices().then((results) => {
-      // this.searchlist = [];
+      this.serviceslist = [];
       results.forEach((element) => {
         element.data.state == 'approved'
           ? (this.serviceslist = [...this.serviceslist, element])
           : null;
       });
-      // console.log(this.serviceslist);
 
-      preloader.click();
-      // return data;
-      // console.log(data);
-
-      // this.serviceslist = data;
-      // // this.serviceslist = [...new Set(this.serviceslist)];
-      // console.log(
-      //   results.filter((service) => {
-      //     service.data.rating = 0;
-      //   })
-      // );
+      this.spinner.hide();
+      // setTimeout(() => {
+      // }, 500);
     });
 
     for (let service of this.serviceslist) {
