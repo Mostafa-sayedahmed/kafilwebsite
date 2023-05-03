@@ -57,4 +57,13 @@ export class ProjectsComponent {
 
   ///// Handling Search ///
   Search(val: string) {}
+  //getDelivary Project
+
+  ChangeDelivary(id: string) {
+    console.log(id);
+
+    this.proj.GetDeliverytime(id).then((res) => {
+      this.ListOfProject = res;
+    });
+  }
 }
