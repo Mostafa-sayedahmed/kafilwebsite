@@ -1,23 +1,4 @@
 <div class="body">
-  <div
-    class="dropdown d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none"
-  >
-    <button
-      id="dropDown"
-      class="btn dropdown-toggle p-2 m-2"
-      type="button"
-      id="dropdownMenuButton1"
-      data-bs-toggle="dropdown"
-      aria-expanded="false"
-    >
-      <i class="fa-solid fa-bars"></i>
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-      <li><a class="dropdown-item text-center" href="#">الاقسام</a></li>
-      <li><a class="dropdown-item text-center" href="#">المهارات</a></li>
-      <li><a class="dropdown-item text-center" href="#">مرشحات أخرى</a></li>
-    </ul>
-  </div>
   <div class="container-fluid">
     <div class="row mt-5">
       <!-- divider -->
@@ -45,7 +26,7 @@
                     aria-expanded="true"
                     aria-controls="panelsStayOpen-collapseOne"
                   >
-                    <h6>{{"Departments"|translate}}</h6>
+                    <h6>{{ "Departments" | translate }}</h6>
                   </button>
                 </h2>
                 <div
@@ -55,17 +36,39 @@
                 >
                   <ul class="list-group">
                     <li class="list-group-item p-3">
-                      {{"Business and advisory and administrative services"|translate}}                    </li>
+                      {{
+                        "Business and advisory and administrative services"
+                          | translate
+                      }}
+                    </li>
 
                     <li class="list-group-item p-3">
-                      {{"Software, developing websites and applications"|translate}}                    </li>
+                      {{
+                        "Software, developing websites and applications"
+                          | translate
+                      }}
+                    </li>
 
-                      <li class="list-group-item p-3">{{"Design"|translate}} ,{{"Video"|translate}} ,{{"Audio"|translate}}   </li>
-                      <li class="list-group-item p-3"> {{"Marketing"|translate}} , {{"Sales"|translate}}</li>
-                    <li class="list-group-item p-3">{{"Writing ang Content Creation"|translate}}</li>
-                    <li class="list-group-item p-3"> {{"Translation and Languages"|translate}}</li>
-                    <li class="list-group-item p-3">{{"Remote assistance"|translate}}</li>
-                    <li class="list-group-item p-3">{{"Others"|translate}} </li>
+                    <li class="list-group-item p-3">
+                      {{ "Design" | translate }} ,{{ "Video" | translate }} ,{{
+                        "Audio" | translate
+                      }}
+                    </li>
+                    <li class="list-group-item p-3">
+                      {{ "Marketing" | translate }} , {{ "Sales" | translate }}
+                    </li>
+                    <li class="list-group-item p-3">
+                      {{ "Writing ang Content Creation" | translate }}
+                    </li>
+                    <li class="list-group-item p-3">
+                      {{ "Translation and Languages" | translate }}
+                    </li>
+                    <li class="list-group-item p-3">
+                      {{ "Remote assistance" | translate }}
+                    </li>
+                    <li class="list-group-item p-3">
+                      {{ "Others" | translate }}
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -73,43 +76,6 @@
           </div>
 
           <!-- accordion 1-->
-
-          <div>
-            <div
-              class="accordion col-12 mt-3"
-              id="accordionPanelsStayOpenExample"
-            >
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="panelsStayOpen-headingS">
-                  <button
-                    class="accordion-button p-3"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-Search"
-                    aria-expanded="true"
-                    aria-controls="panelsStayOpen-Search"
-                  >
-                  <h6>{{"Join the Freelancers"|translate}}</h6>
-                </button>
-                </h2>
-                <div
-                  id="panelsStayOpen-Search"
-                  class="accordion-collapse collapse show"
-                  aria-labelledby="panelsStayOpen-headingS"
-                >
-                  <div class="input-group rounded w-75 p-2 me-4">
-                    <input
-                      type="search"
-                      class="form-control rounded"
-                      placeholder="{{'Search'|translate}}"
-                      aria-label="Search"
-                      aria-describedby="search-addon"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
           <!-- accordion 1-->
 
@@ -128,8 +94,8 @@
                     aria-expanded="true"
                     aria-controls="panelsStayOpen-2"
                   >
-                  <h6>{{"Other Filters"|translate}} </h6>
-                </button>
+                    <h6>{{ "Other Filters" | translate }}</h6>
+                  </button>
                 </h2>
                 <div
                   id="panelsStayOpen-2"
@@ -137,8 +103,12 @@
                   aria-labelledby="panelsStayOpen-headingS"
                 >
                   <ul class="list-group">
-                    <li class="list-group-item p-3">{{"Connected Now"|translate}} </li>
-                    <li class="list-group-item p-3">{{"Verified Identity"|translate}}</li>
+                    <li class="list-group-item p-3">
+                      {{ "Connected Now" | translate }}
+                    </li>
+                    <li class="list-group-item p-3">
+                      {{ "Verified Identity" | translate }}
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -147,42 +117,15 @@
 
           <!-- accordion 1-->
 
-          <div>
-            <div class="accordion col-12 mt-3" id="OpenExample">
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="panelsStayOpen-headingS">
-                  <button
-                    class="accordion-button p-3"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-2"
-                    aria-expanded="true"
-                    aria-controls="panelsStayOpen-2"
-                  >
-                  <h6>{{"Rating"|translate}}</h6>
-                </button>
-                </h2>
-                <div
-                  id="panelsStayOpen-2"
-                  class="accordion-collapse collapse show p-2 text-center"
-                  aria-labelledby="panelsStayOpen-headingS"
-                >
-                  <i class="fa-solid fa-star" id="test"></i>
-                  <i class="fa-solid fa-star" id="test"></i>
-                  <i class="fa-solid fa-star" id="test"></i>
-                  <i class="fa-solid fa-star" id="test"></i>
-                  <i class="fa-solid fa-star" id="test"></i>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div></div>
         </div>
       </div>
 
       <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-8 col-xxl-8">
         <div class="p-3 bg-white mx-3" style="border-radius: 10px">
           <i class="fa-solid fa-user fa-xl ms-2 mx-2"></i>
-{{"Join the Freelancers"|translate}}        </div>
+          {{ "Join the Freelancers" | translate }}
+        </div>
 
         <div class="d-flex flex-wrap">
           <!-- Freelnacer Form  -->
@@ -195,14 +138,16 @@
             >
               <div class="form-row">
                 <div class="form-group">
-                  <label for="inputEmail4" class="my-2">{{"Fullname"|translate}}</label>
+                  <label for="inputEmail4" class="my-2">{{
+                    "Fullname" | translate
+                  }}</label>
                   <input
                     type="text"
                     name="name"
                     [(ngModel)]="newFreelancer.name"
                     class="form-control"
                     id="inputEmail4"
-                    placeholder=" {{'name'|translate}}"
+                    placeholder=" {{ 'name' | translate }}"
                     #freelancerName="ngModel"
                     required
                     pattern="[أ-ي \s]{3,}"
@@ -215,17 +160,17 @@
                     class="alert alert-danger my-2 p-1"
                     [hidden]="freelancerName.valid || freelancerName.untouched"
                   >
-                    <small *ngIf="freelancerName.errors?.['required']"
-                      > {{"must add name"|translate}}</small
+                    <small *ngIf="freelancerName.errors?.['required']">
+                      {{ "must add name" | translate }}</small
                     >
                     <small *ngIf="freelancerName.errors?.['pattern']">
-                      {{"name must be at least 3 characers"|translate}} </small
-                    >
+                      {{ "name must be at least 3 characers" | translate }}
+                    </small>
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="inputPassword4" class="my-2"
-                    >{{"Email"|translate}}:</label
+                    >{{ "Email" | translate }}:</label
                   >
                   <input
                     #email
@@ -233,25 +178,29 @@
                     name="email"
                     class="form-control"
                     id="inputPassword4"
-                    placeholder="{{'Email'|translate}} "
+                    placeholder="{{ 'Email' | translate }} "
                     required
                   />
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputAddress" class="my-2">{{"Country"|translate}} :</label>
+                <label for="inputAddress" class="my-2"
+                  >{{ "Country" | translate }} :</label
+                >
                 <input
                   type="text"
                   name="country"
                   class="form-control"
                   id="inputAddress"
-                  placeholder="{{'Country'|translate}} ..."
+                  placeholder="{{ 'Country' | translate }} ..."
                   required
                   pattern="[أ-ي]{3,12}"
                 />
               </div>
               <div class="form-group">
-                <label for="title" class="my-2"> {{"Job"|translate}} :</label>
+                <label for="title" class="my-2">
+                  {{ "Job" | translate }} :</label
+                >
                 <input
                   #freelancerTitle="ngModel"
                   type="text"
@@ -259,7 +208,7 @@
                   [(ngModel)]="newFreelancer.title"
                   class="form-control"
                   id="title"
-                  placeholder="{{'Which Skills I have'|translate}}"
+                  placeholder="{{ 'Which Skills I have' | translate }}"
                   required
                   pattern="[أ-ي \s]{3,}"
                   [class.is-valid]="freelancerTitle.valid"
@@ -271,18 +220,18 @@
                   class="alert alert-danger my-2 p-1"
                   [hidden]="freelancerTitle.valid || freelancerTitle.untouched"
                 >
-                  <small *ngIf="freelancerTitle.errors?.['required']"
-                    >{{'Must add Job'|translate}}</small
-                  >
+                  <small *ngIf="freelancerTitle.errors?.['required']">{{
+                    "Must add Job" | translate
+                  }}</small>
                   <small *ngIf="freelancerTitle.errors?.['pattern']"
-                    >{{'Job must be at least 3 characters'|translate}}
+                    >{{ "Job must be at least 3 characters" | translate }}
                   </small>
                 </div>
               </div>
               <div class="form-group">
                 <label for="inputAddress3" class="my-2">
-                  {{'Personal Pic ( URL )'|translate}} </label
-                >
+                  {{ "Personal Pic ( URL )" | translate }}
+                </label>
                 <input
                   #freelancerImg="ngModel"
                   type="url"
@@ -290,7 +239,7 @@
                   [(ngModel)]="newFreelancer.img"
                   class="form-control"
                   id="inputAddress3"
-                  placeholder="{{'Personal Pic ( URL )'|translate}}"
+                  placeholder="{{ 'Personal Pic ( URL )' | translate }}"
                   required
                   pattern="https?://.+"
                   [class.is-valid]="freelancerImg.valid"
@@ -302,14 +251,17 @@
                   class="alert alert-danger my-2 p-1"
                   [hidden]="freelancerImg.valid || freelancerImg.untouched"
                 >
-                  <small *ngIf="freelancerImg.errors?.['required']"
-                    >{{'Must Add Pic'|translate}}</small
-                  >
+                  <small *ngIf="freelancerImg.errors?.['required']">{{
+                    "Must Add Pic" | translate
+                  }}</small>
                 </div>
               </div>
 
               <div class="form-group">
-                <label for="foru" class="my-2"> {{'A summary of your work and experience'|translate}}:</label
+                <label for="foru" class="my-2">
+                  {{
+                    "A summary of your work and experience" | translate
+                  }}:</label
                 ><br />
                 <input
                   type="text"
@@ -321,13 +273,15 @@
               </div>
 
               <div class="form-group col-md-4">
-                <label for="inputState" class="my-2"> {{'City'|translate}}:</label>
+                <label for="inputState" class="my-2">
+                  {{ "City" | translate }}:</label
+                >
                 <select id="inputState" class="form-control">
-                  <option selected>{{'Choose City'|translate}}</option>
-                  <option>{{'Cairo'|translate}}</option>
-                  <option>{{'Giza'|translate}}</option>
-                  <option>{{'Alex'|translate}}</option>
-                  <option>{{'Qena'|translate}}</option>
+                  <option selected>{{ "Choose City" | translate }}</option>
+                  <option>{{ "Cairo" | translate }}</option>
+                  <option>{{ "Giza" | translate }}</option>
+                  <option>{{ "Alex" | translate }}</option>
+                  <option>{{ "Qena" | translate }}</option>
                 </select>
               </div>
 
@@ -338,7 +292,7 @@
                     type="checkbox"
                     id="gridCheck"
                     required
-                  />{{'I agree to the terms and conditions'|translate}}
+                  />{{ "I agree to the terms and conditions" | translate }}
                 </div>
               </div>
 
@@ -347,7 +301,7 @@
                 class="btn btn-success w-50 BTNForSub"
                 [disabled]="addingFreelancerForm.invalid"
               >
-              {{'Submit'|translate}}
+                {{ "Submit" | translate }}
               </button>
             </form>
           </div>

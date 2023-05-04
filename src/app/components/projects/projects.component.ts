@@ -3,7 +3,7 @@ import { categoryprojects } from 'src/app/models/categoryProject';
 import { Project } from 'src/app/models/projects';
 import { ProjectsService } from 'src/app/services/projects.service';
 import { Router } from '@angular/router';
-import { NgxSpinnerService } from 'ngx-spinner';
+
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
@@ -14,18 +14,13 @@ export class ProjectsComponent {
   ListofCatproj: categoryprojects[] = [];
   ListofDeliverytimeprojects: categoryprojects[] = [];
   spinner: boolean = true;
+  searchTerm = '';
 
-  constructor(
-    private proj: ProjectsService,
-    private router: Router,
-    private preloader: NgxSpinnerService
-  ) {}
+  constructor(private proj: ProjectsService, private router: Router) {}
   ngOnInit(): void {
-    this.preloader.show();
     this.proj.getallprojects().subscribe((res) => {
       this.spinner = false;
       this.ListOfProject = res;
-      this.preloader.hide();
     });
     this.proj.getCategoryProject().subscribe((res) => {
       this.ListofCatproj = res;
@@ -42,6 +37,7 @@ export class ProjectsComponent {
   }
   // getcategory By ID
   ChangeCatID(id: string) {
+    console.log(id);
     this.proj.getCategoryByID(id).then((res) => {
       this.ListOfProject = res;
     });
@@ -57,5 +53,17 @@ export class ProjectsComponent {
   Detailsproject(projectID: any) {
     // console.log(projectID);
     this.router.navigate(['projects', projectID]);
+  }
+
+  ///// Handling Search ///
+  Search(val: string) {}
+  //getDelivary Project
+
+  ChangeDelivary(id: string) {
+    console.log(id);
+
+    this.proj.GetDeliverytime(id).then((res) => {
+      this.ListOfProject = res;
+    });
   }
 }
