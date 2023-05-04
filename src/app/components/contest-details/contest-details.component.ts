@@ -49,13 +49,12 @@ export class ContestDetailsComponent implements OnInit {
   }
 
   addComment(comment: string) {
-    console.log(localStorage.getItem('user'))
-    if(localStorage.getItem('user') != null) {
+    if(localStorage.getItem('user') != "null") {
         this.CS.addComments(
-        this.currentContestID,
-        JSON.parse(localStorage.getItem('user')!).displayName,
-        JSON.parse(localStorage.getItem('user')!).photoURL,
-        comment
+          this.currentContestID,
+          JSON.parse(localStorage.getItem('user')!).displayName,
+          JSON.parse(localStorage.getItem('user')!).photoURL,
+          comment
       );
       this.getCommentsByContestId();
     }else{

@@ -5,7 +5,7 @@ import { Freelancer } from 'src/app/models/freelancer';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { AngularFirestoreDocument } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
-import { NgxSpinnerService } from 'ngx-spinner';
+import { NgbAlert } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-freelancers',
@@ -13,27 +13,26 @@ import { NgxSpinnerService } from 'ngx-spinner';
   styleUrls: ['./freelancers.component.scss'],
 })
 export class FreelancersComponent implements OnInit {
-  dataspinner: boolean = true;
+  alertForRaring: boolean = false;
+  starRating = 0;
+  spinner: boolean = true;
   freelancers: Freelancer[] = [];
   test: any;
-  constructor(
-    private myService: CrudService,
-    private router: Router,
-    private spinner: NgxSpinnerService
-  ) {}
+  constructor(private myService: CrudService, private router: Router) {}
   ngOnInit(): void {
-    this.spinner.show();
+    //handeling the rating
+    let stars = document.querySelectorAll('.stars');
+    console.log(stars);
 
     //to get the id we have to use snapshotchanges in service
     this.myService.getAllFreelancers().subscribe((data) => {
-      this.dataspinner = false;
+      this.spinner = false;
       this.freelancers = data.map((ele) => {
         return {
           id: ele.payload.doc.id,
           ...ele.payload.doc.data(),
         };
       });
-      this.spinner.hide();
     });
   }
 
@@ -42,5 +41,9 @@ export class FreelancersComponent implements OnInit {
   }
   goToAddFreelancer() {
     this.router.navigate(['addFreelancer']);
+  }
+  handelTheRating() {
+    this.alertForRaring = !this.alertForRaring;
+    console.log(this.alertForRaring);
   }
 }

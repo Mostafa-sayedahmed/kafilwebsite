@@ -40,6 +40,7 @@ import { AddProjectComponent } from './components/add-project/add-project.compon
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServicesCategoryComponent } from './components/services-category/services-category.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -94,6 +95,7 @@ import { ServicesCategoryComponent } from './components/services-category/servic
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
