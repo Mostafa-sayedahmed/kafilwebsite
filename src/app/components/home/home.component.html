@@ -98,10 +98,14 @@
                     placeholder="{{ 'any many more' | translate }}"
                     aria-label="Search"
                     aria-describedby="search-addon"
+                    #searchtxt
+                    (keydown)="search(searchtxt.value)"
+                    (keyup)="search(searchtxt.value)"
                   />
                   <button
                     type="button"
                     class="btn btn-outline-success searchBtn my-2"
+                    (click)="goTo(searchtxt.value)"
                   >
                     <i class="fa-solid fa-magnifying-glass"></i>
                   </button>
@@ -136,7 +140,7 @@
                 <p class="my-2">
                   {{ "Projects slide txt" | translate }}
                 </p>
-                <button class="myBtn ms-3 my-2" routerLink="/portfolois">
+                <button class="myBtn ms-3 my-2" routerLink="/portfolios">
                   {{ "Explore Projects" | translate }}
                 </button>
                 <a
@@ -522,7 +526,9 @@
               | translate
           }}
         </p>
-        <button class="myBtn w-25 m-3">{{ "register now" | translate }}</button>
+        <button class="myBtn w-25 m-3" routerLink="/register">
+          {{ "register now" | translate }}
+        </button>
       </div>
       <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-5">
         <img
@@ -547,7 +553,7 @@
         <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
           <ul class="nav flex-column ms-3 mt-3">
             <li class="nav-item m-0 navBar p-1 d-flex">
-              <a class="nav-link active" aria-current="page" href="#">
+              <a class="nav-link active" aria-current="page" routerLink="#">
                 <i
                   class="fa-solid fa-suitcase fa-lg ms-3"
                   style="color: #1dbf73"
@@ -556,7 +562,7 @@
               >
             </li>
             <li class="nav-item m-0 navBar p-1">
-              <a class="nav-link" href="#" routerLink="/services">
+              <a class="nav-link" routerLink="/services">
                 <i
                   class="fa-solid fa-suitcase fa-lg ms-3"
                   style="color: #1dbf73"
@@ -565,7 +571,7 @@
               >
             </li>
             <li class="nav-item m-0 navBar p-1">
-              <a class="nav-link" href="#" routerLink="/portfolois">
+              <a class="nav-link" routerLink="/portfolois">
                 <i
                   class="fa-solid fa-suitcase fa-lg ms-3"
                   style="color: #1dbf73"
@@ -574,7 +580,7 @@
               >
             </li>
             <li class="nav-item m-0 navBar p-1">
-              <a class="nav-link" href="#" routerLink="/contests">
+              <a class="nav-link" routerLink="/contests">
                 <i
                   class="fa-solid fa-suitcase fa-lg ms-3"
                   style="color: #1dbf73"

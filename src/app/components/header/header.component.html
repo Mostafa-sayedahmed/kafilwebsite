@@ -90,9 +90,12 @@
                 <ng-container
                   *ngFor="let item of headsearchlist; let i = index"
                 >
-                  <a *ngIf="i < 5" routerLink="services/{{ item.uid }}">{{
-                    item.data.title
-                  }}</a>
+                  <a
+                    *ngIf="i < 5"
+                    (click)="searchtxt.value = ''"
+                    routerLink="services/{{ item.uid }}"
+                    >{{ item.data.title }}</a
+                  >
                 </ng-container>
               </section>
             </div>

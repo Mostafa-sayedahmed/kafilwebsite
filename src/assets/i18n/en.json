@@ -106,12 +106,7 @@
   "place_service": "Place service",
 
   "add_project": "Add project",
-  "projects": "projects",
-  "all": "All",
-  "open": "Open",
   "Latest": "Latest",
-  "category": "Category",
-  "skills": "Skills",
   "delivery_Duration": "Delivery Duration",
 
   "Set_title": "Title",
@@ -303,6 +298,7 @@
   "General": "General",
   "Frequently Asked Questions": "Frequently Asked Questions",
   "Departments": "Departments",
+
   "Business and advisory and administrative services": "Business and advisory and administrative services",
   "Software, developing websites and applications": "Software, developing websites and applications",
   "Sales": "Sales",
@@ -332,6 +328,7 @@
   "Job must be at least 3 characters": "Job must be at least 3 characters",
   "Personal Pic ( URL )": "Personal Pic ( URL )",
   "Must Add Pic": "Must Add Pic",
+  "Pic must be URL": "Pic must be URL",
   "A summary of your work and experience": "A summary of your work and experience",
   "City": "City",
   "Choose City": "Choose City",
@@ -366,5 +363,10 @@
   "Will I be able to withdraw the balance if my account is permanently suspended?": "Will I be able to withdraw the balance if my account is permanently suspended?",
   "Will I be able to withdraw the balance if my account is permanently suspended? txt": "In the event of a final ban from the site (and this is not done except after committing a serious violation as described in the Terms of Use page), all transactions that you made are reviewed to assess any damage or harm to a member or to the platform that you may have caused, so that it is deducted from the balance as compensation for After that, you have the right to withdraw the rest of the amount after 30 working days have passed from the date of freezing your account, by contacting technical support via direct chat at the bottom left of the site pages.",
   "Thanks for your feedback": "Thanks for your feedback",
-  "featured": "Featured"
+  "featured": "Featured",
+  "Back to Freelancers": "Back to Freelancers",
+  "Departments of Kafiil": "Departments of Kafiil",
+  "Name": "name",
+  "Likes": "likes",
+  "Welcome to kafill": "Welcome to kafill !"
 }
